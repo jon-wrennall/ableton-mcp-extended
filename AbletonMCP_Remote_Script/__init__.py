@@ -329,16 +329,39 @@ class AbletonMCP(ControlSurface):
             elif command_type == "get_browser_items_at_path":
                 path = params.get("path", "")
                 response["result"] = self.get_browser_items_at_path(path)
-            elif command_type == "get_device_parameters":
-                track_index = params.get("track_index", 0)
-                device_index = params.get("device_index", 0)
-                response["result"] = self._get_device_parameters(track_index, device_index)
-            elif command_type == "get_chain_device_parameters":
-                track_index = params.get("track_index", 0)
-                device_index = params.get("device_index", 0)
-                chain_index = params.get("chain_index", 0)
-                chain_device_index = params.get("chain_device_index", 0)
-                response["result"] = self._get_chain_device_parameters(track_index, device_index, chain_index, chain_device_index)
+            elif command_type in ["get_device_parameters", "get_chain_device_parameters"]:
+                # Schedule on main thread — Live's API is not thread-safe for reads either
+                response_queue = queue.Queue()
+                def main_thread_read_task():
+                    try:
+                        if command_type == "get_device_parameters":
+                            ti = int(params.get("track_index", 0))
+                            di = int(params.get("device_index", 0))
+                            result = self._get_device_parameters(ti, di)
+                        else:
+                            ti = int(params.get("track_index", 0))
+                            di = int(params.get("device_index", 0))
+                            ci = int(params.get("chain_index", 0))
+                            cdi = int(params.get("chain_device_index", 0))
+                            result = self._get_chain_device_parameters(ti, di, ci, cdi)
+                        response_queue.put({"status": "success", "result": result})
+                    except Exception as e:
+                        self.log_message("Error in read task: " + str(e))
+                        response_queue.put({"status": "error", "message": str(e)})
+                try:
+                    self.schedule_message(0, main_thread_read_task)
+                except AssertionError:
+                    main_thread_read_task()
+                try:
+                    task_response = response_queue.get(timeout=10.0)
+                    if task_response.get("status") == "error":
+                        response["status"] = "error"
+                        response["message"] = task_response.get("message", "Unknown error")
+                    else:
+                        response["result"] = task_response.get("result", {})
+                except queue.Empty:
+                    response["status"] = "error"
+                    response["message"] = "Timeout waiting for operation to complete"
             elif command_type == "save_device_snapshot":
                 track_index = params.get("track_index", 0)
                 device_index = params.get("device_index", 0)
@@ -1207,7 +1230,9 @@ class AbletonMCP(ControlSurface):
                     raise ValueError("Parameter '{0}' not found".format(param_name))
             else:
                 raise ValueError("Must provide param_index or param_name")
-            # Clamp to valid range
+            # Capture old value before writing
+            old_value = param.value
+            # Clamp to valid range and write
             clamped = max(param.min, min(param.max, float(value)))
             param.value = clamped
             return {
@@ -1215,7 +1240,7 @@ class AbletonMCP(ControlSurface):
                 "device_index": device_index,
                 "device_name": device.name,
                 "param_name": param.name,
-                "old_value": param.value,
+                "old_value": old_value,
                 "new_value": clamped
             }
         except Exception as e:
