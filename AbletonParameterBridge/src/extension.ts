@@ -12,9 +12,16 @@ const HTTP_PORT = 9878;
 export function activate(activation: ActivationContext) {
   const api = initialize(activation, "1.0.0");
 
-  console.log("[ParameterBridge] Starting HTTP server on port " + HTTP_PORT);
+  let server: http.Server | null = null;
 
-  const server = http.createServer(async (req, res) => {
+  function startServer() {
+    if (server !== null) {
+      console.log("[ParameterBridge] Server already running on port " + HTTP_PORT);
+      return;
+    }
+    console.log("[ParameterBridge] Starting HTTP server on port " + HTTP_PORT);
+
+    server = http.createServer(async (req, res) => {
     res.setHeader("Content-Type", "application/json");
     res.setHeader("Access-Control-Allow-Origin", "*");
 
@@ -262,13 +269,33 @@ export function activate(activation: ActivationContext) {
     }
   });
 
-  server.listen(HTTP_PORT, "127.0.0.1", () => {
-    console.log("[ParameterBridge] HTTP server listening on port " + HTTP_PORT);
+    server.listen(HTTP_PORT, "127.0.0.1", () => {
+      console.log("[ParameterBridge] HTTP server listening on port " + HTTP_PORT);
+    });
+  }
+
+  // Register a command + context menu entry so the user can start the bridge
+  // by right-clicking any MIDI track → "Start Parameter Bridge"
+  api.commands.registerCommand("parameter-bridge.start", () => {
+    startServer();
   });
 
+  void api.ui.registerContextMenuAction(
+    "MidiTrack",
+    "Start Parameter Bridge",
+    "parameter-bridge.start"
+  );
+
+  // Also attempt to start immediately — works in extensions-cli run (dev) mode
+  // and if Live calls activate() automatically at startup.
+  startServer();
+
   return () => {
-    server.close();
-    console.log("[ParameterBridge] HTTP server stopped");
+    if (server !== null) {
+      server.close();
+      server = null;
+      console.log("[ParameterBridge] HTTP server stopped");
+    }
   };
 }
 
