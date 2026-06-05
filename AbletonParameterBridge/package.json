@@ -1,20 +1,19 @@
 {
-  "name": "ableton-parameter-bridge",
-  "version": "1.0.0",
-  "description": "AbletonParameterBridge — Extensions SDK HTTP server for MCP parameter access",
+  "type": "module",
   "main": "dist/extension.js",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch",
-    "clean": "rm -rf dist"
+    "build": "tsc --noEmit && tsx build.ts",
+    "build:prod": "tsc --noEmit && tsx build.ts --production",
+    "start": "tsx build.ts && extensions-cli run"
+  },
+  "dependencies": {
+    "@ableton-extensions/sdk": "file:../extensions-sdk-1.0.0-beta.0/ableton-extensions-sdk-1.0.0-beta.0.tgz"
   },
   "devDependencies": {
-    "typescript": "^5.4.0",
-    "@types/node": "^20.0.0"
-  },
-  "peerDependencies": {
-    "@ableton-extensions/sdk": "*"
-  },
-  "keywords": ["ableton", "live", "extensions", "mcp", "midi"],
-  "license": "MIT"
+    "@ableton-extensions/cli": "file:../extensions-sdk-1.0.0-beta.0/ableton-extensions-cli-1.0.0-beta.0.tgz",
+    "@types/node": "^25.0.0",
+    "esbuild": "0.28.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.0"
+  }
 }

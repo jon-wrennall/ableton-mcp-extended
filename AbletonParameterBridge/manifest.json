@@ -1,9 +1,7 @@
 {
-  "id": "com.jonwrennall.parameter-bridge",
-  "version": "1.0.0",
   "name": "Parameter Bridge",
-  "description": "Exposes all device parameters via HTTP for AI control",
   "author": "Jon Wrennall",
-  "main": "dist/extension.js",
-  "apiVersion": "1.0.0"
+  "entry": "dist/extension.js",
+  "version": "1.0.0",
+  "minimumApiVersion": "1.0.0"
 }

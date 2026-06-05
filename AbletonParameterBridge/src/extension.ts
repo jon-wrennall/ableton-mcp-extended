@@ -1,11 +1,11 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import {
   initialize,
   MidiTrack,
-  AudioTrack,
   type ActivationContext,
 } from "@ableton-extensions/sdk";
-import * as http from "http";
-import * as urlModule from "url";
+import * as http from "node:http";
+import * as urlModule from "node:url";
 
 const HTTP_PORT = 9878;
 
@@ -19,16 +19,21 @@ export function activate(activation: ActivationContext) {
     res.setHeader("Access-Control-Allow-Origin", "*");
 
     try {
-      const parsed = urlModule.parse(req.url!, true);
+      const parsed = urlModule.parse(req.url ?? "/", true);
       const pathname = parsed.pathname ?? "/";
-      const searchParams = parsed.query as Record<string, string>;
-      // pathname already set above
+      const q = parsed.query as Record<string, string>;
+
+      // GET /health — liveness check
+      if (req.method === "GET" && pathname === "/health") {
+        res.writeHead(200);
+        res.end(JSON.stringify({ status: "ok", port: HTTP_PORT }));
+        return;
+      }
 
       // GET /tracks — list all tracks and their devices with param counts
       if (req.method === "GET" && pathname === "/tracks") {
         const song = api.application.song;
-        const tracks = song.tracks;
-        const result = tracks.map((track, i) => ({
+        const result = song.tracks.map((track, i) => ({
           index: i,
           name: track.name,
           type: track instanceof MidiTrack ? "midi" : "audio",
@@ -45,28 +50,25 @@ export function activate(activation: ActivationContext) {
 
       // GET /params?track=0&device=0 — get all parameters for a device
       if (req.method === "GET" && pathname === "/params") {
-        const trackIndex = parseInt(searchParams["track"] ?? "0");
-        const deviceIndex = parseInt(searchParams["device"] ?? "0");
+        const trackIndex = parseInt(q["track"] ?? "0");
+        const deviceIndex = parseInt(q["device"] ?? "0");
 
-        const song = api.application.song;
-        const tracks = song.tracks;
-        if (trackIndex < 0 || trackIndex >= tracks.length) {
+        const tracks = api.application.song.tracks;
+        const track = tracks[trackIndex];
+        if (track === undefined) {
           res.writeHead(400);
           res.end(JSON.stringify({ error: "Track index out of range" }));
           return;
         }
-        const track = tracks[trackIndex];
-        const devices = track.devices;
-        if (deviceIndex < 0 || deviceIndex >= devices.length) {
+        const device = track.devices[deviceIndex];
+        if (device === undefined) {
           res.writeHead(400);
           res.end(JSON.stringify({ error: "Device index out of range" }));
           return;
         }
-        const device = devices[deviceIndex];
-        const params = device.parameters;
 
         const paramData = await Promise.all(
-          params.map(async (p, i) => {
+          device.parameters.map(async (p, i) => {
             try {
               const value = await p.getValue();
               return {
@@ -89,22 +91,20 @@ export function activate(activation: ActivationContext) {
                 max: 1,
                 is_quantized: false,
                 default_value: null,
-                value_items: [],
+                value_items: [] as string[],
               };
             }
           })
         );
 
         res.writeHead(200);
-        res.end(
-          JSON.stringify({
-            track_index: trackIndex,
-            track_name: track.name,
-            device_index: deviceIndex,
-            device_name: device.name,
-            parameters: paramData,
-          })
-        );
+        res.end(JSON.stringify({
+          track_index: trackIndex,
+          track_name: track.name,
+          device_index: deviceIndex,
+          device_name: device.name,
+          parameters: paramData,
+        }));
         return;
       }
 
@@ -113,22 +113,37 @@ export function activate(activation: ActivationContext) {
       if (req.method === "POST" && pathname === "/params") {
         const body = await readBody(req);
         const { track: trackIndex, device: deviceIndex, param_index, param_name, value } =
-          JSON.parse(body);
+          JSON.parse(body) as {
+            track: number;
+            device: number;
+            param_index?: number;
+            param_name?: string;
+            value: number;
+          };
 
-        const song = api.application.song;
-        const track = song.tracks[trackIndex];
+        const track = api.application.song.tracks[trackIndex];
+        if (track === undefined) {
+          res.writeHead(400);
+          res.end(JSON.stringify({ error: "Track index out of range" }));
+          return;
+        }
         const device = track.devices[deviceIndex];
+        if (device === undefined) {
+          res.writeHead(400);
+          res.end(JSON.stringify({ error: "Device index out of range" }));
+          return;
+        }
         const params = device.parameters;
 
         let param = null;
-        if (param_index !== undefined && param_index !== null) {
+        if (param_index !== undefined) {
           param = params[param_index] ?? null;
-        } else if (param_name) {
+        } else if (param_name !== undefined) {
           param =
-            params.find((p) => p.name.toLowerCase() === String(param_name).toLowerCase()) ?? null;
+            params.find((p) => p.name.toLowerCase() === param_name.toLowerCase()) ?? null;
         }
 
-        if (!param) {
+        if (param === null) {
           res.writeHead(400);
           res.end(JSON.stringify({ error: "Parameter not found" }));
           return;
@@ -143,16 +158,26 @@ export function activate(activation: ActivationContext) {
         return;
       }
 
-      // GET /snapshot?track=0&device=0 — capture all values
+      // GET /snapshot?track=0&device=0 — capture all parameter values
       if (req.method === "GET" && pathname === "/snapshot") {
-        const trackIndex = parseInt(searchParams["track"] ?? "0");
-        const deviceIndex = parseInt(searchParams["device"] ?? "0");
-        const song = api.application.song;
-        const track = song.tracks[trackIndex];
+        const trackIndex = parseInt(q["track"] ?? "0");
+        const deviceIndex = parseInt(q["device"] ?? "0");
+
+        const track = api.application.song.tracks[trackIndex];
+        if (track === undefined) {
+          res.writeHead(400);
+          res.end(JSON.stringify({ error: "Track index out of range" }));
+          return;
+        }
         const device = track.devices[deviceIndex];
-        const params = device.parameters;
+        if (device === undefined) {
+          res.writeHead(400);
+          res.end(JSON.stringify({ error: "Device index out of range" }));
+          return;
+        }
+
         const snapshot: Record<string, number> = {};
-        for (const p of params) {
+        for (const p of device.parameters) {
           try {
             snapshot[p.name] = await p.getValue();
           } catch (_) {
@@ -160,36 +185,48 @@ export function activate(activation: ActivationContext) {
           }
         }
         res.writeHead(200);
-        res.end(
-          JSON.stringify({
-            track_index: trackIndex,
-            device_index: deviceIndex,
-            device_name: device.name,
-            snapshot,
-          })
-        );
+        res.end(JSON.stringify({
+          track_index: trackIndex,
+          device_index: deviceIndex,
+          device_name: device.name,
+          snapshot,
+        }));
         return;
       }
 
       // POST /snapshot — bulk restore: set all params from a saved snapshot dict
-      // Body: { track: 0, device: 0, params: { "Filter Freq": 0.8, "Resonance": 0.3, ... } }
+      // Body: { track: 0, device: 0, params: { "Filter Freq": 0.8, "Resonance": 0.3 } }
       if (req.method === "POST" && pathname === "/snapshot") {
         const body = await readBody(req);
-        const { track: trackIndex, device: deviceIndex, params: paramValues } = JSON.parse(body);
+        const { track: trackIndex, device: deviceIndex, params: paramValues } =
+          JSON.parse(body) as {
+            track: number;
+            device: number;
+            params: Record<string, number>;
+          };
 
-        const song = api.application.song;
-        const track = song.tracks[trackIndex];
+        const track = api.application.song.tracks[trackIndex];
+        if (track === undefined) {
+          res.writeHead(400);
+          res.end(JSON.stringify({ error: "Track index out of range" }));
+          return;
+        }
         const device = track.devices[deviceIndex];
+        if (device === undefined) {
+          res.writeHead(400);
+          res.end(JSON.stringify({ error: "Device index out of range" }));
+          return;
+        }
         const liveParams = device.parameters;
 
         const results: { name: string; value: number; status: string }[] = [];
 
         await Promise.all(
-          Object.entries(paramValues as Record<string, number>).map(async ([name, value]) => {
+          Object.entries(paramValues).map(async ([name, value]) => {
             const param = liveParams.find(
               (p) => p.name.toLowerCase() === name.toLowerCase()
             );
-            if (!param) {
+            if (param === undefined) {
               results.push({ name, value, status: "not_found" });
               return;
             }
@@ -205,23 +242,14 @@ export function activate(activation: ActivationContext) {
 
         const applied = results.filter((r) => r.status === "ok").length;
         res.writeHead(200);
-        res.end(
-          JSON.stringify({
-            track_index: trackIndex,
-            device_index: deviceIndex,
-            device_name: device.name,
-            applied,
-            total: Object.keys(paramValues).length,
-            results,
-          })
-        );
-        return;
-      }
-
-      // GET /health — liveness check
-      if (req.method === "GET" && pathname === "/health") {
-        res.writeHead(200);
-        res.end(JSON.stringify({ status: "ok", port: HTTP_PORT }));
+        res.end(JSON.stringify({
+          track_index: trackIndex,
+          device_index: deviceIndex,
+          device_name: device.name,
+          applied,
+          total: Object.keys(paramValues).length,
+          results,
+        }));
         return;
       }
 
@@ -247,7 +275,7 @@ export function activate(activation: ActivationContext) {
 function readBody(req: http.IncomingMessage): Promise<string> {
   return new Promise((resolve, reject) => {
     let data = "";
-    req.on("data", (chunk) => (data += chunk));
+    req.on("data", (chunk) => (data += String(chunk)));
     req.on("end", () => resolve(data));
     req.on("error", reject);
   });
