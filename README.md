@@ -26,11 +26,27 @@ Built on the excellent original work by [Siddharth Ahuja](https://github.com/ahu
 
 ## Compatibility
 
-- **Ableton Live 12** (tested on 12.4.5 beta) — also works on Live 10/11
-- **Python 3.8+**
-- **uv** package manager
+- **Ableton Live 12.4.x** — tested on **12.4.5 beta**. **Live 10 and 11 are not supported**: the browser `plugins` category, device parameter API behaviour, and browser traversal this fork depends on are only present in Live 12.
+- **Python 3.11** (embedded in Ableton Live 12 — no separate install needed for the Remote Script)
+- **Python 3.8+** and **uv** for the MCP server process
 - Works with **Claude Desktop**, **LM Studio** (Llama 3.1 8B+), **Cursor**, and any MCP-compatible client
 - Requires **rapidfuzz** for `search_browser` (`uv run --with rapidfuzz ...`)
+
+### SDK / Framework
+
+The Remote Script (`AbletonMCP_Remote_Script/__init__.py`) uses Ableton's **`_Framework` Control Surface SDK** — the classic Python Remote Script API shipped inside Live. It does **not** use the newer `ableton.v3` SDK introduced in Live 11.1.
+
+Key APIs used from this SDK:
+
+| API | Purpose |
+|-----|---------|
+| `_Framework.ControlSurface` | Base class for the Remote Script |
+| `application().browser` | Browser tree traversal and plugin loading |
+| `song().tracks` / `clip_slots` | Track and clip access |
+| `device.parameters` | Plugin parameter read/write |
+| `clip.set_notes()` | MIDI note writing |
+
+> **Note:** The `_Framework` SDK is internal to Live and undocumented by Ableton. Method signatures and browser category names (e.g. `plugins`) have changed between major versions, which is why Live 10/11 compatibility cannot be guaranteed.
 
 ---
 
