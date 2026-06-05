@@ -34,9 +34,9 @@ Built on the excellent original work by [Siddharth Ahuja](https://github.com/ahu
 
 ### SDK / Framework
 
-The Remote Script (`AbletonMCP_Remote_Script/__init__.py`) uses Ableton's **`_Framework` Control Surface SDK** — the classic Python Remote Script API shipped inside Live. It does **not** use the newer `ableton.v3` SDK introduced in Live 11.1.
+This project uses Ableton's **`_Framework` Control Surface SDK** — the classic Python Remote Script API that has shipped inside Live for many years. It is **not** the new [Ableton Extensions SDK](https://www.ableton.com/en/live/extensions/) introduced in Live 12.4.5 beta.
 
-Key APIs used from this SDK:
+Key APIs used:
 
 | API | Purpose |
 |-----|---------|
@@ -46,7 +46,11 @@ Key APIs used from this SDK:
 | `device.parameters` | Plugin parameter read/write |
 | `clip.set_notes()` | MIDI note writing |
 
-> **Note:** The `_Framework` SDK is internal to Live and undocumented by Ableton. Method signatures and browser category names (e.g. `plugins`) have changed between major versions, which is why Live 10/11 compatibility cannot be guaranteed.
+> **Why does it still require Live 12.4.5?** Although `_Framework` is old, the browser's `plugins` category — which `search_browser` and `load_instrument_or_effect` depend on — only exposes VST3/AU plugins correctly in Live 12. The browser traversal and device parameter behaviour also changed significantly between Live 11 and 12. The `_Framework` SDK is internal and undocumented by Ableton; it is not the same as the new JavaScript Extensions SDK.
+
+#### What is the Ableton Extensions SDK?
+
+Ableton's new [Extensions SDK](https://www.ableton.com/en/live/extensions/) (available in Live 12.4.5 Suite beta) is a separate **JavaScript/Node.js API** for building Extensions that run from Live's right-click context menu. It is open, documented, and purpose-built for Live 12. This MCP server does not use it, but a companion Extension using this SDK (`AbletonParameterBridge`) was built alongside this project to explore deeper parameter access via that API.
 
 ---
 
