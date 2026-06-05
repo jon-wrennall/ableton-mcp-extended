@@ -1,0 +1,20 @@
+{
+  "name": "ableton-parameter-bridge",
+  "version": "1.0.0",
+  "description": "AbletonParameterBridge — Extensions SDK HTTP server for MCP parameter access",
+  "main": "dist/extension.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  },
+  "peerDependencies": {
+    "@ableton-extensions/sdk": "*"
+  },
+  "keywords": ["ableton", "live", "extensions", "mcp", "midi"],
+  "license": "MIT"
+}

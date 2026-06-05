@@ -6,6 +6,21 @@ Built on the excellent original work by [Siddharth Ahuja](https://github.com/ahu
 
 ---
 
+## Architecture
+
+This project has two components that work independently or together:
+
+| Component | SDK | Transport | Required |
+|-----------|-----|-----------|----------|
+| `AbletonMCP_Remote_Script/__init__.py` | `_Framework` (Python) | Socket port 9877 | Yes |
+| `AbletonParameterBridge/` | Extensions SDK (Node.js) | HTTP port 9878 | No — enhances parameter tools |
+
+The Remote Script handles all session, track, clip, browser, and transport commands. The `AbletonParameterBridge` Extension is an optional upgrade — when active, it intercepts parameter reads and writes and routes them through the Extensions SDK's async API, which is more reliable for VST3/AU plugins. Everything falls back gracefully to `_Framework` if the Extension isn't running.
+
+Use `get_bridge_status` to check which mode is active.
+
+---
+
 ## What's New in This Fork
 
 | Feature | Description |
@@ -17,6 +32,8 @@ Built on the excellent original work by [Siddharth Ahuja](https://github.com/ahu
 | `recall_device_snapshot` | Restore any saved snapshot instantly. |
 | `invalidate_browser_cache` | Force a browser cache rebuild after installing new plugins. |
 | `get_chain_device_parameters` | Access parameters of devices inside Instrument/Audio Effect Racks (bypasses macro layer). |
+| `AbletonParameterBridge` integration | Optional Extensions SDK bridge — parameter tools automatically prefer async SDK reads/writes over `_Framework` when the Bridge Extension is active. Bulk snapshot restore via `POST /snapshot`. |
+| `get_bridge_status` | New tool — reports whether the Extensions SDK bridge is live and which transport is active for parameter tools. |
 | Type coercion | All integer and float parameters accept strings — fixes `params.track_index is not of a type(s) integer` errors from Llama 3.x and other small LLMs. |
 | Browser caching | `search_browser` builds a flat index on first call and caches it for 2 minutes — fast subsequent searches. |
 | Fixed `get_browser_tree` | The upstream `process_item` function never populated children. Fixed with proper recursive traversal. |
@@ -50,7 +67,7 @@ Key APIs used:
 
 #### What is the Ableton Extensions SDK?
 
-Ableton's new [Extensions SDK](https://www.ableton.com/en/live/extensions/) (available in Live 12.4.5 Suite beta) is a separate **JavaScript/Node.js API** for building Extensions that run from Live's right-click context menu. It is open, documented, and purpose-built for Live 12. This MCP server does not use it, but a companion Extension using this SDK (`AbletonParameterBridge`) was built alongside this project to explore deeper parameter access via that API.
+Ableton's new [Extensions SDK](https://www.ableton.com/en/live/extensions/) (available in Live 12.4.5 Suite beta) is a separate **JavaScript/Node.js API** for building Extensions that run from Live's right-click context menu. It is open, documented, and purpose-built for Live 12. This MCP server does **not** use it — all communication is via the `_Framework` Remote Script socket only.
 
 ---
 
@@ -73,7 +90,21 @@ cp AbletonMCP_Remote_Script/__init__.py ~/Music/Ableton/User\ Library/Remote\ Sc
 
 Then in Ableton Live: **Preferences → Link, Tempo & MIDI → Control Surface → AbletonMCP** (Input/Output: None).
 
-### 2. Configure Claude Desktop
+### 2. (Optional) Install the AbletonParameterBridge Extension
+
+This enables enhanced parameter access via the Extensions SDK. Requires **Live 12.4.5 Suite beta** and **Node.js v24 LTS**.
+
+```bash
+cd AbletonParameterBridge
+npm install
+npm run build
+```
+
+Then in Ableton Live: **Settings → Extensions → Install Extension** and select the `AbletonParameterBridge` folder. Activate it from the Extensions panel. The bridge starts an HTTP server on port 9878; the MCP server detects it automatically.
+
+> If the Extension is not installed or not active, all parameter tools continue to work via the `_Framework` Remote Script fallback.
+
+### 3. Configure Claude Desktop
 
 Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS):
 
@@ -95,7 +126,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
 
 Replace `/path/to/MCP_Server/server.py` with the actual path to `server.py` in this repo.
 
-### 3. Configure LM Studio (Llama 3.x / small LLMs)
+### 4. Configure LM Studio (Llama 3.x / small LLMs)
 
 Add to your LM Studio MCP config:
 
@@ -155,11 +186,12 @@ Always use tools when available. URIs always start with "query:" — never inven
 ### Plugin Parameter Control *(new in this fork)*
 | Tool | Description |
 |------|-------------|
-| `get_device_parameters` | Read all parameters for a plugin |
-| `set_device_parameter` | Set a parameter by name or index |
-| `save_device_snapshot` | Save all parameter values as a named snapshot |
-| `recall_device_snapshot` | Restore a saved snapshot |
-| `get_chain_device_parameters` | Read parameters inside a Rack chain |
+| `get_bridge_status` | Check whether the Extensions SDK bridge is active |
+| `get_device_parameters` | Read all parameters for a plugin (bridge or `_Framework`) |
+| `set_device_parameter` | Set a parameter by name or index (bridge or `_Framework`) |
+| `save_device_snapshot` | Save all parameter values as a named snapshot (bridge or `_Framework`) |
+| `recall_device_snapshot` | Restore a saved snapshot — bulk restore via bridge when available |
+| `get_chain_device_parameters` | Read parameters inside a Rack chain (`_Framework`) |
 
 ---
 
