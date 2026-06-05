@@ -92,17 +92,75 @@ Then in Ableton Live: **Preferences → Link, Tempo & MIDI → Control Surface �
 
 ### 2. (Optional) Install the AbletonParameterBridge Extension
 
-This enables enhanced parameter access via the Extensions SDK. Requires **Live 12.4.5 Suite beta** and **Node.js v24 LTS**.
+This enables enhanced parameter access via the Extensions SDK. Requires **Live 12.4.5 Suite beta**, **Node.js v24 LTS**, and the [Ableton Extensions SDK](https://ableton.github.io/extensions-sdk) (download from [Ableton's beta program](https://www.ableton.com/beta/)).
+
+> If the bridge is not running, all parameter tools fall back to the `_Framework` Remote Script automatically — nothing breaks.
+
+#### 2a. Build the extension
+
+Place the downloaded SDK folder (e.g. `extensions-sdk-1.0.0-beta.0`) alongside the `AbletonParameterBridge` folder, then:
 
 ```bash
 cd AbletonParameterBridge
 npm install
 npm run build
+npx extensions-cli package .
 ```
 
-Then in Ableton Live: **Settings → Extensions → Install Extension** and select the `AbletonParameterBridge` folder. Activate it from the Extensions panel. The bridge starts an HTTP server on port 9878; the MCP server detects it automatically.
+This produces `Parameter-Bridge-1.0.0.ablx`.
 
-> If the Extension is not installed or not active, all parameter tools continue to work via the `_Framework` Remote Script fallback.
+#### 2b. Install in Live
+
+1. Open **Ableton Live → Settings → Extensions**
+2. Enable **Developer Mode** (button at the bottom of the Extensions panel)
+3. Drag `Parameter-Bridge-1.0.0.ablx` into the drop zone (or click **Choose file**)
+4. When prompted: **"Extension installed successfully. Please restart Live."** — restart Live
+
+> **Important:** The right-click "Start Parameter Bridge" menu entry triggers a one-shot run and immediately stops. Use `extensions-cli run` (below) for a persistent connection.
+
+#### 2c. Run the bridge persistently
+
+The bridge must be started via `extensions-cli run` which connects to Live's Extension Host and keeps the process alive. With Live open, run this in Terminal:
+
+```bash
+cd AbletonParameterBridge
+npx extensions-cli run --live "/Applications/Ableton Live 12 Beta.app" .
+```
+
+Keep this Terminal window open while using the MCP server. The MCP server detects the bridge automatically — call `get_bridge_status` to confirm.
+
+#### 2d. Auto-start on macOS (recommended)
+
+To start the bridge automatically whenever Live is running, install the included LaunchAgent:
+
+```bash
+# 1. Copy the startup script to ~/bin (outside TCC-protected folders)
+mkdir -p ~/bin
+cp AbletonParameterBridge/start-bridge.sh ~/bin/start-parameter-bridge.sh
+chmod +x ~/bin/start-parameter-bridge.sh
+```
+
+Edit `~/bin/start-parameter-bridge.sh` and update `LIVE_APP` and `NPX` paths to match your system (`which npx` to find npx).
+
+```bash
+# 2. Copy and customise the plist (rename with your own identifier)
+cp AbletonParameterBridge/com.YOURNAME.parameter-bridge.plist \
+   ~/Library/LaunchAgents/com.YOURNAME.parameter-bridge.plist
+```
+
+Edit the plist — replace `com.YOURNAME` with your identifier and update the script path to match `~/bin/start-parameter-bridge.sh`.
+
+```bash
+# 3. Load the LaunchAgent
+launchctl bootout gui/$(id -u)/com.YOURNAME.parameter-bridge 2>/dev/null || true
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.YOURNAME.parameter-bridge.plist
+```
+
+The bridge will now start automatically within ~5 seconds of Live opening, and restart if the connection drops. Check status with:
+
+```bash
+cat /tmp/parameter-bridge.log
+```
 
 ### 3. Configure Claude Desktop
 
