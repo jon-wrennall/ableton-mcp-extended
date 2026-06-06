@@ -1,0 +1,29 @@
+{
+  "plugin_name": "Scarbee A-200",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Scarbee A-200", "Scarbee A200", "Scarbee Wurlitzer"],
+  "notes": "NI Scarbee A-200 — deeply sampled Wurlitzer A-200 electric piano in Kontakt. The Wurlitzer uses metal reeds and electrostatic pickups rather than the Rhodes' tines — producing its characteristic buzzy, nasal, slightly gritty tone. Overdrive sits naturally in the Wurlitzer signal chain; even modest drive amounts (QC5 around 40–60) give the classic Supertramp/Doors sound. Tremolo is built-in. The reed character (QC1) controls how much the electrostatic buzz and bite comes through — essential for period-correct tone. Crosstalk (QC2) simulates the subtle bleed between adjacent reed/pickup pairs that defines the Wurlitzer's unique harmonic complexity.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — primary dynamics/output level"},
+    "Modulation":          {"cc": 1,  "description": "Modulation — tremolo depth (patch-dependent)"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds dampers open"},
+    "Soft Pedal":          {"cc": 67, "description": "Soft pedal — reduces attack and softens tone"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Reed Character / Bite — electrostatic buzz and nasal bite of the reed; high = more aggressive 'wasp' tone, low = smoother and cleaner"},
+    "Quick Control 2":     {"cc": 15, "description": "Crosstalk — inter-reed capacitive bleed; adds the warm, complex harmonic shimmer unique to Wurlitzer (keep between 20–60 for realism)"},
+    "Quick Control 3":     {"cc": 16, "description": "Tremolo Rate — speed of built-in stereo tremolo"},
+    "Quick Control 4":     {"cc": 17, "description": "Tremolo Depth — stereo tremolo swing width (0 = off)"},
+    "Quick Control 5":     {"cc": 18, "description": "Overdrive Amount — built-in overdrive; essential for classic Wurlitzer tone. 30–60 = vintage breakup, 80+ = heavy Doors-style grind"},
+    "Quick Control 6":     {"cc": 19, "description": "Release Noise — reed damper noise on key release"},
+    "Quick Control 7":     {"cc": 20, "description": "Mechanical Noise — key action and body mechanical noise level"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random velocity and tuning variation for a more human, less perfect feel"},
+
+    "Attack":              {"cc": 73, "description": "Envelope attack time"},
+    "Release":             {"cc": 72, "description": "Envelope release time"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness / high-shelf EQ"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"},
+    "Chorus":              {"cc": 93, "description": "Chorus/phase shimmer send"}
+  }
+}

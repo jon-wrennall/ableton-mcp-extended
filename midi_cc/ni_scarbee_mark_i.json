@@ -1,0 +1,30 @@
+{
+  "plugin_name": "Scarbee Mark I",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Scarbee Mark I", "Scarbee Mark 1"],
+  "notes": "NI Scarbee Mark I — deeply sampled Fender Rhodes Mark I electric piano in Kontakt. Each velocity layer and tine resonance was individually sampled. CC 11 (Expression) controls dynamics/output. CC 66 (Sostenuto) holds selected notes while new notes play dry — useful for held Rhodes chords. The tremolo is built-in and rate/depth are QC-controllable. For the classic Rhodes through amp tone, combine moderate overdrive (QC5) with slightly lowered pickup position (QC2) and slow tremolo. Mechanical noises (key click, tine buzz) add realism — keep low in a mix, higher for solo/close-up contexts.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — primary dynamics. Automate for natural swell into choruses."},
+    "Modulation":          {"cc": 1,  "description": "Modulation — tremolo depth or vibrato (patch-dependent)"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — sustain dampers open (essential for Rhodes playing)"},
+    "Sostenuto":           {"cc": 66, "description": "Sostenuto — holds selected bass notes while right-hand notes play with dampers engaged"},
+    "Soft Pedal":          {"cc": 67, "description": "Soft pedal — reduces velocity sensitivity / softens tone"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Tine Character / Bark — tine hardness and bite; high = more aggressive bell attack and bark, low = smooth and warm"},
+    "Quick Control 2":     {"cc": 15, "description": "Pickup Position — close (bright, nasal, classic) vs far (darker, more round and vintage)"},
+    "Quick Control 3":     {"cc": 16, "description": "Tremolo Rate — speed of the built-in stereo tremolo (0 = slowest, 127 = fastest panning)"},
+    "Quick Control 4":     {"cc": 17, "description": "Tremolo Depth — how wide the stereo tremolo swings (0 = off, 127 = hard panning)"},
+    "Quick Control 5":     {"cc": 18, "description": "Overdrive Amount — built-in overdrive; low = clean studio Rhodes, medium = warm breakup, high = Stevie Wonder grind"},
+    "Quick Control 6":     {"cc": 19, "description": "Release Noise — tine damper noise on key release; adds organic, played-in character"},
+    "Quick Control 7":     {"cc": 20, "description": "Key / Mechanical Noise — key bed and action mechanical noise level; subtle = realism, high = character"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random velocity and tuning variation between notes for a less pristine, more human feel"},
+
+    "Attack":              {"cc": 73, "description": "Envelope attack time"},
+    "Release":             {"cc": 72, "description": "Envelope release time"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness — high-shelf EQ across the output"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"},
+    "Chorus":              {"cc": 93, "description": "Chorus send — adds vintage chorus/phase shimmer"}
+  }
+}

@@ -184,6 +184,10 @@ For plugins that don't expose parameters through VST3/AU (Arturia V Collection, 
 | Kontakt 8 | NI | 8 Quick Controls (instrument-specific), master filter, expression |
 | Alicia's Keys | NI | Close/room mic mix, sustain resonance, release noise, dynamics |
 | Electric Keys | NI | Bell/tine character, pickup position, tremolo rate+depth, overdrive |
+| Scarbee Mark I | NI | Tine character/bark, pickup position, tremolo rate+depth, overdrive, release/key noise, humanise |
+| Scarbee A-200 | NI | Reed character/bite, crosstalk, tremolo rate+depth, overdrive, release noise, humanise |
+| Scarbee Clavinet Pianet | NI | Pickup selection (AB/CD), mute, wah sweep, envelope filter, overdrive, tone, release noise |
+| Scarbee Bass (MM-Bass / Pre-Bass / Jay-Bass / Rickenbacker — DI + Amped) | NI | Pickup blend, tone, amp/DI blend, attack/slap, fret noise, portamento, humanise |
 | Abbey Road Modern Drummer | NI | Kick/snare/overhead/room mic levels, compression, transient shaping |
 | Studio Drummer (The Fab / The Beast / The Classic) | NI | Kick/snare/hi-hat/tom/overhead/room levels, parallel compression, humanise |
 | Session Strings Pro 2 | NI | Expression/dynamics, vibrato, ensemble size, mic blend, attack, release, humanise |

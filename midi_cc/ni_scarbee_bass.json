@@ -1,0 +1,38 @@
+{
+  "plugin_name": "Scarbee Bass",
+  "manufacturer": "Native Instruments",
+  "match_patterns": [
+    "Scarbee MM-Bass Amped",
+    "Scarbee MM-Bass",
+    "Scarbee Pre-Bass Amped",
+    "Scarbee Pre-Bass",
+    "Scarbee Jay-Bass Amped",
+    "Scarbee Jay-Bass",
+    "Scarbee Rickenbacker Bass",
+    "Scarbee"
+  ],
+  "notes": "NI Scarbee bass series — four deeply sampled electric basses in Kontakt, each available in DI and Amped variants. All share the same CC/QC layout. Per-instrument character:\n\n  MM-Bass (Music Man StingRay): Single humbucker, active EQ, punchy and scooped. The most aggressive Scarbee bass. Amped variant adds a cranked amp simulation. QC1 = Pickup Balance, QC5 = Slap Layer Blend (unique to MM-Bass).\n\n  Pre-Bass (Fender Precision): Split-coil pickup, classic thumpy midrange. The standard studio rock/pop bass. Smooth finger tone. Amped adds warm amp grit.\n\n  Jay-Bass (Fender Jazz): Two single-coil pickups, QC1 blends between neck (warm/round) and bridge (bright/cutting). Extremely versatile — the most balanced of the four.\n\n  Rickenbacker Bass (4001): Distinctive treble grind and piano-like upper harmonics. Two pickups: neck (warm) and bridge (harsh, nasal). The Chris Squire/Paul McCartney bass. Amped variant critical for getting the full Rickenbacker character.\n\nAll variants respond to velocity for pick/pluck hardness. Legato passages require overlapping note input for slides. Right-click any QC → Learn MIDI CC to confirm assignments in your loaded patch.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — primary dynamics/output level. Use for verse/chorus level shifts and natural breath between phrases."},
+    "Modulation":          {"cc": 1,  "description": "Performance variation — finger vs pick style blend or playing intensity (patch-dependent)"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds note / enables legato slide mode on some patches"},
+    "Soft Pedal":          {"cc": 67, "description": "Mute / dead-string effect (patch-dependent)"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Pickup Balance / Position — neck (warm, round) vs bridge (bright, cutting). MM-Bass: humbucker blend. Jay-Bass: neck vs bridge single-coil blend. Rickenbacker: neck vs bridge character."},
+    "Quick Control 2":     {"cc": 15, "description": "Tone — overall tonal brightness / passive tone control simulation. Low = dark and vintage. High = modern hi-fi snap with more upper harmonic detail."},
+    "Quick Control 3":     {"cc": 16, "description": "Amp Character / DI Blend — Amped variants: clean DI vs amp cabinet drive blend. DI variants: output EQ character. High = more amp warmth and harmonic grit."},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb / Room Amount — built-in ambience. Keep subtle for tight mix bass; raise for vintage or dub-style depth."},
+    "Quick Control 5":     {"cc": 18, "description": "Attack / Playing Style — pick vs finger attack hardness, or on MM-Bass Amped: slap layer blend. Controls the sharpness of the initial transient."},
+    "Quick Control 6":     {"cc": 19, "description": "Release / Sustain Time — note decay tail. Short = staccato, tight modern bass. Long = sustaining, singing legato tone."},
+    "Quick Control 7":     {"cc": 20, "description": "Fret / String Noise — mechanical bass noise: fret buzz, finger slides, string squeak. Essential for realism; keep low in dense mixes, higher for exposed bass lines."},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random velocity, timing, and intonation variation between notes for a more played-in feel"},
+
+    "Attack":              {"cc": 73, "description": "Global envelope attack time"},
+    "Release":             {"cc": 72, "description": "Global envelope release time"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness — upper harmonic shelf"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"},
+    "Portamento":          {"cc": 5,  "description": "Portamento/glide time for legato bass slides"}
+  }
+}

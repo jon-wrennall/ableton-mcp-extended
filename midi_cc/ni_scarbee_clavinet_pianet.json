@@ -1,0 +1,33 @@
+{
+  "plugin_name": "Scarbee Clavinet Pianet",
+  "manufacturer": "Native Instruments",
+  "match_patterns": [
+    "Scarbee Clavinet Pianet",
+    "Scarbee Clavinet",
+    "Scarbee Pianet"
+  ],
+  "notes": "NI Scarbee Clavinet Pianet — sampled Hohner Clavinet D6 and Pianet N in Kontakt. Two instruments in one plugin. The Clavinet D6 has four pickup switches (A, B, C, D) selectable in pairs — each combination produces a distinct tonal character: AB = bright and nasal, CD = warm and round, ABCD = full fat. QC1 cycles through these combinations. The wah (QC3) and envelope filter (QC4) are built-in and highly playable — automate CC 19 for classic Stevie Wonder/Shaft-style clavinet. The Pianet N (the other half of the instrument) has a simpler tone but a distinctive plucked-foam character; QC7 controls the foam release noise that defines it. Both respond to velocity heavily — play hard for aggression.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — overall dynamics/output level"},
+    "Modulation":          {"cc": 1,  "description": "Modulation — wah sweep or filter depth (instrument-dependent)"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — note sustain (Clavinet normally has no sustain pedal; adds unnatural sustain)"},
+    "Soft Pedal":          {"cc": 67, "description": "Soft pedal — reduces attack force / mutes slightly"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Pickup Selection — Clavinet D6 pickup switch combination: low = AB (bright/nasal), mid = CD (warm/round), high = ABCD (full). Pianet: pickup level."},
+    "Quick Control 2":     {"cc": 15, "description": "Mute Amount — string/damper mute level; adds percussive, dampened character (essential for funk Clavinet)"},
+    "Quick Control 3":     {"cc": 16, "description": "Wah Sweep — built-in wah filter position; automate for classic Stevie Wonder clavinet wah effect"},
+    "Quick Control 4":     {"cc": 17, "description": "Envelope Filter Amount — auto-wah envelope depth; how much velocity triggers the filter sweep (funk staple)"},
+    "Quick Control 5":     {"cc": 18, "description": "Overdrive Amount — built-in overdrive; even light amounts add the essential Clavinet bite and grit"},
+    "Quick Control 6":     {"cc": 19, "description": "Tone — overall tonal character from dark to bright; interacts strongly with pickup selection"},
+    "Quick Control 7":     {"cc": 20, "description": "Key / Release Noise — string snap and damper noise on release. Pianet: foam release pad noise (the defining character of the Pianet N)."},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random velocity and timing variation for a more played-in feel"},
+
+    "Attack":              {"cc": 73, "description": "Envelope attack time"},
+    "Release":             {"cc": 72, "description": "Envelope release time"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness / high-shelf EQ"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"},
+    "Chorus":              {"cc": 93, "description": "Chorus send level"}
+  }
+}
