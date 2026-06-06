@@ -1,0 +1,38 @@
+{
+  "plugin_name": "Piano V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Piano V2", "Piano V3", "Piano V"],
+  "notes": "Arturia Piano V — physical modelling piano. Controls hammer/string/soundboard physical parameters.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan"},
+    "Expression":        {"cc": 11, "description": "Expression pedal"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Soft Pedal":        {"cc": 67, "description": "Soft pedal (una corda)"},
+    "Sostenuto":         {"cc": 66, "description": "Sostenuto pedal"},
+
+    "Piano Model":       {"cc": 14, "description": "Piano model selection"},
+    "Bright":            {"cc": 74, "description": "Brightness / tone control"},
+    "Dynamic Range":     {"cc": 15, "description": "Velocity response / dynamic range"},
+
+    "Hammer Hardness":   {"cc": 16, "description": "Hammer felt hardness (affects attack character)"},
+    "Hammer Noise":      {"cc": 17, "description": "Hammer strike noise amount"},
+    "String Resonance":  {"cc": 18, "description": "Sympathetic string resonance"},
+    "Damper Resonance":  {"cc": 19, "description": "Damper pedal resonance"},
+    "Soundboard":        {"cc": 20, "description": "Soundboard resonance character"},
+    "Release Noise":     {"cc": 21, "description": "Key release noise amount"},
+
+    "Tune":              {"cc": 22, "description": "Master tuning (offset from A440)"},
+    "Stretch Tuning":    {"cc": 23, "description": "Stretch tuning amount"},
+
+    "Stereo Width":      {"cc": 24, "description": "Stereo image width"},
+    "Mic Position":      {"cc": 25, "description": "Microphone distance/position"},
+    "Mic Angle":         {"cc": 26, "description": "Microphone angle (stereo)"},
+
+    "EQ Low":            {"cc": 70, "description": "Low EQ"},
+    "EQ High":           {"cc": 74, "description": "High EQ / brilliance"},
+    "Reverb":            {"cc": 91, "description": "Reverb send (room size/amount)"},
+    "Reverb Time":       {"cc": 27, "description": "Reverb decay time"},
+    "Chorus":            {"cc": 93, "description": "Chorus depth"}
+  }
+}

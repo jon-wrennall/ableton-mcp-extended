@@ -6,9 +6,17 @@ import logging
 import time
 import urllib.request
 import urllib.error
+import os
+import glob
 from dataclasses import dataclass
 from contextlib import asynccontextmanager
 from typing import AsyncIterator, Dict, Any, List, Union, Optional
+
+try:
+    import mido
+    HAS_MIDO = True
+except ImportError:
+    HAS_MIDO = False
 
 def _i(v) -> int:
     """Coerce string or int to int — handles Llama 3.x sending ints as strings."""
@@ -115,6 +123,90 @@ def get_bridge_client() -> Optional[ParameterBridgeClient]:
     if _bridge_client.is_available():
         return _bridge_client
     return None
+
+
+# ── MIDI CC Controller ────────────────────────────────────────────────────────
+# Sends MIDI CC to a virtual port ("AbletonMCP") to control plugin parameters
+# that aren't exposed through the VST3/AU parameter interface (e.g. Arturia, NI).
+#
+# Setup in Ableton: set each plugin track's MIDI input to "AbletonMCP" on its
+# assigned channel. Default: track_index + 1 maps to MIDI channel 1-16.
+
+CC_MAPS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "midi_cc")
+MIDI_PORT_NAME = "AbletonMCP"
+
+# track_index → assigned MIDI channel (1-16)
+_track_cc_channels: Dict[int, int] = {}
+
+# Loaded CC maps: {filename_stem: map_dict}
+_cc_maps: Dict[str, dict] = {}
+_cc_maps_loaded = False
+
+# plugin device name → cc map (populated on first use)
+_plugin_cc_map_cache: Dict[str, Optional[dict]] = {}
+
+
+def _load_cc_maps() -> None:
+    global _cc_maps, _cc_maps_loaded
+    if _cc_maps_loaded:
+        return
+    pattern = os.path.join(CC_MAPS_DIR, "*.json")
+    for path in glob.glob(pattern):
+        try:
+            with open(path) as f:
+                data = json.load(f)
+            stem = os.path.splitext(os.path.basename(path))[0]
+            _cc_maps[stem] = data
+        except Exception as e:
+            logger.warning(f"Failed to load CC map {path}: {e}")
+    _cc_maps_loaded = True
+    logger.info(f"Loaded {len(_cc_maps)} CC maps from {CC_MAPS_DIR}")
+
+
+def _find_cc_map_for_plugin(plugin_name: str) -> Optional[dict]:
+    """Match a device name to a CC map using the map's match_patterns list."""
+    global _plugin_cc_map_cache
+    if plugin_name in _plugin_cc_map_cache:
+        return _plugin_cc_map_cache[plugin_name]
+    _load_cc_maps()
+    name_lower = plugin_name.lower()
+    for _stem, cc_map in _cc_maps.items():
+        for pattern in cc_map.get("match_patterns", []):
+            if pattern.lower() in name_lower or name_lower in pattern.lower():
+                _plugin_cc_map_cache[plugin_name] = cc_map
+                return cc_map
+    _plugin_cc_map_cache[plugin_name] = None
+    return None
+
+
+def _get_midi_output() -> Optional[Any]:
+    """Open (or reuse) the AbletonMCP virtual MIDI output port."""
+    if not HAS_MIDO:
+        return None
+    try:
+        # Try to open existing port first; if not found, create virtual port
+        available = mido.get_output_names()
+        if MIDI_PORT_NAME in available:
+            return mido.open_output(MIDI_PORT_NAME)
+        return mido.open_output(MIDI_PORT_NAME, virtual=True)
+    except Exception as e:
+        logger.error(f"MIDI port error: {e}")
+        return None
+
+
+def _send_cc(channel: int, cc: int, value: int) -> bool:
+    """Send a single MIDI CC message. channel is 1-16, value is 0-127."""
+    port = _get_midi_output()
+    if port is None:
+        return False
+    try:
+        msg = mido.Message("control_change", channel=channel - 1, control=cc, value=value)
+        port.send(msg)
+        port.close()
+        return True
+    except Exception as e:
+        logger.error(f"Failed to send MIDI CC: {e}")
+        return False
 
 
 @dataclass
@@ -1014,6 +1106,162 @@ def recall_device_snapshot(ctx: Context, track_index: Union[int, str],
     except Exception as e:
         logger.error(f"Error recalling device snapshot: {str(e)}")
         return f"Error recalling device snapshot: {str(e)}"
+
+
+# ── MIDI CC Tools ─────────────────────────────────────────────────────────────
+
+@mcp.tool()
+def set_plugin_parameter_cc(ctx: Context, track_index: Union[int, str],
+                             param_name: str, value: float,
+                             midi_channel: Union[int, str] = None) -> str:
+    """
+    Set a plugin parameter via MIDI CC — works for any plugin regardless of VST3 exposure.
+    Arturia and NI plugins have built-in CC maps; others can use custom channel assignments.
+
+    Requires mido: uv run --with mido --with python-rtmidi ...
+    In Ableton: set the plugin track's MIDI input to "AbletonMCP" on the assigned channel.
+
+    Parameters:
+    - track_index: The track index (0-based)
+    - param_name: Parameter name (e.g. "Filter Cutoff", "LFO Rate", "Macro 1")
+    - value: 0.0 to 1.0 (automatically mapped to CC range 0-127)
+    - midi_channel: Override MIDI channel 1-16 (default: track_index + 1)
+    """
+    if not HAS_MIDO:
+        return "Error: mido not installed. Run: pip install mido python-rtmidi"
+
+    track_index = _i(track_index)
+    value = max(0.0, min(1.0, _f(value)))
+
+    # Determine MIDI channel
+    if midi_channel is not None:
+        channel = _i(midi_channel)
+    elif track_index in _track_cc_channels:
+        channel = _track_cc_channels[track_index]
+    else:
+        channel = (track_index % 16) + 1  # default: track 0→ch1, 1→ch2, etc.
+
+    # Find plugin on track to look up CC map
+    try:
+        ableton = get_ableton_connection()
+        track_info = ableton.send_command("get_track_info", {"track_index": track_index})
+        devices = track_info.get("devices", [])
+        plugin_name = devices[0].get("name", "") if devices else ""
+    except Exception:
+        plugin_name = ""
+
+    cc_map = _find_cc_map_for_plugin(plugin_name) if plugin_name else None
+
+    if cc_map is None:
+        return (
+            f"No CC map found for plugin '{plugin_name}' on track {track_index}. "
+            f"Call list_cc_maps() to see available maps, or use midi_channel to send raw CC."
+        )
+
+    params = cc_map.get("parameters", {})
+    # Case-insensitive param lookup
+    param_key = next(
+        (k for k in params if k.lower() == param_name.lower()), None
+    )
+    if param_key is None:
+        available = ", ".join(params.keys())
+        return f"Parameter '{param_name}' not found in {cc_map['plugin_name']} CC map. Available: {available}"
+
+    cc_num = params[param_key]["cc"]
+    cc_value = int(round(value * 127))
+
+    ok = _send_cc(channel, cc_num, cc_value)
+    if ok:
+        return (
+            f"Sent CC #{cc_num} = {cc_value} (value={value:.3f}) → "
+            f"'{param_key}' on {cc_map['plugin_name']} (track {track_index}, MIDI ch {channel})"
+        )
+    else:
+        return f"Failed to send MIDI CC. Is the 'AbletonMCP' virtual port available?"
+
+
+@mcp.tool()
+def get_cc_map(ctx: Context, track_index: Union[int, str]) -> str:
+    """
+    Show the full CC parameter map for the plugin on a given track.
+    Lists every controllable parameter with its CC number and description.
+
+    Parameters:
+    - track_index: The track index (0-based)
+    """
+    track_index = _i(track_index)
+    try:
+        ableton = get_ableton_connection()
+        track_info = ableton.send_command("get_track_info", {"track_index": track_index})
+        devices = track_info.get("devices", [])
+        plugin_name = devices[0].get("name", "") if devices else ""
+    except Exception as e:
+        return f"Error getting track info: {str(e)}"
+
+    cc_map = _find_cc_map_for_plugin(plugin_name) if plugin_name else None
+    if cc_map is None:
+        _load_cc_maps()
+        available = [m.get("plugin_name", k) for k, m in _cc_maps.items()]
+        return (
+            f"No CC map found for '{plugin_name}' on track {track_index}. "
+            f"Available maps: {', '.join(available)}"
+        )
+
+    channel = _track_cc_channels.get(track_index, (track_index % 16) + 1)
+    result = {
+        "track_index": track_index,
+        "plugin": cc_map["plugin_name"],
+        "manufacturer": cc_map.get("manufacturer", ""),
+        "midi_channel": channel,
+        "notes": cc_map.get("notes", ""),
+        "parameters": {
+            name: {"cc": p["cc"], "description": p.get("description", "")}
+            for name, p in cc_map.get("parameters", {}).items()
+        }
+    }
+    return json.dumps(result, indent=2)
+
+
+@mcp.tool()
+def list_cc_maps(ctx: Context) -> str:
+    """
+    List all available MIDI CC maps with their supported plugins and parameter counts.
+    """
+    _load_cc_maps()
+    if not _cc_maps:
+        return f"No CC maps found in {CC_MAPS_DIR}"
+
+    summary = []
+    for _stem, cc_map in sorted(_cc_maps.items()):
+        param_count = len(cc_map.get("parameters", {}))
+        patterns = ", ".join(cc_map.get("match_patterns", []))
+        summary.append({
+            "plugin": cc_map.get("plugin_name", _stem),
+            "manufacturer": cc_map.get("manufacturer", ""),
+            "matches": patterns,
+            "parameter_count": param_count,
+            "notes": cc_map.get("notes", "")[:80] + ("..." if len(cc_map.get("notes", "")) > 80 else "")
+        })
+    return json.dumps(summary, indent=2)
+
+
+@mcp.tool()
+def assign_cc_channel(ctx: Context, track_index: Union[int, str],
+                      midi_channel: Union[int, str]) -> str:
+    """
+    Assign a specific MIDI channel (1-16) to a track for CC control.
+    Default is track_index + 1. Override here if your Ableton routing uses different channels.
+
+    Parameters:
+    - track_index: The track index (0-based)
+    - midi_channel: MIDI channel 1-16
+    """
+    track_index = _i(track_index)
+    channel = _i(midi_channel)
+    if channel < 1 or channel > 16:
+        return "Error: MIDI channel must be 1-16"
+    _track_cc_channels[track_index] = channel
+    return f"Track {track_index} → MIDI channel {channel}. Set the track's MIDI input to 'AbletonMCP' on channel {channel} in Ableton."
 
 
 # Main execution

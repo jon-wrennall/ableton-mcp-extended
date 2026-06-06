@@ -1,0 +1,46 @@
+{
+  "plugin_name": "OP-Xa V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["OP-Xa V", "OB-Xa", "Oberheim"],
+  "notes": "Arturia OP-Xa V — Oberheim OB-Xa emulation. 8-voice poly, 2 DCOs per voice, classic Oberheim filter.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento":        {"cc": 65, "description": "Portamento on/off"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento time"},
+
+    "Osc1 Waveform":     {"cc": 14, "description": "Osc 1 waveform (saw/pulse)"},
+    "Osc1 Pulse Width":  {"cc": 15, "description": "Osc 1 pulse width"},
+    "Osc2 Waveform":     {"cc": 16, "description": "Osc 2 waveform"},
+    "Osc2 Pulse Width":  {"cc": 17, "description": "Osc 2 pulse width"},
+    "Osc2 Detune":       {"cc": 18, "description": "Osc 2 pitch detune"},
+    "Osc1 Level":        {"cc": 22, "description": "Oscillator 1 level"},
+    "Osc2 Level":        {"cc": 23, "description": "Oscillator 2 level"},
+    "Noise Level":       {"cc": 24, "description": "Noise level"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "Filter cutoff frequency"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance"},
+    "Filter Env Amount": {"cc": 83, "description": "Filter envelope amount"},
+    "Filter Key Track":  {"cc": 25, "description": "Filter keyboard tracking"},
+    "Filter Attack":     {"cc": 73, "description": "Filter attack"},
+    "Filter Decay":      {"cc": 75, "description": "Filter decay"},
+    "Filter Sustain":    {"cc": 79, "description": "Filter sustain"},
+    "Filter Release":    {"cc": 72, "description": "Filter release"},
+
+    "Amp Attack":        {"cc": 85, "description": "Amp attack"},
+    "Amp Decay":         {"cc": 86, "description": "Amp decay"},
+    "Amp Sustain":       {"cc": 87, "description": "Amp sustain"},
+    "Amp Release":       {"cc": 88, "description": "Amp release"},
+
+    "LFO Rate":          {"cc": 76, "description": "LFO rate"},
+    "LFO Depth":         {"cc": 77, "description": "LFO depth"},
+    "LFO Waveform":      {"cc": 26, "description": "LFO waveform"},
+    "LFO Target":        {"cc": 27, "description": "LFO target (pitch/filter/PW)"},
+
+    "Unison Detune":     {"cc": 29, "description": "Unison detune"},
+    "Chorus":            {"cc": 93, "description": "Chorus depth"},
+    "Reverb":            {"cc": 91, "description": "Reverb send"}
+  }
+}

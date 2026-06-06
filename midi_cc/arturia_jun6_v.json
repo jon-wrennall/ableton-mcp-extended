@@ -1,0 +1,41 @@
+{
+  "plugin_name": "Jun-6 V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Jun-6 V"],
+  "notes": "Arturia Jun-6 V — Roland Juno-6/106 emulation. DCO-based subtractive synthesis. Chorus is a defining feature.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento":        {"cc": 65, "description": "Portamento on/off"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento time"},
+
+    "DCO LFO Depth":     {"cc": 16, "description": "LFO modulation depth on DCO (pitch)"},
+    "DCO PWM Depth":     {"cc": 17, "description": "Pulse width modulation depth"},
+    "DCO Pulse Level":   {"cc": 18, "description": "Pulse wave level in mix"},
+    "DCO Saw Level":     {"cc": 19, "description": "Sawtooth wave level in mix"},
+    "DCO Sub Level":     {"cc": 20, "description": "Sub oscillator level"},
+    "DCO Noise Level":   {"cc": 21, "description": "Noise level in mix"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "VCF cutoff frequency"},
+    "Filter Resonance":  {"cc": 71, "description": "VCF resonance"},
+    "Filter Env Amount": {"cc": 83, "description": "Filter envelope modulation amount"},
+    "Filter Attack":     {"cc": 73, "description": "VCF envelope attack"},
+    "Filter Decay":      {"cc": 75, "description": "VCF envelope decay"},
+    "Filter Sustain":    {"cc": 79, "description": "VCF envelope sustain"},
+    "Filter Release":    {"cc": 72, "description": "VCF envelope release"},
+
+    "Amp Attack":        {"cc": 22, "description": "VCA envelope attack"},
+    "Amp Sustain":       {"cc": 23, "description": "VCA envelope sustain"},
+    "Amp Release":       {"cc": 24, "description": "VCA envelope release"},
+
+    "LFO Rate":          {"cc": 76, "description": "LFO speed"},
+    "LFO Delay":         {"cc": 78, "description": "LFO onset delay"},
+
+    "Chorus Type":       {"cc": 14, "description": "Chorus mode: 0=off, 32=I, 64=II, 96=III, 127=I+II"},
+    "Chorus Depth":      {"cc": 93, "description": "Chorus depth/intensity"},
+    "Chorus Rate":       {"cc": 25, "description": "Chorus LFO rate"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level"}
+  }
+}

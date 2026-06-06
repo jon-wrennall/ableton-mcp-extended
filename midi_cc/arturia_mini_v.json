@@ -1,0 +1,47 @@
+{
+  "plugin_name": "Mini V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Mini V3", "Mini V4", "Mini V"],
+  "notes": "Arturia Mini V3/V4 — Minimoog emulation. 3-oscillator subtractive synthesis. Classic ladder filter.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento":        {"cc": 65, "description": "Portamento on/off"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento/glide time"},
+
+    "Osc1 Octave":       {"cc": 14, "description": "Oscillator 1 octave (0-4 = 32/16/8/4/2')"},
+    "Osc2 Octave":       {"cc": 15, "description": "Oscillator 2 octave"},
+    "Osc3 Octave":       {"cc": 16, "description": "Oscillator 3 octave"},
+    "Osc1 Waveform":     {"cc": 17, "description": "Osc 1 waveform (0=tri, 43=saw rev, 64=saw, 85=square, 106=wide pulse, 127=narrow pulse)"},
+    "Osc2 Waveform":     {"cc": 18, "description": "Osc 2 waveform"},
+    "Osc3 Waveform":     {"cc": 19, "description": "Osc 3 waveform"},
+    "Osc2 Pitch":        {"cc": 20, "description": "Osc 2 fine pitch detune (-7 to +7 semitones)"},
+    "Osc3 Pitch":        {"cc": 21, "description": "Osc 3 fine pitch detune"},
+    "Osc1 Level":        {"cc": 22, "description": "Oscillator 1 mixer level"},
+    "Osc2 Level":        {"cc": 23, "description": "Oscillator 2 mixer level"},
+    "Osc3 Level":        {"cc": 24, "description": "Oscillator 3 mixer level"},
+    "Noise Level":       {"cc": 25, "description": "Noise mixer level"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "Filter cutoff frequency"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance (emphasis)"},
+    "Filter Env Amount": {"cc": 83, "description": "Filter envelope amount"},
+    "Filter Attack":     {"cc": 73, "description": "Filter envelope attack"},
+    "Filter Decay":      {"cc": 75, "description": "Filter envelope decay"},
+    "Filter Sustain":    {"cc": 79, "description": "Filter envelope sustain"},
+    "Filter Release":    {"cc": 72, "description": "Filter envelope release"},
+
+    "Amp Attack":        {"cc": 85, "description": "Amplifier envelope attack"},
+    "Amp Decay":         {"cc": 86, "description": "Amplifier envelope decay"},
+    "Amp Sustain":       {"cc": 87, "description": "Amplifier envelope sustain"},
+    "Amp Release":       {"cc": 88, "description": "Amplifier envelope release"},
+
+    "LFO Rate":          {"cc": 76, "description": "LFO rate"},
+    "LFO Depth":         {"cc": 77, "description": "LFO depth"},
+    "LFO Waveform":      {"cc": 26, "description": "LFO waveform"},
+
+    "Reverb":            {"cc": 91, "description": "Reverb send"},
+    "Chorus":            {"cc": 93, "description": "Chorus depth"}
+  }
+}

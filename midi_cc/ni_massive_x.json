@@ -1,0 +1,32 @@
+{
+  "plugin_name": "Massive X",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Massive X", "Massive"],
+  "notes": "NI Massive X — wavetable/oscillator synth. MIDI CC maps to the 8 Macro controls which must be assigned in the plugin to the desired parameters. Assign macros in Massive X's Macro panel before using these CCs.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento/glide time"},
+    "Expression":        {"cc": 11, "description": "Expression pedal"},
+
+    "Macro 1":           {"cc": 14, "description": "Macro control 1 — assign in Massive X to any parameter"},
+    "Macro 2":           {"cc": 15, "description": "Macro control 2"},
+    "Macro 3":           {"cc": 16, "description": "Macro control 3"},
+    "Macro 4":           {"cc": 17, "description": "Macro control 4"},
+    "Macro 5":           {"cc": 18, "description": "Macro control 5"},
+    "Macro 6":           {"cc": 19, "description": "Macro control 6"},
+    "Macro 7":           {"cc": 20, "description": "Macro control 7"},
+    "Macro 8":           {"cc": 21, "description": "Macro control 8"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "Filter cutoff (map a macro to filter cutoff for CC control)"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance"},
+    "Attack":            {"cc": 73, "description": "Amp envelope attack"},
+    "Decay":             {"cc": 75, "description": "Amp envelope decay"},
+    "Release":           {"cc": 72, "description": "Amp envelope release"},
+    "LFO Rate":          {"cc": 76, "description": "LFO 1 rate"},
+    "Reverb":            {"cc": 91, "description": "Reverb send"},
+    "Chorus":            {"cc": 93, "description": "Chorus/ensemble depth"}
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "plugin_name": "Prophet-5 V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Prophet-5 V", "Prophet V3", "Prophet V"],
+  "notes": "Arturia Prophet-5 V — Sequential Circuits Prophet-5 emulation. Poly synth with 2 DCOs per voice, CEM filter.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento":        {"cc": 65, "description": "Portamento on/off"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento time"},
+
+    "OscA Octave":       {"cc": 14, "description": "Oscillator A octave"},
+    "OscA Waveform":     {"cc": 15, "description": "Oscillator A waveform (sawtooth/pulse)"},
+    "OscA Pulse Width":  {"cc": 16, "description": "Oscillator A pulse width"},
+    "OscB Octave":       {"cc": 17, "description": "Oscillator B octave"},
+    "OscB Waveform":     {"cc": 18, "description": "Oscillator B waveform"},
+    "OscB Pulse Width":  {"cc": 19, "description": "Oscillator B pulse width"},
+    "OscB Pitch":        {"cc": 20, "description": "Oscillator B pitch detune (semitones)"},
+    "OscB Fine":         {"cc": 21, "description": "Oscillator B fine detune"},
+    "OscA Level":        {"cc": 22, "description": "Oscillator A mixer level"},
+    "OscB Level":        {"cc": 23, "description": "Oscillator B mixer level"},
+    "Noise Level":       {"cc": 24, "description": "Noise mixer level"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "Filter cutoff frequency"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance"},
+    "Filter Env Amount": {"cc": 83, "description": "Filter envelope amount"},
+    "Filter Key Track":  {"cc": 25, "description": "Filter keyboard tracking"},
+    "Filter Attack":     {"cc": 73, "description": "Filter envelope attack"},
+    "Filter Decay":      {"cc": 75, "description": "Filter envelope decay"},
+    "Filter Sustain":    {"cc": 79, "description": "Filter envelope sustain"},
+    "Filter Release":    {"cc": 72, "description": "Filter envelope release"},
+
+    "Amp Attack":        {"cc": 85, "description": "Amp envelope attack"},
+    "Amp Decay":         {"cc": 86, "description": "Amp envelope decay"},
+    "Amp Sustain":       {"cc": 87, "description": "Amp envelope sustain"},
+    "Amp Release":       {"cc": 88, "description": "Amp envelope release"},
+
+    "LFO Rate":          {"cc": 76, "description": "LFO rate"},
+    "LFO Depth":         {"cc": 77, "description": "LFO depth"},
+    "LFO Waveform":      {"cc": 26, "description": "LFO waveform"},
+    "LFO Target":        {"cc": 27, "description": "LFO modulation target (pitch/filter/PW)"},
+
+    "Unison":            {"cc": 28, "description": "Unison mode on/off (0=off, 127=on)"},
+    "Unison Detune":     {"cc": 29, "description": "Unison detune amount"},
+    "Chorus":            {"cc": 93, "description": "Chorus depth"},
+    "Reverb":            {"cc": 91, "description": "Reverb send"}
+  }
+}

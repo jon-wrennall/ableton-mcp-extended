@@ -1,0 +1,34 @@
+{
+  "plugin_name": "Mellotron V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Mellotron V"],
+  "notes": "Arturia Mellotron V — tape replay instrument emulation. Select tape banks (strings, flute, choir, brass etc). Less synthesis, more sample-based.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan"},
+    "Modulation":        {"cc": 1,  "description": "Wow/flutter modulation"},
+    "Expression":        {"cc": 11, "description": "Expression pedal"},
+    "Sustain":           {"cc": 64, "description": "Sustain (tape stop simulation)"},
+
+    "Tape Bank A":       {"cc": 14, "description": "Tape bank A selection (0-127 scrolls through banks: strings, choir, flute, brass...)"},
+    "Tape Bank B":       {"cc": 15, "description": "Tape bank B selection"},
+    "Bank A Level":      {"cc": 22, "description": "Bank A volume"},
+    "Bank B Level":      {"cc": 23, "description": "Bank B volume"},
+    "Bank Blend":        {"cc": 24, "description": "Blend between bank A and B"},
+
+    "Tone":              {"cc": 74, "description": "Tone control (brightness)"},
+    "Attack":            {"cc": 73, "description": "Tape start attack"},
+    "Release":           {"cc": 72, "description": "Tape release time"},
+
+    "Tape Age":          {"cc": 16, "description": "Tape wear/aging amount (adds character)"},
+    "Wow":               {"cc": 17, "description": "Wow amount (slow pitch drift)"},
+    "Flutter":           {"cc": 18, "description": "Flutter amount (fast pitch variation)"},
+    "Noise":             {"cc": 19, "description": "Tape noise/hiss level"},
+    "Saturation":        {"cc": 20, "description": "Tape saturation"},
+
+    "Reverb":            {"cc": 91, "description": "Reverb send"},
+    "Chorus":            {"cc": 93, "description": "Chorus depth"},
+    "Vibrato Rate":      {"cc": 76, "description": "Vibrato rate"},
+    "Vibrato Depth":     {"cc": 77, "description": "Vibrato depth"}
+  }
+}

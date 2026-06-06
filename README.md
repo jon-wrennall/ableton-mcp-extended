@@ -67,7 +67,7 @@ Key APIs used:
 
 #### What is the Ableton Extensions SDK?
 
-Ableton's new [Extensions SDK](https://www.ableton.com/en/live/extensions/) (available in Live 12.4.5 Suite beta) is a separate **JavaScript/Node.js API** for building Extensions that run from Live's right-click context menu. It is open, documented, and purpose-built for Live 12. This MCP server does **not** use it — all communication is via the `_Framework` Remote Script socket only.
+Ableton's new [Extensions SDK](https://www.ableton.com/en/live/extensions/) (available in Live 12.4.5 Suite beta) is a separate **JavaScript/Node.js API** for building Extensions that run from Live's right-click context menu. It is open, documented, and purpose-built for Live 12. This project uses it via the optional **AbletonParameterBridge** component — when active, parameter tools are routed through the Extensions SDK's async API instead of `_Framework`. See section 2 above for setup.
 
 ---
 
@@ -162,7 +162,50 @@ The bridge will now start automatically within ~5 seconds of Live opening, and r
 cat /tmp/parameter-bridge.log
 ```
 
-### 3. Configure Claude Desktop
+### 3. (Optional) MIDI CC Plugin Control
+
+For plugins that don't expose parameters through VST3/AU (Arturia V Collection, NI instruments), the server can send MIDI CC directly. This gives full parameter control over any synth.
+
+**Supported plugins with built-in CC maps** (`midi_cc/` directory):
+
+| Plugin | Manufacturer | Key parameters |
+|--------|-------------|----------------|
+| DX7 V | Arturia | Algorithm, Feedback, 6 operator levels/ratios, envelopes |
+| Jun-6 V | Arturia | DCO mix, VCF, VCA envelopes, Chorus type/rate |
+| Mini V / Mini V4 | Arturia | 3 osc mix/waveform, Ladder filter, envelopes |
+| Prophet-5 V | Arturia | 2 osc, CEM filter, envelopes, unison |
+| OP-Xa V | Arturia | 2 osc, Oberheim filter, envelopes |
+| Mellotron V | Arturia | Tape bank, wow, flutter, tape age |
+| Piano V | Arturia | Hammer, string resonance, mic position |
+| Massive X | NI | 8 Macros (assign in plugin), filter, envelopes |
+| FM8 | NI | 8 Macros, 6 operator levels |
+
+**Setup:**
+
+```bash
+# Add mido to the MCP server dependencies
+pip install mido python-rtmidi
+```
+
+In Ableton, for each plugin track you want to control via CC:
+1. Set the track's **MIDI From** to `AbletonMCP` (the virtual port the server creates)
+2. Set the channel to **track_index + 1** (e.g. track 0 → channel 1, track 8 → channel 9)
+
+> MIDI channel assignment can be overridden with the `assign_cc_channel` tool.
+
+**Usage:**
+```
+"Make the DX7 piano brighter"
+→ set_plugin_parameter_cc(track=8, param_name="Filter Cutoff", value=0.8)
+
+"Slow the LFO on the Juno strings"
+→ set_plugin_parameter_cc(track=9, param_name="LFO Rate", value=0.2)
+
+"What CC parameters are available for the Minimoog?"
+→ get_cc_map(track=11)
+```
+
+### 4. Configure Claude Desktop
 
 Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS):
 
@@ -175,7 +218,9 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
         "run",
         "--with", "mcp",
         "--with", "rapidfuzz",
-        "/path/to/MCP_Server/server.py"
+        "--with", "mido",
+        "--with", "python-rtmidi",
+        "/path/to/server.py"
       ]
     }
   }
@@ -250,6 +295,14 @@ Always use tools when available. URIs always start with "query:" — never inven
 | `save_device_snapshot` | Save all parameter values as a named snapshot (bridge or `_Framework`) |
 | `recall_device_snapshot` | Restore a saved snapshot — bulk restore via bridge when available |
 | `get_chain_device_parameters` | Read parameters inside a Rack chain (`_Framework`) |
+
+### MIDI CC Control *(bypasses VST3 parameter limits)*
+| Tool | Description |
+|------|-------------|
+| `set_plugin_parameter_cc` | Set any parameter by name via MIDI CC — works on Arturia, NI, and any CC-controllable plugin |
+| `get_cc_map` | Show all CC-controllable parameters for the plugin on a given track |
+| `list_cc_maps` | List all available plugin CC maps |
+| `assign_cc_channel` | Override the default MIDI channel for a track |
 
 ---
 

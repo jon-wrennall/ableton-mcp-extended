@@ -1,0 +1,48 @@
+{
+  "plugin_name": "DX7 V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["DX7 V"],
+  "notes": "Arturia DX7 V — FM synthesis. Standard GM CCs plus DX7-specific operator controls. Verify operator CCs against Arturia's MIDI implementation PDF.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel / vibrato depth"},
+    "Expression":        {"cc": 11, "description": "Expression pedal"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal on/off"},
+    "Portamento":        {"cc": 65, "description": "Portamento on/off"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento/glide time"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "Brightness / filter cutoff"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance"},
+    "Attack":            {"cc": 73, "description": "Envelope attack time"},
+    "Decay":             {"cc": 75, "description": "Envelope decay time"},
+    "Release":           {"cc": 72, "description": "Envelope release time"},
+
+    "LFO Rate":          {"cc": 76, "description": "LFO speed"},
+    "LFO Depth":         {"cc": 77, "description": "LFO modulation depth"},
+    "LFO Delay":         {"cc": 78, "description": "LFO onset delay"},
+
+    "Algorithm":         {"cc": 14, "description": "FM algorithm (0-31 → 1-32)"},
+    "Feedback":          {"cc": 15, "description": "Operator feedback amount"},
+
+    "Op1 Level":         {"cc": 16, "description": "Operator 1 output level"},
+    "Op2 Level":         {"cc": 17, "description": "Operator 2 output level"},
+    "Op3 Level":         {"cc": 18, "description": "Operator 3 output level"},
+    "Op4 Level":         {"cc": 19, "description": "Operator 4 output level"},
+    "Op5 Level":         {"cc": 20, "description": "Operator 5 output level"},
+    "Op6 Level":         {"cc": 21, "description": "Operator 6 output level"},
+
+    "Op1 Ratio":         {"cc": 22, "description": "Operator 1 frequency ratio"},
+    "Op2 Ratio":         {"cc": 23, "description": "Operator 2 frequency ratio"},
+    "Op3 Ratio":         {"cc": 24, "description": "Operator 3 frequency ratio"},
+    "Op4 Ratio":         {"cc": 25, "description": "Operator 4 frequency ratio"},
+
+    "Op1 Attack":        {"cc": 85, "description": "Operator 1 envelope attack"},
+    "Op1 Decay":         {"cc": 86, "description": "Operator 1 envelope decay"},
+    "Op1 Sustain":       {"cc": 87, "description": "Operator 1 envelope sustain"},
+    "Op1 Release":       {"cc": 88, "description": "Operator 1 envelope release"},
+
+    "Chorus":            {"cc": 93, "description": "Chorus depth"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level"}
+  }
+}
