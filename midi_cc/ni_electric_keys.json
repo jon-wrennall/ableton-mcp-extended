@@ -1,0 +1,32 @@
+{
+  "plugin_name": "Electric Keys",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Electric Keys", "Session Keys Electric", "Electric Sunburst", "Electric Mint"],
+  "notes": "NI Electric Keys / Session Keys Electric — electric piano collection covering Rhodes Mark I/II, Wurlitzer, CP-80. Runs in Kontakt. CC 11 Expression controls dynamics. Tremolo rate/depth are the most musical real-time controls.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — dynamics control (velocity swell in real time)"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+    "Soft Pedal":          {"cc": 67, "description": "Soft pedal"},
+    "Modulation":          {"cc": 1,  "description": "Modulation wheel — typically controls tremolo depth"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Instrument Model — selects between Rhodes Mk I, Mk II, Wurlitzer, CP-80 (varies by patch)"},
+    "Quick Control 2":     {"cc": 15, "description": "Bell/Tine Character — balance between bell-like attack and body"},
+    "Quick Control 3":     {"cc": 16, "description": "Pickup Position — mic/pickup distance (bright/warm)"},
+    "Quick Control 4":     {"cc": 17, "description": "Tremolo Rate — speed of built-in tremolo"},
+    "Quick Control 5":     {"cc": 18, "description": "Tremolo Depth — intensity of tremolo effect"},
+    "Quick Control 6":     {"cc": 19, "description": "Reverb Mix — built-in reverb amount"},
+    "Quick Control 7":     {"cc": 20, "description": "Chorus/Phaser Mix — modulation effect amount"},
+    "Quick Control 8":     {"cc": 21, "description": "Overdrive/Amp Saturation — tube warmth/grit"},
+
+    "Brightness":          {"cc": 74, "description": "Tone/brightness"},
+    "Tremolo Rate":        {"cc": 76, "description": "Tremolo LFO rate"},
+    "Tremolo Depth":       {"cc": 77, "description": "Tremolo depth"},
+    "Stereo Width":        {"cc": 22, "description": "Stereo spread of the tremolo (auto-pan)"},
+    "Reverb":              {"cc": 91, "description": "Reverb send"},
+    "Chorus":              {"cc": 93, "description": "Chorus/phaser depth"},
+    "Release":             {"cc": 72, "description": "Release time — note decay length"},
+    "Dynamics":            {"cc": 23, "description": "Velocity sensitivity / dynamic response curve"}
+  }
+}

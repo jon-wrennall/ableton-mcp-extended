@@ -181,6 +181,10 @@ For plugins that don't expose parameters through VST3/AU (Arturia V Collection, 
 | FM8 | NI | 8 Macros, 6 operator levels |
 | Guitar Rig 7 | NI | 8 Macros, amp gain/EQ, reverb, delay, wah |
 | Choir Omnia | NI | Expression/dynamics, vowel morph, vibrato, reverb (via Kontakt Quick Controls) |
+| Kontakt 8 | NI | 8 Quick Controls (instrument-specific), master filter, expression |
+| Alicia's Keys | NI | Close/room mic mix, sustain resonance, release noise, dynamics |
+| Electric Keys | NI | Bell/tine character, pickup position, tremolo rate+depth, overdrive |
+| Abbey Road Modern Drummer | NI | Kick/snare/overhead/room mic levels, compression, transient shaping |
 | Jupiter-8 V | Arturia | 2 DCOs, 24dB filter, chorus type, arpeggiator, unison |
 | Jup-8000 | Arturia | 2 OSCs, filter, envelopes, chorus, ring mod |
 | CS-80 V | Arturia | Dual-layer (Ch1+Ch2), ring mod, ribbon, lush pads |

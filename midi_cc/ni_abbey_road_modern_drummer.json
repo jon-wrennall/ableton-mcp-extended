@@ -1,0 +1,33 @@
+{
+  "plugin_name": "Abbey Road Modern Drummer",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Abbey Road Modern Drummer", "Modern Drummer", "Abbey Road Drummer"],
+  "notes": "NI Abbey Road Modern Drummer — multi-mic drum kit recorded at Abbey Road Studios. Runs in Kontakt. Individual mic channels can be mixed via Quick Controls. The close/overhead/room balance is the key real-time control for changing the drum sound character.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Master stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression / overall dynamics"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Kick Close Mic Level — tight, punchy kick character"},
+    "Quick Control 2":     {"cc": 15, "description": "Snare Top Mic Level — crack and attack"},
+    "Quick Control 3":     {"cc": 16, "description": "Overhead Mic Level — cymbals and kit overview"},
+    "Quick Control 4":     {"cc": 17, "description": "Room Mic Level — abbey road room ambience (more = bigger/roomy sound)"},
+    "Quick Control 5":     {"cc": 18, "description": "Kick Sub Level — low-frequency body of the kick"},
+    "Quick Control 6":     {"cc": 19, "description": "Snare Bottom Mic — snare wire buzz/rattle character"},
+    "Quick Control 7":     {"cc": 20, "description": "Hi-Hat Level — overall hi-hat volume in mix"},
+    "Quick Control 8":     {"cc": 21, "description": "Reverb/Room Blend — overall room/close mic ratio"},
+
+    "Kick Level":          {"cc": 22, "description": "Kick drum overall level"},
+    "Snare Level":         {"cc": 23, "description": "Snare drum overall level"},
+    "Overhead Level":      {"cc": 24, "description": "Overhead mics — captures full kit with cymbals"},
+    "Room Level":          {"cc": 25, "description": "Room microphone level — the Abbey Road sound"},
+    "Tom Level":           {"cc": 26, "description": "Tom drums overall level"},
+    "Cymbal Level":        {"cc": 27, "description": "Cymbal/hi-hat level"},
+    "Compression":         {"cc": 28, "description": "Master bus compression amount"},
+    "EQ Brightness":       {"cc": 74, "description": "High-frequency EQ / air"},
+    "EQ Body":             {"cc": 70, "description": "Low-mid body EQ"},
+    "Reverb":              {"cc": 91, "description": "Additional reverb send"},
+    "Transient Attack":    {"cc": 29, "description": "Transient shaper attack (more = punchier hits)"},
+    "Velocity Curve":      {"cc": 30, "description": "Velocity response sensitivity"}
+  }
+}

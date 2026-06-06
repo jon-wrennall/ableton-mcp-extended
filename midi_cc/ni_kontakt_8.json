@@ -1,0 +1,34 @@
+{
+  "plugin_name": "Kontakt 8",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Kontakt 8", "Kontakt 7", "Kontakt 6", "Kontakt"],
+  "notes": "NI Kontakt 8 — general purpose sampler. CC mappings here are Kontakt's default Quick Control assignments. Each loaded instrument will have its own 8 Quick Controls with custom labels. Right-click any knob in Kontakt and choose 'Learn MIDI CC' for direct assignment. CC 7/10/11/64 always work regardless of loaded instrument.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Kontakt master output volume (always active)"},
+    "Pan":                 {"cc": 10, "description": "Kontakt master stereo pan (always active)"},
+    "Expression":          {"cc": 11, "description": "Expression — many Kontakt instruments respond to CC 11 for dynamics"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal (always active)"},
+    "Soft Pedal":          {"cc": 67, "description": "Soft pedal — many piano/keyboard instruments respond"},
+    "Sostenuto":           {"cc": 66, "description": "Sostenuto pedal"},
+    "Modulation":          {"cc": 1,  "description": "Modulation wheel — instrument-dependent"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Kontakt Quick Control 1 — check instrument's KC panel for label (right-click knob → Assign → MIDI CC)"},
+    "Quick Control 2":     {"cc": 15, "description": "Kontakt Quick Control 2"},
+    "Quick Control 3":     {"cc": 16, "description": "Kontakt Quick Control 3"},
+    "Quick Control 4":     {"cc": 17, "description": "Kontakt Quick Control 4"},
+    "Quick Control 5":     {"cc": 18, "description": "Kontakt Quick Control 5"},
+    "Quick Control 6":     {"cc": 19, "description": "Kontakt Quick Control 6"},
+    "Quick Control 7":     {"cc": 20, "description": "Kontakt Quick Control 7"},
+    "Quick Control 8":     {"cc": 21, "description": "Kontakt Quick Control 8"},
+
+    "Master Filter Cutoff":{"cc": 74, "description": "Kontakt master filter cutoff (if master filter is enabled in Options)"},
+    "Master Filter Resonance": {"cc": 71, "description": "Kontakt master filter resonance"},
+    "Attack":              {"cc": 73, "description": "Envelope attack (instrument-dependent)"},
+    "Release":             {"cc": 72, "description": "Envelope release (instrument-dependent)"},
+    "Reverb":              {"cc": 91, "description": "Send reverb level (if Kontakt's internal effects are used)"},
+    "Chorus":              {"cc": 93, "description": "Send chorus level (instrument-dependent)"},
+
+    "Glide":               {"cc": 5,  "description": "Portamento/glide time (instrument-dependent)"},
+    "Breath":              {"cc": 2,  "description": "Breath controller — used by some orchestral/wind instruments for dynamics"}
+  }
+}
