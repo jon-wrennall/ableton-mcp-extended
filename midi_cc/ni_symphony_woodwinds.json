@@ -1,0 +1,35 @@
+{
+  "plugin_name": "Symphony Series Woodwind Ensemble",
+  "manufacturer": "Native Instruments",
+  "match_patterns": [
+    "Symphony Series Woodwind Ensemble",
+    "Symphony Woodwinds",
+    "Symphony Series Woodwinds",
+    "Symphony Series Woodwind"
+  ],
+  "notes": "NI Symphony Series Woodwind Ensemble — full orchestral woodwind section (flutes, oboes, clarinets, bassoons) recorded at Teldex Studio Berlin. CC 1 + CC 11 dual-dynamics approach applies here as for strings and brass — CC 1 cross-fades dynamic layers, CC 11 rides the level. Woodwinds are highly expressive; small CC 11 moves (5–10 values) create natural phrase shaping. Breath noise (QC 5) should be used sparingly — just enough to add life. Legato transitions require overlapping notes in the MIDI performance. Key switches trigger articulations (default C0–B0).",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — output level envelope. Small, continuous movements are key to realistic woodwind phrasing. The most natural-sounding CC for orchestral winds."},
+    "Modulation":          {"cc": 1,  "description": "Dynamics cross-fade — morphs between soft (pp) and full (ff) dynamic layers. Changes both volume and spectral character (reeds become brighter and more nasal at high velocities)."},
+    "Breath":              {"cc": 2,  "description": "Breath controller — secondary dynamics or air pressure simulation"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds legato mode on some articulations"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Ensemble Size — scales from solo-weight (thin, transparent) to full tutti section"},
+    "Quick Control 2":     {"cc": 15, "description": "Vibrato Depth — natural player vibrato intensity (0 = straight tone, useful for baroque or exposed solos)"},
+    "Quick Control 3":     {"cc": 16, "description": "Attack Speed — reed/flute speaking time; lower = soft and airy onset, higher = clean and articulate"},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb Amount — built-in hall/reverb mix"},
+    "Quick Control 5":     {"cc": 18, "description": "Breath Noise — air and key noise level; adds intimacy and organic feel (use sparingly)"},
+    "Quick Control 6":     {"cc": 19, "description": "Release Time — note tail decay after key-up"},
+    "Quick Control 7":     {"cc": 20, "description": "Tonal Colour — reed character or embouchure simulation; higher = brighter, more open tone"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random detuning and timing variation between players"},
+
+    "Attack":              {"cc": 73, "description": "Global envelope attack time"},
+    "Release":             {"cc": 72, "description": "Global envelope release time"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness / upper harmonic content"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"},
+    "Portamento":          {"cc": 5,  "description": "Portamento/glide time for legato transitions"},
+    "Stereo Width":        {"cc": 22, "description": "Stereo image width of the woodwind section"}
+  }
+}

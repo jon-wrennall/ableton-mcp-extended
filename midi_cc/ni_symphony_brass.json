@@ -1,0 +1,34 @@
+{
+  "plugin_name": "Symphony Series Brass Ensemble",
+  "manufacturer": "Native Instruments",
+  "match_patterns": [
+    "Symphony Series Brass Ensemble",
+    "Symphony Brass",
+    "Symphony Series Brass"
+  ],
+  "notes": "NI Symphony Series Brass Ensemble — full orchestral brass section (trumpets, horns, trombones, tuba) recorded at Teldex Studio Berlin. CC 1 (Modulation) cross-fades dynamic layers (pp to ff); CC 11 (Expression) rides the level envelope — automate both simultaneously for convincing orchestral brass. Key switches select articulations (sustain, staccato, sforzando, falls etc. — default C0–B0 range). Brass response is naturally slower than strings; allow time in note timings for the attack to bloom. For sforzando accents, use high CC 1 + CC 11 with a short note and quick CC 11 pull-back.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — output level envelope. Automate for phrasing. Combine with CC 1 for natural brass swells; pull back at phrase ends."},
+    "Modulation":          {"cc": 1,  "description": "Dynamics cross-fade — morphs between soft (pp) and powerful (ff) dynamic layers, changing both volume and tone colour. Essential for realistic orchestral brass."},
+    "Breath":              {"cc": 2,  "description": "Breath controller — secondary dynamics input"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Ensemble Blend — balance between section weight; lower = leaner soloistic character, higher = full tutti mass"},
+    "Quick Control 2":     {"cc": 15, "description": "Mute Amount — straight/cup/harmon mute blend (muted articulations must be loaded; check KS assignments)"},
+    "Quick Control 3":     {"cc": 16, "description": "Attack Speed — note speaking time; lower = soft and blossoming, higher = punchy and immediate"},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb Amount — built-in reverb / hall tail mix"},
+    "Quick Control 5":     {"cc": 18, "description": "Vibrato Depth — natural vibrato intensity (horn players use significant vibrato; trumpets less)"},
+    "Quick Control 6":     {"cc": 19, "description": "Growl / Flutter Tongue — flutter-tongue or growl effect depth (when available in loaded articulation)"},
+    "Quick Control 7":     {"cc": 20, "description": "Brightness — spectral brightness / harmonic presence of the brass tone"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random timing and tuning variation between players"},
+
+    "Attack":              {"cc": 73, "description": "Global envelope attack time"},
+    "Release":             {"cc": 72, "description": "Global envelope release time"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness (global high-shelf)"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"},
+    "Stereo Width":        {"cc": 22, "description": "Stereo image width of the brass section"},
+    "Close Mic":           {"cc": 15, "description": "Close microphone level — spot mic, more attack definition"}
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "plugin_name": "Session Guitarist",
+  "manufacturer": "Native Instruments",
+  "match_patterns": [
+    "Session Guitarist Picked Nylon",
+    "Session Guitarist Electric Mint",
+    "Session Guitarist Strummed Acoustic",
+    "Session Guitarist Strummed Acoustic 2",
+    "Session Guitarist Picked Acoustic",
+    "Session Guitarist"
+  ],
+  "notes": "NI Session Guitarist series — Picked Nylon, Electric Mint, Strummed Acoustic, Strummed Acoustic 2. All variants share the same Quick Control layout, though exact labels differ slightly by instrument. CC 64 (Sustain) holds strummed chords; release to choke. CC 11 (Expression) controls overall level/dynamics. Key switches or chord keys trigger specific chord voicings or patterns depending on mode. Right-click any knob in Kontakt → Learn MIDI CC to verify assignments for your specific variant.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — dynamics and output level. Use for fade-ins and natural playing volume variation."},
+    "Modulation":          {"cc": 1,  "description": "Strum speed or performance variation — instrument-dependent"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds chord in strummed modes; release to choke/mute"},
+    "Soft Pedal":          {"cc": 67, "description": "Palm mute or tone softening (instrument-dependent)"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Pick / Strum Position — bridge (bright/cutting) vs neck (warm/mellow)"},
+    "Quick Control 2":     {"cc": 15, "description": "Tone — overall tonal brightness; high = sparkly, low = warm body"},
+    "Quick Control 3":     {"cc": 16, "description": "Reverb Amount — built-in reverb mix"},
+    "Quick Control 4":     {"cc": 17, "description": "Delay Amount — built-in stereo delay mix"},
+    "Quick Control 5":     {"cc": 18, "description": "Chorus / Modulation Depth — add shimmer or movement to the tone"},
+    "Quick Control 6":     {"cc": 19, "description": "Attack Variation — randomise pick attack timing (realism)"},
+    "Quick Control 7":     {"cc": 20, "description": "String Noise — fret buzz and slide noise level (higher = rawer feel)"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random velocity and timing variation between notes"},
+
+    "Attack":              {"cc": 73, "description": "Envelope attack time"},
+    "Release":             {"cc": 72, "description": "Envelope release time"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness / body filter"},
+    "Reverb":              {"cc": 91, "description": "Reverb send"},
+    "Chorus":              {"cc": 93, "description": "Chorus send"}
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "plugin_name": "Session Strings Pro 2",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Session Strings Pro 2", "Session Strings Pro", "Session Strings"],
+  "notes": "NI Session Strings Pro 2 — studio string ensemble in Kontakt. CC 11 (Expression) is the most critical real-time controller for natural dynamics. CC 1 (Modulation) controls vibrato depth. Key switches (C0-B0 by default) switch articulations — use a separate MIDI track for key switch automation.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — primary dynamics control. Automate this for realistic string swells and fades. The most important CC for strings."},
+    "Modulation":          {"cc": 1,  "description": "Vibrato depth — add after note attack for realistic bowing"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+    "Breath":              {"cc": 2,  "description": "Breath controller — secondary dynamics (instrument-dependent)"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Ensemble Size — number of players / width of the section"},
+    "Quick Control 2":     {"cc": 15, "description": "Close Mic Level — direct string mic (more presence/definition)"},
+    "Quick Control 3":     {"cc": 16, "description": "Room Mic Level — hall ambience (more space/blend)"},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb Amount — built-in reverb mix"},
+    "Quick Control 5":     {"cc": 18, "description": "Attack Shape — bow attack time (faster=aggressive, slower=soft legato)"},
+    "Quick Control 6":     {"cc": 19, "description": "Release Time — tail length after note release"},
+    "Quick Control 7":     {"cc": 20, "description": "Vibrato Rate — speed of automatic vibrato"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random timing/tuning variation between players"},
+
+    "Attack":              {"cc": 73, "description": "Note attack time"},
+    "Release":             {"cc": 72, "description": "Note release time"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness / EQ high shelf"},
+    "Reverb":              {"cc": 91, "description": "Reverb send"},
+    "Stereo Width":        {"cc": 22, "description": "Stereo image width of the ensemble"}
+  }
+}

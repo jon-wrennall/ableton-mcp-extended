@@ -1,0 +1,26 @@
+{
+  "plugin_name": "Session Percussionist",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Session Percussionist"],
+  "notes": "NI Session Percussionist — hand percussion ensemble in Kontakt (cajon, bongos, djembe, shakers, tambourine etc.). CC 11 (Expression) controls global output level. Individual instrument slots are triggered across the key range — check the instrument's mapping view for exact key assignments. Quick Controls adjust mic blend and performance character. Right-click any knob → Learn MIDI CC to confirm assignments.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — global dynamics / output level"},
+    "Modulation":          {"cc": 1,  "description": "Modulation — instrument-dependent (typically accent depth or variation)"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Close Mic Level — direct mic on instruments (more punch and definition)"},
+    "Quick Control 2":     {"cc": 15, "description": "Room Mic Level — room ambience / hall blend"},
+    "Quick Control 3":     {"cc": 16, "description": "Overhead Mic Level — overhead/stereo spread of the ensemble"},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb Amount — built-in reverb mix"},
+    "Quick Control 5":     {"cc": 18, "description": "Attack Transient — transient shaper; higher = snappier attack punch"},
+    "Quick Control 6":     {"cc": 19, "description": "Release Time — body/tail decay length"},
+    "Quick Control 7":     {"cc": 20, "description": "Humanise — random velocity and timing variation for natural feel"},
+    "Quick Control 8":     {"cc": 21, "description": "Bleed / Crosstalk — mic bleed between instruments (higher = more live room feel)"},
+
+    "Attack":              {"cc": 73, "description": "Global envelope attack"},
+    "Release":             {"cc": 72, "description": "Global envelope release"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"}
+  }
+}

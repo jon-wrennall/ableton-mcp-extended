@@ -1,0 +1,29 @@
+{
+  "plugin_name": "Session Horns Pro",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Session Horns Pro", "Session Horns"],
+  "notes": "NI Session Horns Pro — studio brass ensemble in Kontakt. CC 11 (Expression) is the primary real-time dynamics controller. CC 1 (Modulation) adds vibrato depth. The instrument uses 8 Quick Controls for ensemble, mic, and performance parameters. Articulations are triggered via key switches (default: C1–B1 range — check instrument's KS panel). Ensemble player count affects tone weight as well as width.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — primary dynamics. Automate for natural horn swells and breaths. The most important CC for realistic brass."},
+    "Modulation":          {"cc": 1,  "description": "Vibrato depth — add gradually after the attack for natural brass vibrato"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+    "Breath":              {"cc": 2,  "description": "Breath controller — secondary dynamics shaping"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Ensemble Size — number of players; higher = thicker, heavier tone"},
+    "Quick Control 2":     {"cc": 15, "description": "Close Mic Level — direct mic, more definition and attack transient"},
+    "Quick Control 3":     {"cc": 16, "description": "Room Mic Level — hall ambience, more blend and space"},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb Amount — built-in reverb mix"},
+    "Quick Control 5":     {"cc": 18, "description": "Attack Speed — how quickly notes speak; lower = softer falls, higher = punchy sforzando"},
+    "Quick Control 6":     {"cc": 19, "description": "Release Time — note tail length after key-up"},
+    "Quick Control 7":     {"cc": 20, "description": "Vibrato Rate — speed of automatic vibrato cycle"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random timing and tuning variation between players"},
+
+    "Attack":              {"cc": 73, "description": "Global envelope attack time"},
+    "Release":             {"cc": 72, "description": "Global envelope release time"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness — high-shelf EQ style"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"},
+    "Growl":               {"cc": 22, "description": "Growl / flutter-tongue intensity (if mapped in instrument KS panel)"}
+  }
+}

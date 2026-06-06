@@ -1,0 +1,35 @@
+{
+  "plugin_name": "Symphony Series String Ensemble",
+  "manufacturer": "Native Instruments",
+  "match_patterns": [
+    "Symphony Series String Ensemble",
+    "Symphony Strings",
+    "Symphony Series Strings"
+  ],
+  "notes": "NI Symphony Series String Ensemble — large orchestral string section recorded at Teldex Studio Berlin. Uses a dual-dynamics approach: CC 1 (Modulation) cross-fades the p/mp/mf/f dynamic layers; CC 11 (Expression) rides the overall level. For realistic phrasing, automate both simultaneously — CC 1 shapes the tonal character, CC 11 the volume envelope. Articulations are key-switched (default range: C0–B0). Legato transition quality depends on playing with a sustained overlap — hold the first note while pressing the next. Round-robin is active; repeated notes will naturally vary.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — rides the output level envelope. Use for phrasing crescendos and diminuendos. Combine with CC 1 for natural orchestral swells."},
+    "Modulation":          {"cc": 1,  "description": "Dynamics cross-fade — morphs between soft (p) and loud (ff) dynamic layers. This controls tone colour as well as level. The most important CC for orchestral realism."},
+    "Breath":              {"cc": 2,  "description": "Breath controller — alternative/additional dynamics input (instrument-dependent)"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds legato mode open on some articulations"},
+    "Sostenuto":           {"cc": 66, "description": "Sostenuto — selectively sustains held notes"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Ensemble Size — scales the section between chamber (few players) and full orchestral string body"},
+    "Quick Control 2":     {"cc": 15, "description": "Close Mic Level — spot/close microphone; more bite and bow noise"},
+    "Quick Control 3":     {"cc": 16, "description": "Tree Mic Level — main stereo tree; natural blend of the full section"},
+    "Quick Control 4":     {"cc": 17, "description": "Hall / Outrigger Mic Level — wide hall ambience; room depth and spaciousness"},
+    "Quick Control 5":     {"cc": 18, "description": "Attack Shape — bow-on-string attack speed; low = soft sul tasto feel, high = aggressive spiccato entry"},
+    "Quick Control 6":     {"cc": 19, "description": "Release Time — string decay tail after note release"},
+    "Quick Control 7":     {"cc": 20, "description": "Vibrato Depth — intensity of natural player vibrato (0 = straight tone)"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random detuning and timing variation between desk pairs"},
+
+    "Attack":              {"cc": 73, "description": "Global envelope attack time"},
+    "Release":             {"cc": 72, "description": "Global envelope release time"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness — high-shelf filter across the section"},
+    "Reverb":              {"cc": 91, "description": "Reverb send"},
+    "Stereo Width":        {"cc": 22, "description": "Stereo image width of the full string section"},
+    "Portamento":          {"cc": 5,  "description": "Portamento/glide time between legato notes"}
+  }
+}

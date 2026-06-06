@@ -185,6 +185,14 @@ For plugins that don't expose parameters through VST3/AU (Arturia V Collection, 
 | Alicia's Keys | NI | Close/room mic mix, sustain resonance, release noise, dynamics |
 | Electric Keys | NI | Bell/tine character, pickup position, tremolo rate+depth, overdrive |
 | Abbey Road Modern Drummer | NI | Kick/snare/overhead/room mic levels, compression, transient shaping |
+| Session Strings Pro 2 | NI | Expression/dynamics, vibrato, ensemble size, mic blend, attack, release, humanise |
+| Session Horns Pro | NI | Expression/dynamics, vibrato, ensemble size, mic blend, attack, growl/flutter, humanise |
+| Session Guitarist (Picked Nylon / Electric Mint / Strummed Acoustic) | NI | Pick position, tone, reverb, delay, chorus, string noise, humanise |
+| Session Percussionist | NI | Close/room/overhead mic levels, reverb, attack transient, release, bleed, humanise |
+| Symphony Series String Ensemble | NI | CC 1+11 dual dynamics, ensemble size, 3-mic blend, attack, vibrato, portamento, humanise |
+| Symphony Series Brass Ensemble | NI | CC 1+11 dual dynamics, ensemble blend, mute, attack, vibrato, growl/flutter, humanise |
+| Symphony Series Woodwind Ensemble | NI | CC 1+11 dual dynamics, ensemble size, vibrato, breath noise, tonal colour, humanise |
+| Symphony Series Percussion | NI | Close/room/overhead/hall mic levels, attack transient, decay, reverb, humanise |
 | Jupiter-8 V | Arturia | 2 DCOs, 24dB filter, chorus type, arpeggiator, unison |
 | Jup-8000 | Arturia | 2 OSCs, filter, envelopes, chorus, ring mod |
 | CS-80 V | Arturia | Dual-layer (Ch1+Ch2), ring mod, ribbon, lush pads |

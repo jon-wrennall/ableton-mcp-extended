@@ -1,0 +1,30 @@
+{
+  "plugin_name": "Symphony Series Percussion",
+  "manufacturer": "Native Instruments",
+  "match_patterns": [
+    "Symphony Series Percussion",
+    "Symphony Percussion"
+  ],
+  "notes": "NI Symphony Series Percussion — orchestral percussion (timpani, snare, bass drum, cymbals, tam-tam, xylophone, marimba, glockenspiel, vibraphone etc.) recorded at Teldex Studio Berlin. Instruments are spread across the key range — check the mapping view in Kontakt for exact key assignments per instrument. CC 11 (Expression) controls global output level; use for overall blend rather than individual hits. Mic blending via Quick Controls gives significant control over the dry/room character. Timpani pitch bends are available on some patches; CC 5 (Portamento) can control glide speed if enabled.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — overall dynamics/output level. Use to blend the percussion section into the mix rather than per-hit accents."},
+    "Modulation":          {"cc": 1,  "description": "Modulation — accent depth or soft-stick blend (instrument-dependent; check instrument mapping)"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — sustain open/close on cymbal choke patches (instrument-dependent)"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Close Mic Level — direct spot microphones; maximum punch and attack transient definition"},
+    "Quick Control 2":     {"cc": 15, "description": "Room Mic Level — room microphones; adds body and natural room decay"},
+    "Quick Control 3":     {"cc": 16, "description": "Overhead Mic Level — overhead stereo pair; wide natural spread of the full ensemble"},
+    "Quick Control 4":     {"cc": 17, "description": "Hall Mic Level — far hall microphones; maximum ambience and orchestral depth (use to blend with strings/brass)"},
+    "Quick Control 5":     {"cc": 18, "description": "Attack Transient Shape — adjusts the sharpness of the initial hit transient"},
+    "Quick Control 6":     {"cc": 19, "description": "Release / Decay Time — body resonance and decay tail length after each hit"},
+    "Quick Control 7":     {"cc": 20, "description": "Reverb Amount — built-in convolution or algorithmic reverb mix"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random velocity and timing variation for natural ensemble feel"},
+
+    "Attack":              {"cc": 73, "description": "Global envelope attack time"},
+    "Release":             {"cc": 72, "description": "Global envelope release/decay time"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"},
+    "Portamento":          {"cc": 5,  "description": "Portamento/glide — used for timpani pitch bend speed on glissando patches"}
+  }
+}
