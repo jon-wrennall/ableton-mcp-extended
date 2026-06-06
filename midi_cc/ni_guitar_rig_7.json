@@ -1,0 +1,37 @@
+{
+  "plugin_name": "Guitar Rig 7",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Guitar Rig 7", "Guitar Rig 6", "Guitar Rig"],
+  "notes": "NI Guitar Rig 7 — multi-effects processor. MIDI CC maps to the 8 Macro controls (assign in Guitar Rig's Macro panel to amp/effect parameters) plus global controls. Right-click any knob in Guitar Rig → Learn MIDI CC to assign directly.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression pedal (wah, volume swells)"},
+    "Sustain":             {"cc": 64, "description": "Sustain / hold"},
+
+    "Macro 1":             {"cc": 14, "description": "Macro 1 — assign in Guitar Rig Macro panel (e.g. amp gain)"},
+    "Macro 2":             {"cc": 15, "description": "Macro 2 (e.g. amp tone/EQ)"},
+    "Macro 3":             {"cc": 16, "description": "Macro 3 (e.g. reverb mix)"},
+    "Macro 4":             {"cc": 17, "description": "Macro 4 (e.g. delay mix)"},
+    "Macro 5":             {"cc": 18, "description": "Macro 5 (e.g. drive/dist level)"},
+    "Macro 6":             {"cc": 19, "description": "Macro 6 (e.g. chorus depth)"},
+    "Macro 7":             {"cc": 20, "description": "Macro 7"},
+    "Macro 8":             {"cc": 21, "description": "Macro 8"},
+
+    "Amp Gain":            {"cc": 22, "description": "Amp gain (assign Macro 1 to amp gain in Guitar Rig for this to work)"},
+    "Amp Volume":          {"cc": 23, "description": "Amp channel volume"},
+    "Amp Bass":            {"cc": 70, "description": "Amp bass EQ"},
+    "Amp Mid":             {"cc": 71, "description": "Amp mid EQ"},
+    "Amp Treble":          {"cc": 74, "description": "Amp treble EQ"},
+    "Amp Presence":        {"cc": 24, "description": "Amp presence"},
+
+    "Reverb Mix":          {"cc": 91, "description": "Reverb send/mix"},
+    "Delay Mix":           {"cc": 25, "description": "Delay mix level"},
+    "Delay Time":          {"cc": 76, "description": "Delay time"},
+    "Delay Feedback":      {"cc": 77, "description": "Delay feedback"},
+    "Chorus Mix":          {"cc": 93, "description": "Chorus mix"},
+    "Wah":                 {"cc": 4,  "description": "Wah pedal position (foot controller)"},
+    "Noise Gate":          {"cc": 26, "description": "Noise gate threshold"},
+    "Compressor":          {"cc": 27, "description": "Compressor amount"}
+  }
+}

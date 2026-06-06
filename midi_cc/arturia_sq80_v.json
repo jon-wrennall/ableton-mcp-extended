@@ -1,0 +1,60 @@
+{
+  "plugin_name": "SQ80 V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["SQ80 V", "SQ-80 V", "SQ80", "Ensoniq SQ80"],
+  "notes": "Arturia SQ80 V — Ensoniq SQ-80 (1987) emulation. Hybrid synth: 3 digital wavetable oscillators + Curtis analog filter. 8-voice poly. Unique wavetable character with punchy analog filtering.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Modulation":          {"cc": 1,  "description": "Modulation wheel"},
+    "Expression":          {"cc": 11, "description": "Expression pedal"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+    "Portamento":          {"cc": 65, "description": "Portamento on/off"},
+    "Portamento Time":     {"cc": 5,  "description": "Portamento time"},
+
+    "Osc1 Wavetable":      {"cc": 14, "description": "Oscillator 1 wavetable selection (0-127 scans through SQ-80 waveforms)"},
+    "Osc1 Octave":         {"cc": 15, "description": "Oscillator 1 octave"},
+    "Osc1 Semi":           {"cc": 16, "description": "Oscillator 1 semitone transpose"},
+    "Osc1 Fine":           {"cc": 17, "description": "Oscillator 1 fine detune"},
+    "Osc1 Level":          {"cc": 22, "description": "Oscillator 1 mixer level"},
+
+    "Osc2 Wavetable":      {"cc": 18, "description": "Oscillator 2 wavetable selection"},
+    "Osc2 Octave":         {"cc": 19, "description": "Oscillator 2 octave"},
+    "Osc2 Semi":           {"cc": 20, "description": "Oscillator 2 semitone transpose"},
+    "Osc2 Fine":           {"cc": 21, "description": "Oscillator 2 fine detune"},
+    "Osc2 Level":          {"cc": 23, "description": "Oscillator 2 mixer level"},
+
+    "Osc3 Wavetable":      {"cc": 24, "description": "Oscillator 3 wavetable selection"},
+    "Osc3 Octave":         {"cc": 25, "description": "Oscillator 3 octave"},
+    "Osc3 Fine":           {"cc": 26, "description": "Oscillator 3 fine detune"},
+    "Osc3 Level":          {"cc": 27, "description": "Oscillator 3 mixer level"},
+    "Noise Level":         {"cc": 28, "description": "Noise mixer level"},
+
+    "Filter Cutoff":       {"cc": 74, "description": "Curtis filter cutoff frequency"},
+    "Filter Resonance":    {"cc": 71, "description": "Filter resonance (self-oscillates at max)"},
+    "Filter Env Amount":   {"cc": 83, "description": "Filter envelope amount (positive or negative)"},
+    "Filter Key Track":    {"cc": 29, "description": "Filter keyboard tracking"},
+    "Filter Attack":       {"cc": 73, "description": "Filter envelope attack"},
+    "Filter Decay":        {"cc": 75, "description": "Filter envelope decay"},
+    "Filter Sustain":      {"cc": 79, "description": "Filter envelope sustain"},
+    "Filter Release":      {"cc": 72, "description": "Filter envelope release"},
+
+    "Amp Attack":          {"cc": 85, "description": "Amp envelope attack"},
+    "Amp Decay":           {"cc": 86, "description": "Amp envelope decay"},
+    "Amp Sustain":         {"cc": 87, "description": "Amp envelope sustain"},
+    "Amp Release":         {"cc": 88, "description": "Amp envelope release"},
+
+    "LFO1 Rate":           {"cc": 76, "description": "LFO 1 rate"},
+    "LFO1 Depth":          {"cc": 77, "description": "LFO 1 depth"},
+    "LFO1 Waveform":       {"cc": 30, "description": "LFO 1 waveform"},
+    "LFO2 Rate":           {"cc": 78, "description": "LFO 2 rate"},
+    "LFO2 Depth":          {"cc": 31, "description": "LFO 2 depth"},
+
+    "Mod Env Amount":      {"cc": 80, "description": "Modulation envelope amount"},
+    "Mod Env Attack":      {"cc": 81, "description": "Modulation envelope attack"},
+    "Mod Env Decay":       {"cc": 82, "description": "Modulation envelope decay"},
+
+    "Chorus":              {"cc": 93, "description": "Chorus depth"},
+    "Reverb":              {"cc": 91, "description": "Reverb send"}
+  }
+}

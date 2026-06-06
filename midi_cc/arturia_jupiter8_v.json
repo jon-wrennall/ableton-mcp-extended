@@ -1,0 +1,60 @@
+{
+  "plugin_name": "Jupiter-8 V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Jupiter-8 V", "Jupiter 8 V", "Jupiter8 V"],
+  "notes": "Arturia Jupiter-8 V — Roland Jupiter-8 (1981) emulation. 8-voice poly, 2 DCOs per voice, 24dB LP filter, iconic Roland chorus.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Modulation":          {"cc": 1,  "description": "Modulation wheel"},
+    "Expression":          {"cc": 11, "description": "Expression pedal"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+    "Portamento":          {"cc": 65, "description": "Portamento on/off"},
+    "Portamento Time":     {"cc": 5,  "description": "Portamento/glide time"},
+
+    "OscA Waveform":       {"cc": 14, "description": "Osc A waveform (0=saw, 43=pulse, 85=saw+pulse, 127=noise)"},
+    "OscA Pulse Width":    {"cc": 15, "description": "Osc A pulse width"},
+    "OscA Range":          {"cc": 16, "description": "Osc A octave range (16'/8'/4'/2')"},
+    "OscB Waveform":       {"cc": 17, "description": "Osc B waveform"},
+    "OscB Pulse Width":    {"cc": 18, "description": "Osc B pulse width"},
+    "OscB Range":          {"cc": 19, "description": "Osc B octave range"},
+    "OscB Pitch":          {"cc": 20, "description": "Osc B coarse pitch (+/- 7 semitones)"},
+    "OscB Fine":           {"cc": 21, "description": "Osc B fine pitch detune"},
+    "OscA Level":          {"cc": 22, "description": "Osc A mixer level"},
+    "OscB Level":          {"cc": 23, "description": "Osc B mixer level"},
+    "Noise Level":         {"cc": 24, "description": "Noise mixer level"},
+    "Sub Level":           {"cc": 25, "description": "Sub oscillator level"},
+
+    "Filter Cutoff":       {"cc": 74, "description": "VCF cutoff frequency"},
+    "Filter Resonance":    {"cc": 71, "description": "VCF resonance"},
+    "Filter Poles":        {"cc": 26, "description": "Filter slope: 0=2-pole (12dB), 127=4-pole (24dB)"},
+    "Filter Env Amount":   {"cc": 83, "description": "Filter envelope modulation amount"},
+    "Filter Key Track":    {"cc": 27, "description": "Filter keyboard tracking amount"},
+    "Filter Attack":       {"cc": 73, "description": "Filter envelope attack"},
+    "Filter Decay":        {"cc": 75, "description": "Filter envelope decay"},
+    "Filter Sustain":      {"cc": 79, "description": "Filter envelope sustain"},
+    "Filter Release":      {"cc": 72, "description": "Filter envelope release"},
+
+    "Amp Attack":          {"cc": 85, "description": "VCA envelope attack"},
+    "Amp Decay":           {"cc": 86, "description": "VCA envelope decay"},
+    "Amp Sustain":         {"cc": 87, "description": "VCA envelope sustain"},
+    "Amp Release":         {"cc": 88, "description": "VCA envelope release"},
+
+    "LFO Rate":            {"cc": 76, "description": "LFO rate"},
+    "LFO Depth":           {"cc": 77, "description": "LFO depth"},
+    "LFO Waveform":        {"cc": 28, "description": "LFO waveform (tri/saw/square/random)"},
+    "LFO Target":          {"cc": 29, "description": "LFO destination (pitch/filter/PW/VCA)"},
+    "LFO Delay":           {"cc": 78, "description": "LFO onset delay"},
+
+    "Chorus Type":         {"cc": 30, "description": "Chorus mode: 0=off, 43=I, 85=II, 127=I+II"},
+    "Chorus Depth":        {"cc": 93, "description": "Chorus depth/intensity"},
+    "Chorus Rate":         {"cc": 31, "description": "Chorus LFO rate"},
+
+    "Arpeggio On":         {"cc": 84, "description": "Arpeggiator on/off (0=off, 127=on)"},
+    "Arpeggio Rate":       {"cc": 80, "description": "Arpeggiator rate"},
+    "Arpeggio Range":      {"cc": 81, "description": "Arpeggiator octave range (1-4)"},
+
+    "Unison Detune":       {"cc": 82, "description": "Unison detune amount"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"}
+  }
+}

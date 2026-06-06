@@ -179,6 +179,16 @@ For plugins that don't expose parameters through VST3/AU (Arturia V Collection, 
 | Piano V | Arturia | Hammer, string resonance, mic position |
 | Massive X | NI | 8 Macros (assign in plugin), filter, envelopes |
 | FM8 | NI | 8 Macros, 6 operator levels |
+| Guitar Rig 7 | NI | 8 Macros, amp gain/EQ, reverb, delay, wah |
+| Choir Omnia | NI | Expression/dynamics, vowel morph, vibrato, reverb (via Kontakt Quick Controls) |
+| Jupiter-8 V | Arturia | 2 DCOs, 24dB filter, chorus type, arpeggiator, unison |
+| Jup-8000 | Arturia | 2 OSCs, filter, envelopes, chorus, ring mod |
+| CS-80 V | Arturia | Dual-layer (Ch1+Ch2), ring mod, ribbon, lush pads |
+| B-3 V | Arturia | All 9 upper+lower drawbars, Leslie speed/brake, percussion, key click |
+| Analog Lab | Arturia | 5 adaptive Macros (labels change per preset) |
+| Stage-73 V | Arturia | Rhodes tine/pickup/hammer, tremolo rate+depth, phaser |
+| Synclavier V | Arturia | FM index/ratio, 6 harmonic partials, timbre frame morph |
+| SQ80 V | Arturia | 3 wavetable OSCs, Curtis filter, dual LFO, mod envelope |
 
 **Setup:**
 

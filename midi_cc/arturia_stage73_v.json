@@ -1,0 +1,42 @@
+{
+  "plugin_name": "Stage-73 V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Stage-73 V", "Stage 73 V", "Stage73 V", "Rhodes"],
+  "notes": "Arturia Stage-73 V — Fender Rhodes electric piano emulation (Mark I and Mark II models). Physical modelling of tines, pickups, and tonebars. Classic tremolo built in.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression pedal (dynamics)"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+    "Soft Pedal":          {"cc": 67, "description": "Soft pedal"},
+
+    "Rhodes Model":        {"cc": 14, "description": "Piano model: 0=Mark I (73-key), 64=Mark I (88-key), 127=Mark II"},
+    "Pickup Position":     {"cc": 15, "description": "Pickup position (near/far tine tip — affects brightness/mellowness)"},
+    "Pickup Type":         {"cc": 16, "description": "Pickup type (affects tone character)"},
+
+    "Bell":                {"cc": 74, "description": "Bell/brightness — amount of tine tip harmonic content"},
+    "Tine Volume":         {"cc": 17, "description": "Tine volume in the mix"},
+    "Tone Bar":            {"cc": 18, "description": "Tone bar hardness / stiffness"},
+    "Hammer Hardness":     {"cc": 19, "description": "Hammer felt hardness (soft=warm, hard=bright/glassy)"},
+    "Damper Noise":        {"cc": 20, "description": "Damper pad noise level"},
+    "Release Noise":       {"cc": 21, "description": "Key release click/noise"},
+
+    "Velocity Curve":      {"cc": 22, "description": "Velocity response curve"},
+    "Dynamic Range":       {"cc": 23, "description": "Dynamic range of velocity response"},
+
+    "Tremolo On":          {"cc": 84, "description": "Tremolo on/off (0=off, 127=on)"},
+    "Tremolo Rate":        {"cc": 76, "description": "Tremolo LFO rate (slow/fast)"},
+    "Tremolo Depth":       {"cc": 77, "description": "Tremolo depth (intensity)"},
+    "Tremolo Stereo":      {"cc": 24, "description": "Tremolo stereo width / panning spread"},
+    "Tremolo Waveform":    {"cc": 25, "description": "Tremolo waveform (sine/square)"},
+
+    "Phaser Mix":          {"cc": 26, "description": "Phaser effect mix"},
+    "Phaser Rate":         {"cc": 27, "description": "Phaser LFO rate"},
+    "Chorus Mix":          {"cc": 93, "description": "Chorus depth"},
+    "Reverb":              {"cc": 91, "description": "Reverb send"},
+    "EQ Low":              {"cc": 70, "description": "Low-frequency EQ boost/cut"},
+    "EQ High":             {"cc": 74, "description": "High-frequency EQ (treble)"},
+    "Amp Overdrive":       {"cc": 28, "description": "Amp overdrive/saturation amount"},
+    "Stereo Width":        {"cc": 29, "description": "Stereo image width"}
+  }
+}

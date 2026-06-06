@@ -1,0 +1,48 @@
+{
+  "plugin_name": "Synclavier V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Synclavier V", "Synclavier"],
+  "notes": "Arturia Synclavier V — New England Digital Synclavier II emulation. Combines FM synthesis with additive harmonic control. Up to 12 partials, each with independent level and ratio. Timbre frames allow morphing between harmonic states.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Modulation":          {"cc": 1,  "description": "Modulation wheel"},
+    "Expression":          {"cc": 11, "description": "Expression pedal"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+    "Portamento Time":     {"cc": 5,  "description": "Portamento time"},
+
+    "FM Ratio":            {"cc": 14, "description": "FM carrier-to-modulator frequency ratio"},
+    "FM Index":            {"cc": 15, "description": "FM modulation index (depth) — core timbre control"},
+    "FM Harmonic":         {"cc": 16, "description": "FM modulator harmonic content"},
+    "Timbre Frame":        {"cc": 17, "description": "Timbre frame morph position (scrub through harmonic snapshots)"},
+    "Frame Speed":         {"cc": 18, "description": "Timbre frame playback speed"},
+
+    "Partial 1 Level":     {"cc": 19, "description": "Harmonic partial 1 level (fundamental)"},
+    "Partial 2 Level":     {"cc": 20, "description": "Harmonic partial 2 level"},
+    "Partial 3 Level":     {"cc": 21, "description": "Harmonic partial 3 level"},
+    "Partial 4 Level":     {"cc": 22, "description": "Harmonic partial 4 level"},
+    "Partial 5 Level":     {"cc": 23, "description": "Harmonic partial 5 level"},
+    "Partial 6 Level":     {"cc": 24, "description": "Harmonic partial 6 level"},
+
+    "Filter Cutoff":       {"cc": 74, "description": "Filter cutoff frequency"},
+    "Filter Resonance":    {"cc": 71, "description": "Filter resonance"},
+    "Filter Env Amount":   {"cc": 83, "description": "Filter envelope amount"},
+    "Filter Attack":       {"cc": 73, "description": "Filter envelope attack"},
+    "Filter Decay":        {"cc": 75, "description": "Filter envelope decay"},
+    "Filter Sustain":      {"cc": 79, "description": "Filter envelope sustain"},
+    "Filter Release":      {"cc": 72, "description": "Filter envelope release"},
+
+    "Amp Attack":          {"cc": 85, "description": "Amp envelope attack"},
+    "Amp Decay":           {"cc": 86, "description": "Amp envelope decay"},
+    "Amp Sustain":         {"cc": 87, "description": "Amp envelope sustain"},
+    "Amp Release":         {"cc": 88, "description": "Amp envelope release"},
+
+    "LFO Rate":            {"cc": 76, "description": "LFO rate"},
+    "LFO Depth":           {"cc": 77, "description": "LFO depth"},
+    "LFO Target":          {"cc": 25, "description": "LFO modulation target"},
+
+    "Stereo Width":        {"cc": 26, "description": "Stereo spread"},
+    "Reverb":              {"cc": 91, "description": "Reverb send"},
+    "Chorus":              {"cc": 93, "description": "Chorus depth"}
+  }
+}

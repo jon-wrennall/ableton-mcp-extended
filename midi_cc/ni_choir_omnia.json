@@ -1,0 +1,38 @@
+{
+  "plugin_name": "Choir Omnia",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Choir Omnia", "Omnia"],
+  "notes": "NI Choir Omnia — sample-based professional choir instrument. Runs in Kontakt 7+. MIDI CC maps to NKS/Kontakt automation parameters. The 8 Quick Controls in Kontakt can be assigned to any internal parameter.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — controls dynamics/breath (very effective for realistic swells)"},
+    "Modulation":          {"cc": 1,  "description": "Modulation — typically controls vibrato depth"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Kontakt Quick Control 1 — assign in Kontakt to e.g. Vowel morphing"},
+    "Quick Control 2":     {"cc": 15, "description": "Kontakt Quick Control 2 — assign to e.g. Ensemble size"},
+    "Quick Control 3":     {"cc": 16, "description": "Kontakt Quick Control 3 — assign to e.g. Reverb mix"},
+    "Quick Control 4":     {"cc": 17, "description": "Kontakt Quick Control 4 — assign to e.g. Attack"},
+    "Quick Control 5":     {"cc": 18, "description": "Kontakt Quick Control 5"},
+    "Quick Control 6":     {"cc": 19, "description": "Kontakt Quick Control 6"},
+    "Quick Control 7":     {"cc": 20, "description": "Kontakt Quick Control 7"},
+    "Quick Control 8":     {"cc": 21, "description": "Kontakt Quick Control 8"},
+
+    "Dynamics":            {"cc": 11, "description": "Choir dynamics/breath — CC11 Expression is the most natural controller"},
+    "Vowel":               {"cc": 22, "description": "Vowel morph (A/E/I/O/U) — assign Quick Control 1"},
+    "Ensemble Size":       {"cc": 23, "description": "Choir ensemble width/size"},
+    "Vibrato Depth":       {"cc": 77, "description": "Vibrato depth"},
+    "Vibrato Rate":        {"cc": 76, "description": "Vibrato rate"},
+    "Vibrato Delay":       {"cc": 78, "description": "Vibrato onset delay"},
+
+    "Attack":              {"cc": 73, "description": "Note attack time"},
+    "Release":             {"cc": 72, "description": "Note release time"},
+
+    "Reverb Mix":          {"cc": 91, "description": "Reverb wet/dry mix"},
+    "Reverb Size":         {"cc": 24, "description": "Reverb room size"},
+    "Stereo Width":        {"cc": 25, "description": "Stereo image width"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness / high-frequency content"},
+    "Warmth":              {"cc": 70, "description": "Low-frequency body / warmth"}
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "plugin_name": "Jup-8000",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Jup-8000", "Jup 8000", "Jup8000"],
+  "notes": "Arturia Jup-8000 — virtual analog synthesizer inspired by the Roland Jupiter series. 8-voice poly, 2 oscillators per voice, 24dB LP filter, extensive modulation matrix.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Modulation":          {"cc": 1,  "description": "Modulation wheel"},
+    "Expression":          {"cc": 11, "description": "Expression pedal"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+    "Portamento":          {"cc": 65, "description": "Portamento on/off"},
+    "Portamento Time":     {"cc": 5,  "description": "Portamento time"},
+
+    "Osc1 Waveform":       {"cc": 14, "description": "Oscillator 1 waveform (saw/pulse/sine)"},
+    "Osc1 Pulse Width":    {"cc": 15, "description": "Oscillator 1 pulse width"},
+    "Osc1 Octave":         {"cc": 16, "description": "Oscillator 1 octave"},
+    "Osc2 Waveform":       {"cc": 17, "description": "Oscillator 2 waveform"},
+    "Osc2 Pulse Width":    {"cc": 18, "description": "Oscillator 2 pulse width"},
+    "Osc2 Octave":         {"cc": 19, "description": "Oscillator 2 octave"},
+    "Osc2 Pitch":          {"cc": 20, "description": "Oscillator 2 coarse pitch"},
+    "Osc2 Fine":           {"cc": 21, "description": "Oscillator 2 fine detune"},
+    "Osc1 Level":          {"cc": 22, "description": "Oscillator 1 level"},
+    "Osc2 Level":          {"cc": 23, "description": "Oscillator 2 level"},
+    "Noise Level":         {"cc": 24, "description": "Noise level"},
+    "Ring Mod":            {"cc": 25, "description": "Ring modulator level"},
+
+    "Filter Cutoff":       {"cc": 74, "description": "Filter cutoff frequency"},
+    "Filter Resonance":    {"cc": 71, "description": "Filter resonance"},
+    "Filter Env Amount":   {"cc": 83, "description": "Filter envelope amount"},
+    "Filter Key Track":    {"cc": 26, "description": "Filter keyboard tracking"},
+    "Filter Attack":       {"cc": 73, "description": "Filter envelope attack"},
+    "Filter Decay":        {"cc": 75, "description": "Filter envelope decay"},
+    "Filter Sustain":      {"cc": 79, "description": "Filter envelope sustain"},
+    "Filter Release":      {"cc": 72, "description": "Filter envelope release"},
+
+    "Amp Attack":          {"cc": 85, "description": "Amp envelope attack"},
+    "Amp Decay":           {"cc": 86, "description": "Amp envelope decay"},
+    "Amp Sustain":         {"cc": 87, "description": "Amp envelope sustain"},
+    "Amp Release":         {"cc": 88, "description": "Amp envelope release"},
+
+    "LFO Rate":            {"cc": 76, "description": "LFO rate"},
+    "LFO Depth":           {"cc": 77, "description": "LFO depth"},
+    "LFO Waveform":        {"cc": 27, "description": "LFO waveform"},
+    "LFO Target":          {"cc": 28, "description": "LFO modulation target"},
+    "LFO Delay":           {"cc": 78, "description": "LFO onset delay"},
+
+    "Chorus Type":         {"cc": 29, "description": "Chorus mode (0=off, 43=I, 85=II, 127=I+II)"},
+    "Chorus Depth":        {"cc": 93, "description": "Chorus depth"},
+    "Reverb":              {"cc": 91, "description": "Reverb send"},
+    "Unison Detune":       {"cc": 30, "description": "Unison detune amount"}
+  }
+}

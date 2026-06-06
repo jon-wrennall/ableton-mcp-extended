@@ -1,0 +1,27 @@
+{
+  "plugin_name": "Analog Lab",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Analog Lab V", "Analog Lab", "AnalogLab"],
+  "notes": "Arturia Analog Lab — preset browser/player for the entire V Collection. Exposes 5 Macro controls that adapt per preset. The macros are pre-assigned by each preset designer (e.g. Macro 1=Filter, Macro 2=Reverb). Check the macro labels in the plugin for the current preset.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Modulation":          {"cc": 1,  "description": "Modulation wheel"},
+    "Expression":          {"cc": 11, "description": "Expression pedal"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+    "Portamento":          {"cc": 65, "description": "Portamento on/off"},
+    "Portamento Time":     {"cc": 5,  "description": "Portamento time"},
+
+    "Macro 1":             {"cc": 74, "description": "Macro 1 — typically Filter Cutoff or Tone (check plugin label)"},
+    "Macro 2":             {"cc": 71, "description": "Macro 2 — typically Filter Resonance or Reverb"},
+    "Macro 3":             {"cc": 76, "description": "Macro 3 — typically LFO Rate or Chorus"},
+    "Macro 4":             {"cc": 72, "description": "Macro 4 — typically Release or Delay"},
+    "Macro 5":             {"cc": 77, "description": "Macro 5 — typically LFO Depth or extra morph"},
+
+    "Attack":              {"cc": 73, "description": "Envelope attack (if exposed by current preset)"},
+    "Decay":               {"cc": 75, "description": "Envelope decay"},
+    "Release":             {"cc": 72, "description": "Envelope release"},
+    "Reverb":              {"cc": 91, "description": "Reverb send"},
+    "Chorus":              {"cc": 93, "description": "Chorus depth"}
+  }
+}

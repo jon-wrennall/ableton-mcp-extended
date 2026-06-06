@@ -1,0 +1,55 @@
+{
+  "plugin_name": "CS-80 V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["CS-80 V", "CS80 V", "CS 80"],
+  "notes": "Arturia CS-80 V — Yamaha CS-80 (1976) emulation. 8-voice poly, two independent layers (I+II) per voice each with own filter+VCA, ring modulator, ribbon controller. Famous for lush pads and 'Blade Runner' sounds.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Modulation":          {"cc": 1,  "description": "Modulation wheel"},
+    "Expression":          {"cc": 11, "description": "Expression pedal"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+    "Portamento":          {"cc": 65, "description": "Portamento on/off"},
+    "Portamento Time":     {"cc": 5,  "description": "Portamento time"},
+
+    "Ch1 Osc Pitch":       {"cc": 14, "description": "Channel 1 oscillator pitch (coarse)"},
+    "Ch1 Osc Detune":      {"cc": 15, "description": "Channel 1 oscillator detune (fine)"},
+    "Ch1 Osc Waveform":    {"cc": 16, "description": "Channel 1 oscillator waveform (saw/pulse)"},
+    "Ch1 Pulse Width":     {"cc": 17, "description": "Channel 1 pulse width"},
+    "Ch1 Sub Osc":         {"cc": 18, "description": "Channel 1 sub oscillator level"},
+    "Ch1 Filter Cutoff":   {"cc": 74, "description": "Channel 1 high-pass filter cutoff"},
+    "Ch1 Filter Resonance":{"cc": 71, "description": "Channel 1 filter resonance"},
+    "Ch1 Filter Attack":   {"cc": 73, "description": "Channel 1 filter/VCA attack"},
+    "Ch1 Filter Decay":    {"cc": 75, "description": "Channel 1 filter decay"},
+    "Ch1 Filter Sustain":  {"cc": 79, "description": "Channel 1 filter sustain"},
+    "Ch1 Filter Release":  {"cc": 72, "description": "Channel 1 filter release"},
+    "Ch1 Level":           {"cc": 22, "description": "Channel 1 output level"},
+
+    "Ch2 Osc Pitch":       {"cc": 19, "description": "Channel 2 oscillator pitch (coarse)"},
+    "Ch2 Osc Detune":      {"cc": 20, "description": "Channel 2 oscillator detune"},
+    "Ch2 Osc Waveform":    {"cc": 21, "description": "Channel 2 oscillator waveform"},
+    "Ch2 Pulse Width":     {"cc": 23, "description": "Channel 2 pulse width"},
+    "Ch2 Filter Cutoff":   {"cc": 83, "description": "Channel 2 filter cutoff"},
+    "Ch2 Filter Attack":   {"cc": 85, "description": "Channel 2 filter/VCA attack"},
+    "Ch2 Filter Decay":    {"cc": 86, "description": "Channel 2 filter decay"},
+    "Ch2 Filter Sustain":  {"cc": 87, "description": "Channel 2 filter sustain"},
+    "Ch2 Filter Release":  {"cc": 88, "description": "Channel 2 filter release"},
+    "Ch2 Level":           {"cc": 24, "description": "Channel 2 output level"},
+
+    "Ring Mod":            {"cc": 25, "description": "Ring modulator amount (Ch1×Ch2)"},
+    "Noise":               {"cc": 26, "description": "Noise level"},
+
+    "LFO Rate":            {"cc": 76, "description": "LFO rate"},
+    "LFO Depth":           {"cc": 77, "description": "LFO depth"},
+    "LFO Waveform":        {"cc": 27, "description": "LFO waveform"},
+    "LFO Target":          {"cc": 28, "description": "LFO target (pitch/filter/PW)"},
+    "LFO Delay":           {"cc": 78, "description": "LFO onset delay"},
+
+    "Ribbon Pitch":        {"cc": 29, "description": "Ribbon controller pitch range"},
+    "Ribbon Filter":       {"cc": 30, "description": "Ribbon controller filter amount"},
+
+    "Chorus Depth":        {"cc": 93, "description": "Chorus/ensemble depth"},
+    "Reverb":              {"cc": 91, "description": "Reverb send"},
+    "Brilliance":          {"cc": 74, "description": "Tone brilliance (treble EQ)"}
+  }
+}

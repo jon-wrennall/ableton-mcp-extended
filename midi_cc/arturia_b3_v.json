@@ -1,0 +1,53 @@
+{
+  "plugin_name": "B-3 V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["B-3 V", "B3 V", "Hammond B3", "B 3 V"],
+  "notes": "Arturia B-3 V — Hammond B-3 organ emulation. 9 drawbars per manual, percussion, rotary speaker (Leslie). Drawbars use CC 12-20 (upper) and CC 21-29 (lower). Rotary speed is the most expressive real-time control.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression pedal (volume swell — essential for organ)"},
+    "Sustain":             {"cc": 64, "description": "Sustain"},
+
+    "Upper 16":            {"cc": 12, "description": "Upper manual drawbar 1 — 16' (sub bass)"},
+    "Upper 5.33":          {"cc": 13, "description": "Upper manual drawbar 2 — 5⅓' (quint)"},
+    "Upper 8":             {"cc": 14, "description": "Upper manual drawbar 3 — 8' (fundamental)"},
+    "Upper 4":             {"cc": 15, "description": "Upper manual drawbar 4 — 4' (octave)"},
+    "Upper 2.67":          {"cc": 16, "description": "Upper manual drawbar 5 — 2⅔' (nazard)"},
+    "Upper 2":             {"cc": 17, "description": "Upper manual drawbar 6 — 2' (super octave)"},
+    "Upper 1.6":           {"cc": 18, "description": "Upper manual drawbar 7 — 1⅗' (tierce)"},
+    "Upper 1.33":          {"cc": 19, "description": "Upper manual drawbar 8 — 1⅓' (larigot)"},
+    "Upper 1":             {"cc": 20, "description": "Upper manual drawbar 9 — 1' (sifflote)"},
+
+    "Lower 16":            {"cc": 21, "description": "Lower manual drawbar 1 — 16'"},
+    "Lower 5.33":          {"cc": 22, "description": "Lower manual drawbar 2 — 5⅓'"},
+    "Lower 8":             {"cc": 23, "description": "Lower manual drawbar 3 — 8'"},
+    "Lower 4":             {"cc": 24, "description": "Lower manual drawbar 4 — 4'"},
+    "Lower 2.67":          {"cc": 25, "description": "Lower manual drawbar 5 — 2⅔'"},
+    "Lower 2":             {"cc": 26, "description": "Lower manual drawbar 6 — 2'"},
+    "Lower 1.6":           {"cc": 27, "description": "Lower manual drawbar 7 — 1⅗'"},
+    "Lower 1.33":          {"cc": 28, "description": "Lower manual drawbar 8 — 1⅓'"},
+    "Lower 1":             {"cc": 29, "description": "Lower manual drawbar 9 — 1'"},
+
+    "Pedal 16":            {"cc": 30, "description": "Pedal drawbar — 16'"},
+    "Pedal 8":             {"cc": 31, "description": "Pedal drawbar — 8'"},
+
+    "Rotary Speed":        {"cc": 1,  "description": "Rotary speaker (Leslie) speed: 0=slow (chorale), 127=fast (tremolo)"},
+    "Rotary On":           {"cc": 84, "description": "Rotary speaker on/off (0=off/brake, 127=on)"},
+    "Rotary Brake":        {"cc": 80, "description": "Leslie brake (stop rotation) 0=spinning, 127=stopped"},
+    "Rotary Distance":     {"cc": 81, "description": "Mic distance from Leslie cabinet"},
+    "Rotary Horn Level":   {"cc": 82, "description": "Horn (treble rotor) level"},
+    "Rotary Bass Level":   {"cc": 83, "description": "Bass rotor level"},
+
+    "Percussion On":       {"cc": 85, "description": "Percussion on/off (0=off, 127=on)"},
+    "Percussion Soft":     {"cc": 86, "description": "Percussion level: 0=normal, 127=soft"},
+    "Percussion Fast":     {"cc": 87, "description": "Percussion decay: 0=slow, 127=fast"},
+    "Percussion Harmonic": {"cc": 88, "description": "Percussion harmonic: 0=2nd, 127=3rd"},
+
+    "Key Click":           {"cc": 74, "description": "Key click amount (attack transient)"},
+    "Vibrato Chorus":      {"cc": 93, "description": "Vibrato/chorus depth (V1/V2/V3/C1/C2/C3)"},
+    "Vibrato Rate":        {"cc": 76, "description": "Vibrato rate"},
+    "Reverb":              {"cc": 91, "description": "Reverb send"},
+    "Overdrive":           {"cc": 70, "description": "Tube/overdrive amount"}
+  }
+}
