@@ -1,0 +1,22 @@
+{
+  "plugin_name": "Farfisa V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Farfisa V", "Arturia Farfisa V", "Farfisa Compact V"],
+  "notes": "Arturia Farfisa V emulates the Farfisa Compact Duo, the Italian transistor combo organ that became the signature sound of 1960s psychedelia, soul, and garage rock, heard on recordings by The Doors, Pink Floyd, Procol Harum, and countless others. Unlike the Hammond B-3 which uses additive tonewheels, the Farfisa uses transistor divider circuits that produce a brighter, thinner, more reedy sound — punchier and more aggressive in the midrange. Individual register tabs (16', 8', 4', 2', 1' for upper; 16', 8' for bass) combine to shape the overall timbre, and the built-in vibrato and ensemble/chorus effect are central to the characteristic sound. Expression pedal control is essential for dynamics in performance.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master volume — overall organ output level"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression pedal — the primary dynamic control in organ performance; controls swell/volume"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — vibrato depth or additional modulation"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Upper Registers":   {"cc": 22, "description": "Upper keyboard register selection — combines 16', 8', 4', 2', 1' footage tabs; more tabs = brighter and louder"},
+    "Lower Registers":   {"cc": 23, "description": "Lower keyboard register selection — bass register footage tabs (16', 8')"},
+    "Vibrato Depth":     {"cc": 76, "description": "Vibrato depth — intensity of the built-in vibrato effect; characteristic of the Farfisa's expressive playing style"},
+    "Attack Mode":       {"cc": 24, "description": "Attack mode — selects between Normal (full sustain), Fast (percussive attack), and Muted (damped) articulation styles"},
+    "Ensemble Rate":     {"cc": 93, "description": "Ensemble/chorus rate — the Farfisa's built-in ensemble effect gives a chorus-like shimmer to the transistor sound"},
+    "Tone/Brightness":   {"cc": 74, "description": "Tone/brightness — overall tonal filter control, darkening or brightening the combined register output"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — adds space; period-correct spring or room character suits the Farfisa"},
+    "Key Click":         {"cc": 25, "description": "Key click level — the mechanical noise of the organ keys; adds realistic transient attack character"}
+  }
+}

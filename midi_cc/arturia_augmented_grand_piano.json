@@ -1,0 +1,23 @@
+{
+  "plugin_name": "Augmented GRAND PIANO",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Augmented GRAND PIANO", "Augmented Grand Piano", "Arturia Augmented Grand Piano"],
+  "notes": "Arturia Augmented GRAND PIANO combines high-quality grand piano samples with a synthesis layer for a hybrid instrument ranging from pure acoustic piano to evolved electronic textures built on a piano foundation. The acoustic layer captures the full dynamic range, string resonance, and mechanical character of a concert grand, while the synth layer augments it with pads, wavetables, or other synthesis textures. Sustain resonance is a distinctive control — it adjusts the level of sympathetic string resonance heard when the sustain pedal is held, which is one of the most characteristic aspects of an acoustic grand piano's sound. The blend control allows seamless transitions from purely acoustic to hybrid cinematic piano textures.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level dynamically"},
+    "Modulation":        {"cc": 1,  "description": "Blend/Morph — sweeps between the Acoustic grand piano layer and the Synth layer"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal — holds notes and engages full sympathetic string resonance"},
+    "Sostenuto":         {"cc": 66, "description": "Sostenuto pedal — sustains only notes depressed at the moment of pedalling"},
+
+    "Acoustic Layer":    {"cc": 22, "description": "Acoustic piano layer level — level of the grand piano sample recordings"},
+    "Synth Layer":       {"cc": 23, "description": "Synth layer level — level of the synthesis component"},
+    "Filter Cutoff":     {"cc": 74, "description": "Filter cutoff — tonal shaping of the combined output; subtle movement adds expression to the synth layer"},
+    "Attack":            {"cc": 73, "description": "Amplitude envelope attack — applies primarily to the synth layer; longer attacks create slow pad swells beneath the piano"},
+    "Release":           {"cc": 72, "description": "Amplitude envelope release — tail length; longer for ambient, sustaining textures"},
+    "Sustain Resonance": {"cc": 24, "description": "Sustain string resonance — level of sympathetic string resonance when the sustain pedal is held; higher = more acoustic grand character"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — concert hall reverb enhances both the acoustic and synth layers"},
+    "Motion Rate":       {"cc": 76, "description": "Motion/LFO rate — automated parameter animation speed for evolving hybrid textures"}
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "plugin_name": "ARP 2600 V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["ARP 2600 V", "ARP2600 V", "ARP 2600"],
+  "notes": "Arturia ARP 2600 V is a faithful emulation of the classic ARP 2600 semi-modular synthesizer, combining pre-patched signal flow with a fully patchable matrix for deep customization. The instrument features three VCOs, a 4072-style 24dB/oct low-pass filter with a separate 20Hz high-pass filter, a built-in spring reverb, and a sample-and-hold circuit for generative patching. It excels at leads, bass, and experimental textures thanks to its rich filter character and flexible architecture. Filter cutoff and resonance are the primary real-time performance controls, while VCF envelope amount and LFO rate shape the movement of the sound.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — typically routed to VCF cutoff or VCO pitch"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal — holds notes"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento/glide time between notes"},
+
+    "VCF Cutoff":        {"cc": 74, "description": "VCF low-pass filter cutoff frequency — the primary timbral control"},
+    "VCF Resonance":     {"cc": 71, "description": "VCF resonance/Q — self-oscillates at maximum, giving the classic ARP scream"},
+    "VCF Env Amount":    {"cc": 22, "description": "Amount of ADSR envelope applied to VCF cutoff — positive values open the filter on attack"},
+    "VCF HPF Cutoff":    {"cc": 75, "description": "20Hz high-pass filter cutoff — removes low-frequency rumble or thins the sound"},
+
+    "Attack":            {"cc": 73, "description": "ADSR envelope attack time — applies to both VCF and VCA"},
+    "Decay":             {"cc": 79, "description": "ADSR envelope decay time"},
+    "Sustain Level":     {"cc": 80, "description": "ADSR envelope sustain level"},
+    "Release":           {"cc": 72, "description": "ADSR envelope release time"},
+
+    "LFO Rate":          {"cc": 76, "description": "LFO rate — controls speed of modulation assigned to pitch, filter, or PWM"},
+    "LFO Depth":         {"cc": 77, "description": "LFO depth — modulation amount applied to target parameter"},
+
+    "VCO1 Frequency":    {"cc": 23, "description": "VCO1 base frequency/pitch offset"},
+    "VCO2 Frequency":    {"cc": 24, "description": "VCO2 frequency — detune relative to VCO1 for chorus and beating effects"},
+    "VCO3 Frequency":    {"cc": 25, "description": "VCO3 frequency — can be used as an LFO or audio-rate source"},
+    "Noise Level":       {"cc": 26, "description": "White/pink noise mixer level — feeds into VCF for percussion and wind textures"},
+    "Ring Mod Level":    {"cc": 27, "description": "Ring modulator output level — metallic, bell-like tones from VCO1 x VCO2"},
+
+    "Spring Reverb":     {"cc": 91, "description": "Built-in spring reverb send level — the signature warm, coiling reverb of the ARP 2600"},
+
+    "Macro 1":           {"cc": 14, "description": "Adaptive Macro 1 — label and target change per preset"},
+    "Macro 2":           {"cc": 15, "description": "Adaptive Macro 2 — label and target change per preset"},
+    "Macro 3":           {"cc": 16, "description": "Adaptive Macro 3 — label and target change per preset"},
+    "Macro 4":           {"cc": 17, "description": "Adaptive Macro 4 — label and target change per preset"},
+    "Macro 5":           {"cc": 18, "description": "Adaptive Macro 5 — label and target change per preset"}
+  }
+}

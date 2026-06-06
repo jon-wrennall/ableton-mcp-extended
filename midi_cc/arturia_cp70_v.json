@@ -1,0 +1,24 @@
+{
+  "plugin_name": "CP-70 V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["CP-70 V", "Yamaha CP-70 V", "CP70 V"],
+  "notes": "Arturia CP-70 V emulates the Yamaha CP-70 electro-acoustic grand piano, a portable stage instrument that combined real piano strings and hammers with electromagnetic pickups — essentially a scaled-down grand piano that could be amplified and recorded directly. The CP-70 was the instrument of choice for live keyboard players who needed the feel and tone of a real piano on stage: Genesis (Tony Banks), ABBA (Benny Andersson), Stevie Wonder, and many others relied on it through the late 1970s and 1980s. Its unique character comes from the interaction between the acoustic string resonance, the pickup position, and the treble bridge assembly — producing a sound simultaneously like a piano and an electric guitar. Physical string resonance, pickup position, and lid simulation are the distinctive controls.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics in performance"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — assignable modulation source"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal — holds notes, engages string sympathetic resonance"},
+    "Sostenuto":         {"cc": 66, "description": "Sostenuto pedal — sustains only notes held at the moment of pedalling"},
+
+    "Pickup Position":   {"cc": 22, "description": "Pickup position — moves the electromagnetic pickup along the string length; near the bridge = bright and twangy; near the middle = warm and full"},
+    "Hammer Character":  {"cc": 23, "description": "Hammer hardness/character — softer felts give a rounder, more acoustic tone; harder felts give a brighter, more percussive attack"},
+    "String Resonance":  {"cc": 24, "description": "String sympathetic resonance — the acoustic coupling between strings; higher values give a more piano-like bloom when the sustain pedal is held"},
+    "Lid Position":      {"cc": 25, "description": "Lid position — simulates the acoustic lid of the grand piano enclosure; closed is darker and more direct, open is brighter and more resonant"},
+    "Tremolo Rate":      {"cc": 76, "description": "Tremolo rate — the CP-70 was commonly used with a Leslie cabinet or tremolo amplifier; controls tremolo speed"},
+    "Tremolo Depth":     {"cc": 77, "description": "Tremolo depth — intensity of tremolo amplitude modulation"},
+    "Chorus":            {"cc": 93, "description": "Chorus depth — adds subtle ensemble width"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — plate or hall reverb suits the CP-70's live character"},
+    "Release Noise":     {"cc": 26, "description": "Release noise — the mechanical sound of dampers returning to strings; adds physical realism to the model"}
+  }
+}

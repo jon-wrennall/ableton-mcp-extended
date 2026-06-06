@@ -170,13 +170,51 @@ For plugins that don't expose parameters through VST3/AU (Arturia V Collection, 
 
 | Plugin | Manufacturer | Key parameters |
 |--------|-------------|----------------|
+| Analog Lab Pro V | Arturia | 5 adaptive Macros (labels change per preset) |
+| ARP 2600 V | Arturia | VCF cutoff/resonance, VCF env amount, LFO, portamento, spring reverb, Macros CC 14–18 |
+| Acid V | Arturia | Filter cutoff/resonance, env mod, accent, glide, waveform, decay, drive |
+| Augmented BRASS | Arturia | Acoustic/synth layer blend (CC 1 morph), filter, attack, release, reverb |
+| Augmented GRAND PIANO | Arturia | Acoustic/synth blend, filter, sustain resonance, reverb, motion rate |
+| Augmented MALLETS | Arturia | Acoustic/synth blend, filter, vibrato rate+depth, reverb |
+| Augmented STRINGS | Arturia | Acoustic/synth blend (CC 1 morph), filter, attack, release, reverb |
+| Augmented VOICES | Arturia | Vocal/synth blend, vowel/formant morph (CC 1), filter, reverb |
+| Augmented WOODWINDS | Arturia | Acoustic/synth blend, breath noise, filter, attack, release, reverb |
+| Augmented YANGTZE | Arturia | Chinese instruments/synth blend, timbre morph (CC 1), vibrato, reverb |
+| B-3 V | Arturia | All 9 upper+lower drawbars, Leslie speed/brake, percussion, key click |
+| Buchla Easel V | Arturia | Complex Osc timbre, modulation index, LPG level, attack, decay, Macros CC 14–18 |
+| CMI V | Arturia | Brightness/harmonic content, formant, vibrato, sample layer mix, reverb |
+| CP-70 V | Arturia | Pickup position, hammer character, string resonance, lid, tremolo, chorus, sostenuto |
+| CS-80 V | Arturia | Dual-layer (Ch1+Ch2), ring mod, ribbon, lush pads |
+| CZ V | Arturia | Phase distortion, dual lines, ring mod, detune, chorus |
+| Clavinet V | Arturia | Pickup AB/CD, mute, wah sweep, envelope filter, overdrive, key noise |
 | DX7 V | Arturia | Algorithm, Feedback, 6 operator levels/ratios, envelopes |
+| Emulator II V | Arturia | Filter cutoff/resonance, lo-fi character, attack, release, chorus, reverb |
+| Farfisa V | Arturia | Upper/lower registers, vibrato, attack mode, ensemble/chorus, brightness |
+| Jup-8000 V | Arturia | 2 OSCs, filter, envelopes, chorus, ring mod |
+| Jup-8 V | Arturia | 2 DCOs, 24dB filter, chorus type, arpeggiator, unison |
 | Jun-6 V | Arturia | DCO mix, VCF, VCA envelopes, Chorus type/rate |
-| Mini V / Mini V4 | Arturia | 3 osc mix/waveform, Ladder filter, envelopes |
-| Prophet-5 V | Arturia | 2 osc, CEM filter, envelopes, unison |
-| OP-Xa V | Arturia | 2 osc, Oberheim filter, envelopes |
+| Korg MS-20 V | Arturia | HPF (VCF1) + LPF (VCF2) cutoff, resonance, dual EGs, LFO, portamento |
+| Matrix-12 V | Arturia | SEM filter cutoff/resonance/mode, modulation matrix, LFO, Macros CC 14–18 |
 | Mellotron V | Arturia | Tape bank, wow, flutter, tape age |
+| Mini V | Arturia | 3 osc mix/waveform, Ladder filter, envelopes |
+| MiniBrute V | Arturia | Steiner-Parker filter, Ultrasaw, Metalizer, Brute Factor |
+| MiniFreak V | Arturia | Dual digital engines + SEM filter, Macros CC 14–18 |
+| Modular V | Arturia | VCF cutoff/resonance/env amount, VCO mix, LFO, portamento |
+| OP-Xa V | Arturia | 2 osc, Oberheim filter, envelopes |
 | Piano V | Arturia | Hammer, string resonance, mic position |
+| Prophet-5 V | Arturia | 2 osc, CEM filter, envelopes, unison |
+| Prophet-VS V | Arturia | Vector joystick X/Y (CC 22/23), vector LFO, filter, reverb |
+| Pure Lo-Fi | Arturia | Vinyl noise, wow/flutter rate+depth, bitcrush, tape saturation |
+| SEM V | Arturia | State-variable filter cutoff/resonance/mode, VCO mix, LFO |
+| SQ80 V | Arturia | 3 wavetable OSCs, Curtis filter, dual LFO, mod envelope |
+| Solina V | Arturia | Strings/brass/choir section levels, BBD ensemble rate, attack, release |
+| Stage-73 V | Arturia | Rhodes tine/pickup/hammer, tremolo rate+depth, phaser |
+| Synclavier V | Arturia | FM index/ratio, 6 harmonic partials, timbre frame morph |
+| Synthi V | Arturia | Filter freq/resonance, osc pitch, LFO, pin matrix, spring reverb |
+| Synthx V | Arturia | Filter cutoff/resonance, voice detune, LFO, Macros CC 14–18 |
+| VOX Continental V | Arturia | Upper/lower registers, vibrato rate+depth, tone, reverb |
+| Vocoder V | Arturia | Formant shift, band spread, sibilance, carrier level, LFO wobble |
+| Wurli V | Arturia | Reed character/bite, pickup crosstalk, tremolo rate+depth, overdrive, reverb |
 | Massive X | NI | 8 Macros (assign in plugin), filter, envelopes |
 | FM8 | NI | 8 Macros, 6 operator levels |
 | Guitar Rig 7 | NI | 8 Macros, amp gain/EQ, reverb, delay, wah |

@@ -1,0 +1,29 @@
+{
+  "plugin_name": "Buchla Easel V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Buchla Easel V", "Buchla Music Easel V", "Buchla Easel"],
+  "notes": "Arturia Buchla Easel V emulates the Buchla Music Easel, a self-contained 'west coast' synthesis system designed by Don Buchla in the early 1970s. Unlike Moog-style east coast synthesis, the Easel uses a Complex Oscillator (combining a modulating and carrier oscillator) and a Lowpass Gate (combining VCA and filter in one element) for a fundamentally different timbral character — sounds bloom, breathe, and shimmer rather than cut and punch. The modulation index controls how deeply the modulation oscillator distorts the carrier, producing anything from subtle FM shimmer to complex clangorous spectra. This instrument is best suited to experimental music, generative compositions, drone textures, and cinematic sound design.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Lowpass Gate level — the primary dynamic control, opening the combined VCA/filter gate"},
+    "Modulation":        {"cc": 1,  "description": "Modulation index — depth of FM modulation from the modulating oscillator into the carrier"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento time — glide between pitches"},
+
+    "Complex Osc Timbre":   {"cc": 74, "description": "Complex oscillator timbre/waveform morph — shifts harmonic content of the carrier oscillator"},
+    "Modulation Index":     {"cc": 77, "description": "FM modulation index depth — higher values create more complex, inharmonic spectra"},
+    "Lowpass Gate Level":   {"cc": 22, "description": "Lowpass Gate level offset — sets the baseline opening of the combined gate/filter"},
+    "Mod Osc Rate":         {"cc": 76, "description": "Modulation oscillator rate — from sub-audio to audio rate, crossing into FM territory"},
+    "Mod Osc Depth":        {"cc": 23, "description": "Modulation oscillator depth applied to carrier pitch — vibrato at low rates, FM at audio rates"},
+    "Attack":               {"cc": 73, "description": "Envelope attack time — the Easel's envelope shapes the Lowpass Gate opening"},
+    "Decay":                {"cc": 72, "description": "Envelope decay/release time — controls how the Lowpass Gate closes after a note"},
+    "Reverb":               {"cc": 91, "description": "Reverb send level — adds space and depth to the Easel's organic tones"},
+
+    "Macro 1":           {"cc": 14, "description": "Adaptive Macro 1 — label and target change per preset"},
+    "Macro 2":           {"cc": 15, "description": "Adaptive Macro 2 — label and target change per preset"},
+    "Macro 3":           {"cc": 16, "description": "Adaptive Macro 3 — label and target change per preset"},
+    "Macro 4":           {"cc": 17, "description": "Adaptive Macro 4 — label and target change per preset"},
+    "Macro 5":           {"cc": 18, "description": "Adaptive Macro 5 — label and target change per preset"}
+  }
+}

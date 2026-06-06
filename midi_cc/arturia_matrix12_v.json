@@ -1,0 +1,35 @@
+{
+  "plugin_name": "Matrix-12 V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Matrix-12 V", "Matrix 12 V", "Oberheim Matrix-12 V"],
+  "notes": "Arturia Matrix-12 V emulates the Oberheim Matrix-12, one of the most powerful and complex analog synthesizers ever produced, featuring 12 voices each with two oscillators and the legendary Oberheim state-variable filter. The Matrix-12's defining feature is its massive modulation matrix, offering 27 modulation sources and 59 destinations — far beyond any other hardware synthesizer of its era. The state-variable filter can operate simultaneously in low-pass, band-pass, high-pass, and notch modes or any blend thereof, providing enormous timbral flexibility. Filter cutoff, resonance, and filter mode are the key real-time controls, while the extensive macro system allows complex multi-parameter performance gestures ideal for evolving pads, rich leads, and cinematic textures.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — assignable to any modulation matrix destination"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento time — glide rate between pitches"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "State-variable filter cutoff frequency — primary timbral control across all filter modes"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance/Q — adds emphasis at the cutoff point; self-oscillates at maximum"},
+    "Filter Mode":       {"cc": 22, "description": "Filter mode blend — morphs between LP, BP, HP, and notch simultaneously"},
+    "Filter Env Amount": {"cc": 83, "description": "Filter envelope modulation amount — how much the filter envelope opens/closes the cutoff"},
+    "Attack":            {"cc": 73, "description": "Filter/amp envelope attack time"},
+    "Decay":             {"cc": 79, "description": "Filter/amp envelope decay time"},
+    "Sustain Level":     {"cc": 80, "description": "Filter/amp envelope sustain level"},
+    "Release":           {"cc": 72, "description": "Filter/amp envelope release time"},
+    "LFO Rate":          {"cc": 76, "description": "LFO rate — modulation oscillator speed"},
+    "LFO Depth":         {"cc": 77, "description": "LFO depth — amount of LFO modulation applied to target"},
+    "Osc1 Level":        {"cc": 23, "description": "Oscillator 1 mixer level"},
+    "Osc2 Level":        {"cc": 24, "description": "Oscillator 2 mixer level"},
+    "Osc2 Detune":       {"cc": 25, "description": "Oscillator 2 fine detune — creates chorusing and beating between oscillators"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — adds space to the Matrix-12's lush polyphonic sounds"},
+
+    "Macro 1":           {"cc": 14, "description": "Adaptive Macro 1 — label and target change per preset"},
+    "Macro 2":           {"cc": 15, "description": "Adaptive Macro 2 — label and target change per preset"},
+    "Macro 3":           {"cc": 16, "description": "Adaptive Macro 3 — label and target change per preset"},
+    "Macro 4":           {"cc": 17, "description": "Adaptive Macro 4 — label and target change per preset"},
+    "Macro 5":           {"cc": 18, "description": "Adaptive Macro 5 — label and target change per preset"}
+  }
+}

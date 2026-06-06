@@ -1,0 +1,23 @@
+{
+  "plugin_name": "Augmented VOICES",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Augmented VOICES", "Augmented Voices", "Arturia Augmented Voices"],
+  "notes": "Arturia Augmented VOICES is a hybrid instrument combining real human choral and vocal recordings with a synthesis layer, creating sounds that range from lush, ethereal choirs to otherworldly electronic vocal textures. The acoustic layer draws on recorded voices — soprano, alto, tenor, bass, breaths, vowels — while the synth layer adds harmonic synthesis that mirrors and augments the vocal formant character. The Vowel/Formant Morph control (CC 1) is the centrepiece, sweeping through vowel shapes to animate the vocal character in real time, producing the expressive, evolving movement characteristic of human singing. This instrument excels at cinematic scoring, ambient music, spiritual or ethereal textures, and any production that needs human warmth combined with electronic scale and sustain.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level; simulates breath and dynamic swell in choral performance"},
+    "Modulation":        {"cc": 1,  "description": "Vowel/Formant Morph — sweeps through vowel shapes (A-E-I-O-U) and blends between acoustic vocal and synth layers"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Vocal Layer":       {"cc": 22, "description": "Vocal/acoustic layer level — level of the real human voice recordings in the blend"},
+    "Synth Layer":       {"cc": 23, "description": "Synth layer level — level of the synthesis component that mirrors and extends the vocal character"},
+    "Filter Cutoff":     {"cc": 74, "description": "Filter cutoff — shapes the formant region; rolling off creates darker, more distant voices; opening creates bright, forward presence"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance — adds emphasis that can accentuate vowel formant peaks"},
+    "Attack":            {"cc": 73, "description": "Amplitude envelope attack — longer attacks give slow, swelling choral entries; short for immediate, choral stab textures"},
+    "Release":           {"cc": 72, "description": "Amplitude envelope release — tail length; longer for reverberant, heavenly sustain"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — large hall or cathedral reverb is integral to the sacred/cinematic character of choral textures"},
+    "Shimmer Rate":      {"cc": 76, "description": "Shimmer/motion rate — automated parameter movement that creates breathing, shimmering, evolving vocal textures"},
+    "Shimmer Depth":     {"cc": 77, "description": "Shimmer/motion depth — intensity of the animated parameter movement"}
+  }
+}

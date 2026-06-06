@@ -1,0 +1,33 @@
+{
+  "plugin_name": "MiniFreak V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["MiniFreak V", "Mini Freak V", "Arturia MiniFreak"],
+  "notes": "Arturia MiniFreak V is the software counterpart to the MiniFreak hardware synthesizer, a digital/analog hybrid featuring two independent digital oscillator engines — each selectable from over a dozen synthesis types including wavetable, superwave, speech, two-operator FM, physical modelling, harmonic, and more — feeding into an analog Oberheim SEM-style state-variable filter. The combination of freely assignable digital oscillators with an analog filter creates an exceptionally versatile instrument suited to everything from cinematic pads to aggressive electronic leads. An extensive modulation matrix with multiple LFOs, envelopes, and a step sequencer/arpeggiator round out the architecture. Macros provide per-preset multi-parameter control ideal for live performance.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — assignable modulation source in the matrix"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento time — glide rate between notes"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "Analog SEM filter cutoff — primary timbral control; simultaneously outputs LP, BP, HP"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance — aggressive resonant peak; self-oscillates at maximum"},
+    "Osc1 Wave/Morph":   {"cc": 22, "description": "Oscillator 1 wave/type morph — sweeps through the waveform or parameter space of the chosen engine (wavetable position, FM ratio, harmonic content, etc.)"},
+    "Osc2 Wave/Morph":   {"cc": 23, "description": "Oscillator 2 wave/type morph — same as Osc1 but for the second engine, allowing independent timbral shaping"},
+    "Osc1 Type":         {"cc": 24, "description": "Oscillator 1 engine type selection — cycles through available synthesis modes"},
+    "Osc2 Type":         {"cc": 25, "description": "Oscillator 2 engine type selection — independent engine from Osc1"},
+    "Osc Mix":           {"cc": 26, "description": "Oscillator mix balance — crossfades between Osc1 and Osc2 levels"},
+    "Attack":            {"cc": 73, "description": "Amplitude envelope attack time"},
+    "Release":           {"cc": 72, "description": "Amplitude envelope release time"},
+    "LFO Rate":          {"cc": 76, "description": "LFO rate — primary modulation oscillator speed"},
+    "FX Mix":            {"cc": 91, "description": "FX reverb/delay send level — built-in effects wet mix"},
+    "Chorus":            {"cc": 93, "description": "Chorus effect depth — adds ensemble width and shimmer"},
+
+    "Macro 1":           {"cc": 14, "description": "Adaptive Macro 1 — label and target change per preset"},
+    "Macro 2":           {"cc": 15, "description": "Adaptive Macro 2 — label and target change per preset"},
+    "Macro 3":           {"cc": 16, "description": "Adaptive Macro 3 — label and target change per preset"},
+    "Macro 4":           {"cc": 17, "description": "Adaptive Macro 4 — label and target change per preset"},
+    "Macro 5":           {"cc": 18, "description": "Adaptive Macro 5 — label and target change per preset"}
+  }
+}

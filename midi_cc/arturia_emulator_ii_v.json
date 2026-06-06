@@ -1,0 +1,24 @@
+{
+  "plugin_name": "Emulator II V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Emulator II V", "E-MU Emulator II V", "Emulator 2 V"],
+  "notes": "Arturia Emulator II V emulates the E-MU Emulator II, the influential 12-bit digital sampler used by Peter Gabriel, Depeche Mode, Tears for Fears, and countless 1980s pop and new wave artists. The Emulator II's 12-bit audio resolution, combined with its warm CEM-chip low-pass filter, creates a distinctive sound — slightly gritty and lo-fi, yet musical and full-bodied — that became one of the defining timbres of the decade. Unlike pure sample players, the Emulator II processes audio through an analog filter stage which adds warmth and character unavailable in purely digital playback. Filter cutoff, resonance, and filter envelope amount are the most important real-time controls, while the lo-fi character control reintroduces the hardware's bit-depth limitations.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — typically routed to vibrato on sustained patches"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "CEM low-pass filter cutoff — warms and shapes the 12-bit samples; opening fully reveals the raw digital character"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance — adds emphasis and the characteristic CEM filter peak"},
+    "Filter Env Amount": {"cc": 22, "description": "Filter envelope amount — how much the amplitude envelope opens the filter; creates the punchy, plucked filter sweeps common on Emulator II patches"},
+    "Lo-Fi Character":   {"cc": 23, "description": "Lo-fi/bit-depth character — reintroduces the 12-bit aliasing and quantisation noise of the original hardware"},
+    "Attack":            {"cc": 73, "description": "Amplitude envelope attack time — from immediate transients to slow fades"},
+    "Release":           {"cc": 72, "description": "Amplitude envelope release time — tail length after note off"},
+    "Chorus":            {"cc": 93, "description": "Chorus depth — adds ensemble width, used on many classic Emulator II string and pad patches"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — period-correct hall or room reverb"},
+    "Sample Tuning":     {"cc": 24, "description": "Sample tuning — coarse pitch adjustment across the sample bank"},
+    "Vibrato Rate":      {"cc": 76, "description": "Vibrato rate — speed of pitch modulation on sustained notes"}
+  }
+}

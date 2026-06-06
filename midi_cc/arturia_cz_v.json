@@ -1,0 +1,26 @@
+{
+  "plugin_name": "CZ V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["CZ V", "Casio CZ V", "CZ-101 V", "CZ-1 V"],
+  "notes": "Arturia CZ V emulates the Casio CZ series synthesizers (CZ-101, CZ-1000, CZ-3000, CZ-5000, CZ-1), which used phase distortion synthesis — Casio's proprietary alternative to Yamaha's FM synthesis. Phase distortion works by warping the phase of a sine wave through a second modulating waveform, producing rich, complex timbres from eight selectable distortion waveforms per line. Two independent synthesis lines (Line 1 and Line 2) can be run in series, in parallel, or with ring modulation between them. The CZ series is known for its bright digital clarity combined with warmth absent from early FM instruments, and the ring modulator adds distinctive metallic and bell-like tones.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — vibrato depth or LFO modulation amount"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Line1 Phase Cutoff":{"cc": 74, "description": "Line 1 phase distortion depth/cutoff — sweeps through the phase distortion amount, darkening or brightening Line 1's timbre"},
+    "Line2 Level":       {"cc": 22, "description": "Line 2 output level — mix balance of the second synthesis line in the combined output"},
+    "Ring Mod Amount":   {"cc": 23, "description": "Ring modulation amount — multiplies Line 1 and Line 2 for metallic, bell-like inharmonic spectra"},
+    "Detune":            {"cc": 24, "description": "Detune between Line 1 and Line 2 — creates chorusing, beating, and ensemble-like thickness"},
+    "Attack":            {"cc": 73, "description": "DCO envelope attack time — applies to both amplitude and phase distortion envelopes"},
+    "Release":           {"cc": 72, "description": "DCO envelope release time"},
+    "Chorus Rate":       {"cc": 93, "description": "Chorus rate — the CZ hardware had a built-in chorus; this replicates that ensemble-widening effect"},
+    "LFO Rate":          {"cc": 76, "description": "LFO rate — modulation oscillator speed for vibrato or tremolo"},
+    "LFO Depth":         {"cc": 77, "description": "LFO depth — modulation amount applied to pitch or phase"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — adds space and dimension"},
+    "Line1 Waveform":    {"cc": 25, "description": "Line 1 phase distortion waveform — selects from 8 distortion shapes (sine-saw, sine-square, resonant types, etc.)"},
+    "Line2 Waveform":    {"cc": 26, "description": "Line 2 phase distortion waveform — independent waveform for the second synthesis line"}
+  }
+}

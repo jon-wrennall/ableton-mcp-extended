@@ -1,0 +1,23 @@
+{
+  "plugin_name": "Vocoder V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Vocoder V", "Arturia Vocoder V"],
+  "notes": "Arturia Vocoder V is a 16-band vocoder inspired by classic hardware vocoders including the EMS Vocoder 5000, Sennheiser VSM-201, and Moog 16-band Vocoder. A vocoder works by analysing the spectral envelope of a modulator signal (typically a voice or microphone input) and imposing that envelope onto a carrier signal (the internal synthesizer). The result is the classic robotic, talking-synthesizer effect used in Daft Punk, Kraftwerk, Laurie Anderson, Roger Troutman, and countless others. Carrier cutoff/formant and formant shift are the most expressive real-time controls, while band spread and sibilance refine intelligibility and presence. For best results, use a live microphone or pre-recorded vocal as the modulator input.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Carrier level — scales synthesizer carrier signal level relative to modulator"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — assignable modulation source for carrier synth"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal — holds vocoder output"},
+    "LFO Rate":          {"cc": 76, "description": "Carrier LFO rate — adds wobble or vibrato to the carrier pitch"},
+
+    "Carrier Cutoff":    {"cc": 74, "description": "Carrier synthesizer filter cutoff — shapes the frequency range of the carrier before vocoding"},
+    "Formant Shift":     {"cc": 22, "description": "Formant shift — shifts all analysis bands up or down in frequency, changing perceived vocal register (up = child-like, down = deep)"},
+    "Band Spread":       {"cc": 23, "description": "Band spread — increases or decreases the frequency spacing between vocoder analysis bands; wider spread improves intelligibility"},
+    "Sibilance":         {"cc": 24, "description": "Sibilance level — controls the level of unvoiced high-frequency content (s, t, f sounds) passed directly to output for intelligibility"},
+    "Attack":            {"cc": 73, "description": "Band envelope attack — how quickly each band responds to the modulator; faster = more detailed articulation"},
+    "Release":           {"cc": 72, "description": "Band envelope release — how quickly bands close after modulator signal drops; longer = smoother, more sustained vocoder effect"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — adds space and dimension to the vocoder output"},
+    "Carrier Waveform":  {"cc": 25, "description": "Carrier oscillator waveform — sawtooth for pitched vocal effect; noise for whispered/unpitched effect"}
+  }
+}

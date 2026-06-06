@@ -1,0 +1,23 @@
+{
+  "plugin_name": "Wurli V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Wurli V", "Arturia Wurli V", "Wurlitzer V"],
+  "notes": "Arturia Wurli V is a physical model of the Wurlitzer electric piano, capturing the instrument's characteristic reed-and-pickup mechanism from first principles rather than sample playback. Physical modelling allows the Wurli V to respond to velocity, touch, and performance nuance in ways that closely mirror the original hardware — including the mechanical noise of reed attack, pickup crosstalk between notes, and the subtle variation between individual reeds. The Wurlitzer's distinctive slightly overdriven, slightly buzzy midrange character is shaped by reed bite, pickup settings, and the built-in tremolo effect. Overdrive and tremolo automation are central to the instrument's expressive range, from clean R&B comping to heavily driven rock and soul leads.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level dynamically"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — assignable modulation source"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Reed Bite":         {"cc": 22, "description": "Reed character/bite — controls the physical interaction between reed and pickup; higher values increase the buzzy, aggressive midrange character"},
+    "Pickup Crosstalk":  {"cc": 23, "description": "Pickup crosstalk — simulates electromagnetic interference between adjacent note pickups; adds subtle harmonic complexity"},
+    "Tremolo Rate":      {"cc": 76, "description": "Tremolo rate — speed of the amplitude tremolo effect; integral to the classic Wurlitzer soul/R&B sound"},
+    "Tremolo Depth":     {"cc": 77, "description": "Tremolo depth — intensity of the tremolo amplitude modulation"},
+    "Overdrive":         {"cc": 25, "description": "Overdrive amount — from clean sparkle to the heavily saturated drive used on classic rock recordings"},
+    "Release Noise":     {"cc": 26, "description": "Release noise level — the mechanical thunk of keys releasing; adds realism to the physical model"},
+    "Brightness":        {"cc": 74, "description": "Brightness/tone — overall high-frequency content; controls the pick-up EQ character"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — room or plate reverb adds space to the direct electric piano sound"},
+    "Chorus":            {"cc": 93, "description": "Chorus depth — adds subtle ensemble width"}
+  }
+}

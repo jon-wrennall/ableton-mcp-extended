@@ -1,0 +1,23 @@
+{
+  "plugin_name": "Solina V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Solina V", "ARP Solina V", "String Ensemble V"],
+  "notes": "Arturia Solina V emulates the ARP Solina String Ensemble (also sold as the ARP Pro/DX and Eminent 310 Unique), the iconic 1970s string machine used by ABBA, Jean-Michel Jarre, Tangerine Dream, and countless pop and progressive rock artists. The Solina uses organ-style divide-down oscillators to produce all 49 notes simultaneously — there is no envelope, no filter, and no polyphony limit — with the output fed through a bucket-brigade device (BBD) ensemble chorus that gives the instrument its warm, shimmering, detuned character. Separate sections for Cellos, Violas, Violins, Brass, and Choir can be blended to taste. The ensemble/chorus effect is not decorative but integral to the sound — the Solina without chorus sounds thin and clinical.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales overall output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — assignable modulation, often vibrato depth"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Strings Level":     {"cc": 22, "description": "String section level — combined level of Cellos, Violas, and Violins registers"},
+    "Brass Level":       {"cc": 23, "description": "Brass section level — bright, buzzy brass ensemble layer"},
+    "Choir Level":       {"cc": 24, "description": "Choir/vocal section level — adds a human voice-like layer to the ensemble"},
+    "Ensemble Rate":     {"cc": 93, "description": "Ensemble/BBD chorus rate — speed of the bucket-brigade ensemble effect; the defining Solina character control"},
+    "Ensemble Depth":    {"cc": 77, "description": "Ensemble depth — intensity of the BBD chorus modulation; deeper values give wider, more lush detuning"},
+    "Attack":            {"cc": 73, "description": "Amplitude envelope attack — the Solina has a slow attack option; longer attacks give bowed string phrasing"},
+    "Release":           {"cc": 72, "description": "Amplitude envelope release — tail length after keys are released"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — hall or plate reverb suits the orchestral character of the Solina"},
+    "Tone":              {"cc": 74, "description": "Tone/brightness — overall tonal shaping; roll off treble for lush warmth or open fully for vintage brightness"}
+  }
+}

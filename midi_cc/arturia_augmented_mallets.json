@@ -1,0 +1,23 @@
+{
+  "plugin_name": "Augmented MALLETS",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Augmented MALLETS", "Augmented Mallets", "Arturia Augmented Mallets"],
+  "notes": "Arturia Augmented MALLETS is a hybrid instrument combining sampled mallet percussion — marimba, vibraphone, xylophone, glockenspiel, crotales, and other tuned percussion — with a synthesis layer, creating a palette from pure acoustic percussion to shimmering electronic textures with the attack characteristics of struck bars. Mallet instruments have naturally fast attacks and exponential decays, and the instrument preserves these transient characteristics while allowing the synth layer to extend, colour, and sustain them far beyond what the acoustic instruments can achieve. Vibrato (applied to the vibraphone-style motor effect) and blend/morph are the key expressive controls, while release/decay governs how quickly notes die away.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Blend/Morph — sweeps between Acoustic mallet layer and Synth layer"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal — holds notes, allowing bars/resonators to ring freely"},
+
+    "Acoustic Layer":    {"cc": 22, "description": "Acoustic mallet layer level — level of the real mallet percussion recordings"},
+    "Synth Layer":       {"cc": 23, "description": "Synth layer level — level of the synthesis component extending the mallet character"},
+    "Filter Cutoff":     {"cc": 74, "description": "Filter cutoff — shapes brightness; high cutoff emphasises the metallic upper partials of xylophone/glockenspiel; lower values darken towards marimba warmth"},
+    "Attack":            {"cc": 73, "description": "Amplitude envelope attack — mallet instruments are naturally fast; longer attack softens the transient for pad-like sustained textures"},
+    "Release":           {"cc": 72, "description": "Release/decay — how quickly bars ring down; long release gives vibraphone sustain, short gives xylophone dryness"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — hall reverb allows the mallet resonators to bloom naturally"},
+    "Vibrato Rate":      {"cc": 76, "description": "Vibrato rate — modulates the vibraphone motor speed effect; slow for gentle shimmer, fast for wide tremolo"},
+    "Vibrato Depth":     {"cc": 77, "description": "Vibrato depth — intensity of the vibrato/motor effect applied to the vibraphone layer"},
+    "Motion Depth":      {"cc": 24, "description": "Motion/animation depth — automated parameter movement for evolving hybrid textures"}
+  }
+}

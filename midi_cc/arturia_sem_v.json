@@ -1,0 +1,28 @@
+{
+  "plugin_name": "SEM V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["SEM V", "Oberheim SEM V", "Synthesizer Expander Module V"],
+  "notes": "Arturia SEM V emulates the Oberheim Synthesizer Expander Module, the deceptively simple two-oscillator synthesizer that spawned the Oberheim Two-Voice, Four-Voice, and ultimately the OB series. The SEM's state-variable filter is its most celebrated feature — a 12dB/oct design that simultaneously outputs low-pass, band-pass, high-pass, and notch, allowing any blend between modes via a continuous control. This makes the SEM filter far more versatile in character than many competitors. The architecture is deliberately straightforward, but the filter's smooth, slightly warm resonance and multimode flexibility make it a go-to instrument for pads, basses, leads, and strings-style sounds that feel immediately classic and musical.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — assignable modulation source"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento time — glide between pitches"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "State-variable filter cutoff — simultaneously controls LP, BP, HP, and notch outputs"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance — smooth, musical peak; self-oscillates into a clean sine wave"},
+    "Filter Mode":       {"cc": 22, "description": "Filter mode blend — morphs from low-pass through notch to high-pass; the SEM's unique feature"},
+    "VCO Mix":           {"cc": 23, "description": "Oscillator mix — balance between VCO1 and VCO2 levels"},
+    "VCO1 Waveform":     {"cc": 24, "description": "VCO1 waveform — sawtooth, triangle, pulse"},
+    "VCO2 Waveform":     {"cc": 25, "description": "VCO2 waveform — sawtooth, triangle, pulse; combine with VCO1 for rich textures"},
+    "VCO2 Detune":       {"cc": 26, "description": "VCO2 detune — fine pitch offset; creates chorus-like thickening"},
+    "Attack":            {"cc": 73, "description": "Envelope attack time — shared envelope for filter and VCA"},
+    "Release":           {"cc": 72, "description": "Envelope release time"},
+    "LFO Rate":          {"cc": 76, "description": "LFO rate — modulation speed"},
+    "LFO Depth":         {"cc": 77, "description": "LFO depth — modulation amount"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level"},
+    "Chorus":            {"cc": 93, "description": "Chorus depth — adds ensemble width to pads and strings"}
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "plugin_name": "Vox Continental V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Vox Continental V", "Vox V", "Continental V"],
+  "notes": "Arturia Vox Continental V emulates the Vox Continental, the transistor combo organ synonymous with the British Invasion, used by The Animals, The Doors, Ray Manzarek, and The Dave Clark Five. Like the Farfisa, the Vox Continental uses transistor divider circuits rather than tonewheels, producing a bright, reedy, slightly nasal tone quite different from the Hammond's warm additive character. The distinctive inverted black-and-white keyboard, the independent upper and lower register tabs, and the built-in vibrato are its defining features. The Continental's sound is thinner and more cutting than the Farfisa, making it ideal for driving leads and punchy chordal stabs in 60s-inspired music, psychedelia, and garage rock.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master volume — overall organ output level"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression pedal — primary dynamic control for swell and volume variation"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — vibrato depth or additional modulation"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Upper Registers":   {"cc": 22, "description": "Upper keyboard register tabs — combines footage tabs to shape timbre; the Continental's tabs are calibrated differently from the Farfisa, giving it a characteristically thinner, brighter top-end"},
+    "Lower Registers":   {"cc": 23, "description": "Lower keyboard register tabs — bass section footage tabs"},
+    "Vibrato Rate":      {"cc": 76, "description": "Vibrato rate — speed of the built-in vibrato; slow rates give gentle sway, faster rates give a churning Leslie-like effect"},
+    "Vibrato Depth":     {"cc": 77, "description": "Vibrato depth — intensity of pitch modulation; the Continental's vibrato is distinctive and recognisable"},
+    "Tone":              {"cc": 74, "description": "Tone/brightness — tonal shaping across the full organ output"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — spring or room reverb adds period character"},
+    "Key Click":         {"cc": 25, "description": "Key click level — transistor key click transient; adds realistic attack"}
+  }
+}

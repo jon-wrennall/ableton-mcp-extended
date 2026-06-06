@@ -1,0 +1,23 @@
+{
+  "plugin_name": "Acid V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Acid V", "Arturia Acid V", "TB-303 V"],
+  "notes": "Arturia Acid V is a faithful emulation of the Roland TB-303 bassline synthesizer, the instrument that defined acid house, techno, and acid techno. The instrument features a single sawtooth/square-wave VCO feeding a 3-pole 18dB/oct low-pass filter with its characteristic resonant peak, driven by an accent-and-glide step sequencer architecture. Filter cutoff and resonance are the two most important real-time performance controls — sweeping them together at high resonance produces the quintessential acid squelch. Envelope modulation depth and accent level shape how aggressively notes punch through, while glide/portamento creates the sliding legato lines central to the style.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level dynamically"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — assignable modulation source"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento Time":   {"cc": 5,  "description": "Glide time — controls portamento slide speed between notes"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "VCF low-pass filter cutoff frequency — the primary acid squelch control"},
+    "Filter Resonance":  {"cc": 71, "description": "VCF resonance — high values produce the signature acid 'quack'; self-oscillates at maximum"},
+    "Env Mod Amount":    {"cc": 22, "description": "Envelope modulation depth — how much the decay envelope opens the filter; central to acid phrasing"},
+    "Accent Depth":      {"cc": 23, "description": "Accent depth — controls how strongly accented steps boost level and filter brightness"},
+    "VCO Waveform":      {"cc": 24, "description": "Oscillator waveform blend — sawtooth to square wave; sawtooth is brighter, square is rounder"},
+    "Decay":             {"cc": 72, "description": "Filter/amp envelope decay time — short values give the punchy pluck; longer values give sustained slides"},
+    "Distortion Drive":  {"cc": 25, "description": "Distortion/overdrive amount — from subtle harmonic warming to heavy clipping"},
+    "Tempo Sync":        {"cc": 26, "description": "Sequencer/LFO tempo sync toggle — locks modulation to project BPM (0=free, 64+=synced)"}
+  }
+}

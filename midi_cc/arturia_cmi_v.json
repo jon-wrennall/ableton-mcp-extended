@@ -1,0 +1,24 @@
+{
+  "plugin_name": "CMI V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["CMI V", "Fairlight CMI V", "Fairlight V"],
+  "notes": "Arturia CMI V emulates the Fairlight CMI (Computer Musical Instrument), the pioneering Australian digital sampler and synthesizer used by Peter Gabriel, Kate Bush, Trevor Horn, Stevie Wonder, and many others in the early 1980s. The Fairlight combined sample playback with a rudimentary additive synthesis engine (Page R for the sequencer, Page 4 for waveform drawing), producing an immediately recognisable sonic character — bright, slightly harsh, yet musical — that defined the sound of 1980s pop and film scores. Brightness/harmonic content and formant controls are the primary timbral tools, while expression and vibrato shape the performance character of sustained notes.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics; essential for bowed and wind sample patches"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — typically controls vibrato depth on pitched patches"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Brightness":        {"cc": 74, "description": "Harmonic brightness/filter cutoff — shapes the high-frequency content and air of the sampled/synthesized waveform"},
+    "Formant":           {"cc": 22, "description": "Formant control — shifts the spectral centre of the waveform, changing perceived vowel or instrument body character"},
+    "Attack":            {"cc": 73, "description": "Sample playback envelope attack — time from note-on to full level"},
+    "Release":           {"cc": 72, "description": "Sample playback envelope release — tail length after note off"},
+    "Vibrato Rate":      {"cc": 76, "description": "Vibrato rate — speed of pitch modulation applied to sustained notes"},
+    "Vibrato Depth":     {"cc": 77, "description": "Vibrato depth — amount of pitch modulation; gives vocal and string patches organic movement"},
+    "Sample Layer Mix":  {"cc": 23, "description": "Sample layer mix — balance between layered sample banks or timbral layers within a patch"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — period-correct hall reverb suits the Fairlight's 1980s character"},
+    "Chorus":            {"cc": 93, "description": "Chorus depth — adds ensemble width, characteristic of many Fairlight string and pad patches"},
+    "Sample Tuning":     {"cc": 24, "description": "Sample tuning/pitch offset — coarse pitch adjustment across the sampled waveform"}
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "plugin_name": "Augmented BRASS",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Augmented BRASS", "Augmented Brass", "Arturia Augmented Brass"],
+  "notes": "Arturia Augmented BRASS is a hybrid instrument combining recorded brass ensemble samples with a synthesis layer, enabling a range from realistic orchestral brass to full electronic textures with brass tonality woven in. The acoustic layer captures the attack transient, valve noise, air, and timbral richness of real brass sections, while the synth layer adds sustain, pads, and electronic colour. The blend is continuously controllable via the Morph control, making it ideal for transitions from acoustic section writing to electronic sound design within a single patch. Attack shaping is particularly important as it defines whether the brass feels live and punchy or smooth and synthetic.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level; essential for brass dynamics and crescendos"},
+    "Modulation":        {"cc": 1,  "description": "Blend/Morph — continuously sweeps between the Acoustic brass layer and the Synth layer"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Acoustic Layer":    {"cc": 22, "description": "Acoustic brass layer level — level of the real brass ensemble recordings"},
+    "Synth Layer":       {"cc": 23, "description": "Synth layer level — level of the synthesis engine"},
+    "Filter Cutoff":     {"cc": 74, "description": "Filter cutoff — shapes brightness; opening the filter emphasises the bright, cutting character of brass"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance — adds tonal emphasis at cutoff"},
+    "Attack":            {"cc": 73, "description": "Amplitude envelope attack — short attack = punchy brass stabs; long attack = slow swells for film scoring"},
+    "Release":           {"cc": 72, "description": "Amplitude envelope release — tail length after note off"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — concert hall or stage reverb sits the brass in an acoustic space"},
+    "Motion Rate":       {"cc": 76, "description": "Motion/LFO rate — automated movement across the parameter space for evolving textures"},
+    "Motion Depth":      {"cc": 77, "description": "Motion/LFO depth — amount of automated movement"}
+  }
+}

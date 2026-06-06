@@ -1,0 +1,31 @@
+{
+  "plugin_name": "Synthx V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Synthx V", "Synth X V", "Arturia SynthX"],
+  "notes": "Arturia Synthx V is inspired by the Oberheim Two-Voice and Four-Voice concept — a multi-timbral analog synthesizer comprising up to four independent synthesis voices, each built around dual VCOs, a filter, and its own envelope generator. This architecture allows thick, layered sounds where each voice can carry a different timbre, making it ideal for stacked pads, fat unison leads, and rich polyphonic textures. Per-voice detuning and independent filter cutoffs create organic, wide stereo soundscapes that are difficult to achieve with single-voice instruments. The instrument suits film scoring, ambient music, and any production that demands large-scale, orchestral-weight synthesizer sounds.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — assignable modulation source"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento time — glide speed between pitches"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "Global filter cutoff — primary brightness control across all active voices"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance — resonant peak character"},
+    "Voice Detune":      {"cc": 22, "description": "Voice detune spread — detunes individual voices against each other for chorus-like thickening"},
+    "Attack":            {"cc": 73, "description": "Envelope attack time — shared across voices for cohesive articulation"},
+    "Release":           {"cc": 72, "description": "Envelope release time — tail length after note off"},
+    "LFO Rate":          {"cc": 76, "description": "LFO rate — modulation oscillator speed"},
+    "LFO Depth":         {"cc": 77, "description": "LFO depth — modulation amount applied to pitch or filter"},
+    "Osc Mix":           {"cc": 23, "description": "Oscillator mix — balance between the two VCOs within each voice"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — adds space to the wide, layered sound"},
+    "Chorus":            {"cc": 93, "description": "Chorus/ensemble depth — additional width and movement"},
+
+    "Macro 1":           {"cc": 14, "description": "Adaptive Macro 1 — label and target change per preset"},
+    "Macro 2":           {"cc": 15, "description": "Adaptive Macro 2 — label and target change per preset"},
+    "Macro 3":           {"cc": 16, "description": "Adaptive Macro 3 — label and target change per preset"},
+    "Macro 4":           {"cc": 17, "description": "Adaptive Macro 4 — label and target change per preset"},
+    "Macro 5":           {"cc": 18, "description": "Adaptive Macro 5 — label and target change per preset"}
+  }
+}

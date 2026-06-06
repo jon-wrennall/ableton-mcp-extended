@@ -1,0 +1,26 @@
+{
+  "plugin_name": "Pure Lo-Fi",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Pure Lo-Fi", "Arturia Pure Lo-Fi", "PureLoFi"],
+  "notes": "Arturia Pure Lo-Fi is a dedicated lo-fi synthesizer and texture tool, combining a core synthesizer engine with an extensive suite of vintage degradation processors — vinyl crackle and noise, tape hiss and saturation, wow and flutter, bitcrushing, and sample-rate reduction. Together these tools recreate the sound of records, tapes, and old samplers to varying degrees of authenticity. The instrument is purpose-built for lo-fi hip hop, chill beats, boom bap, and any production where vintage warmth, imperfection, and nostalgic texture are desirable. Filter cutoff shapes the underlying tone, while the degradation controls are the defining creative tools — the vinyl noise amount, wow/flutter rate and depth, and bitcrusher depth are the most important automation targets.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — assignable modulation source"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "Filter cutoff frequency — shapes the underlying synthesizer tone from bright to dark"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance — adds warmth or character at the cutoff point"},
+    "Vinyl Noise Amount":{"cc": 22, "description": "Vinyl crackle and noise amount — from subtle surface noise to heavy, worn-record degradation"},
+    "Wow/Flutter Rate":  {"cc": 23, "description": "Wow and flutter rate — speed of pitch instability; slow wow mimics stretched tape, fast flutter mimics worn mechanisms"},
+    "Wow/Flutter Depth": {"cc": 24, "description": "Wow and flutter depth — amount of pitch instability applied; higher values create pronounced warping"},
+    "Bitcrush Depth":    {"cc": 25, "description": "Bitcrusher depth — reduces bit depth for gritty, lo-fi digital character reminiscent of early samplers"},
+    "Tape Saturation":   {"cc": 26, "description": "Tape saturation amount — adds harmonic warmth and soft compression from virtual tape recording"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — dusty room or vintage hall reverb character"},
+    "Attack":            {"cc": 73, "description": "Amplitude envelope attack time"},
+    "Release":           {"cc": 72, "description": "Amplitude envelope release time"},
+    "Sample Rate Reduce":{"cc": 27, "description": "Sample rate reduction — lowers sample rate for lo-fi aliasing and vintage digital character"},
+    "Chorus":            {"cc": 93, "description": "Chorus depth — gentle ensemble widening"}
+  }
+}

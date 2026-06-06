@@ -1,0 +1,26 @@
+{
+  "plugin_name": "Prophet VS V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Prophet VS V", "Prophet-VS V", "Sequential Prophet VS"],
+  "notes": "Arturia Prophet VS V emulates the Sequential Circuits Prophet VS, the first commercial synthesizer to use vector synthesis — a technique where a joystick continuously crossfades between four independent digital oscillators arranged at the corners of a square. Each oscillator has its own waveform from a library of 128 digital waves, and the joystick position determines the mix of all four, allowing smooth morphing between starkly different timbres. The VS is famous for its ability to evolve and breathe in ways impossible with conventional subtractive synthesis, and Arturia's version adds an analog-modelled filter absent from the original. Vector X and Y position controls are the defining performance gestures, making the instrument ideal for animated pads, morphing textures, and evolving soundscapes.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — assignable modulation source"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento time — glide speed between pitches"},
+
+    "Vector X Position": {"cc": 22, "description": "Vector joystick X position — crossfades between oscillator A+D (left) and B+C (right); the primary timbral morphing control"},
+    "Vector Y Position": {"cc": 23, "description": "Vector joystick Y position — crossfades between oscillator A+B (top) and C+D (bottom); combined with X creates four-way morphing"},
+    "Vector LFO Rate":   {"cc": 76, "description": "Vector LFO rate — automated movement of the joystick position for continuously evolving morphs"},
+    "Vector LFO Depth":  {"cc": 77, "description": "Vector LFO depth — amount of automated joystick movement"},
+    "Filter Cutoff":     {"cc": 74, "description": "Low-pass filter cutoff — Arturia's analog-modelled filter addition to the VS architecture"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance — adds character and peak to the filter"},
+    "Attack":            {"cc": 73, "description": "Amplitude envelope attack time"},
+    "Release":           {"cc": 72, "description": "Amplitude envelope release time"},
+    "Detune":            {"cc": 24, "description": "Oscillator detune — spreads the four oscillators for chorusing and ensemble width"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — adds space and depth to evolving textures"},
+    "Chorus":            {"cc": 93, "description": "Chorus depth — further widens the vector synthesis stereo field"}
+  }
+}

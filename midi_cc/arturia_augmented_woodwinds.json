@@ -1,0 +1,23 @@
+{
+  "plugin_name": "Augmented WOODWINDS",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Augmented WOODWINDS", "Augmented Woodwinds", "Arturia Augmented Woodwinds"],
+  "notes": "Arturia Augmented WOODWINDS blends recorded woodwind instrument samples — flutes, clarinets, oboes, bassoons, saxophones — with a synthesis engine to create a spectrum from organic acoustic writing tool to electronic textures that retain woodwind tonal character. The acoustic layer's breath noise, reed character, and tonal warmth of real woodwinds give the instrument immediate realism, while the synth layer introduces sustain, harmonic complexity, and electronic colour. Expression via CC 11 is particularly important for woodwinds, simulating the natural dynamic control a player achieves through breath pressure. Breath noise (CC 24) adds authenticity to the acoustic layer, making phrases feel performed rather than triggered.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — simulates breath pressure dynamics; the single most important performance control for realistic woodwind phrasing"},
+    "Modulation":        {"cc": 1,  "description": "Blend/Morph — sweeps between the Acoustic woodwind layer and the Synth layer"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Acoustic Layer":    {"cc": 22, "description": "Acoustic woodwind layer level — level of the real woodwind recordings"},
+    "Synth Layer":       {"cc": 23, "description": "Synth layer level — level of the synthesis engine component"},
+    "Breath Noise":      {"cc": 24, "description": "Breath noise amount — adds the natural air and reed/embouchure noise of acoustic woodwind playing; essential for realism"},
+    "Filter Cutoff":     {"cc": 74, "description": "Filter cutoff — tonal shaping; woodwinds are naturally warm so subtle cutoff movement aids expression"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance — adds tonal character at the cutoff point"},
+    "Attack":            {"cc": 73, "description": "Amplitude envelope attack — short for tongued articulation, longer for slurred legato phrases"},
+    "Release":           {"cc": 72, "description": "Amplitude envelope release — tail length after note off"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — hall or room reverb places the woodwinds in a natural acoustic environment"},
+    "Motion Rate":       {"cc": 76, "description": "Motion/LFO rate — parameter animation speed for evolving textures"}
+  }
+}

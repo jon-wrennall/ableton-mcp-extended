@@ -1,0 +1,23 @@
+{
+  "plugin_name": "Augmented STRINGS",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Augmented STRINGS", "Augmented Strings", "Arturia Augmented Strings"],
+  "notes": "Arturia Augmented STRINGS is a hybrid instrument combining deeply sampled real string ensemble recordings with a synthesis engine (wavetable, additive, FM) that can be blended smoothly from pure acoustic to fully synthetic or any combination in between. This architecture allows the instrument to produce everything from lush, realistic orchestral string textures to electronic pads infused with organic string character. The Acoustic Layer and Synth Layer levels control the fundamental blend, while Morph (CC 1) provides a single continuous control to sweep between the two worlds. Filter, attack, and release shape the combined output, and the Motion/LFO rate adds movement and animation to evolving textures. Particularly effective for film scoring, ambient music, and hybrid electronic productions.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics; essential for bowed string phrasing"},
+    "Modulation":        {"cc": 1,  "description": "Blend/Morph — sweeps between the Acoustic string layer and the Synth layer; the primary creative control"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Acoustic Layer":    {"cc": 22, "description": "Acoustic string layer level — level of the real string ensemble samples in the blend"},
+    "Synth Layer":       {"cc": 23, "description": "Synth layer level — level of the synthesis engine (wavetable/FM/additive) in the blend"},
+    "Filter Cutoff":     {"cc": 74, "description": "Filter cutoff — shapes combined layer brightness; roll off for dark pads, open for bright, bowing-like shimmer"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance — adds tonal emphasis at the cutoff frequency"},
+    "Attack":            {"cc": 73, "description": "Amplitude envelope attack — longer attacks give slow bowing articulation; short for pizzicato-like plucks"},
+    "Release":           {"cc": 72, "description": "Amplitude envelope release — tail length; longer for sustained, reverberant textures"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — hall or chamber reverb enhances the orchestral character of the acoustic layer"},
+    "Motion Rate":       {"cc": 76, "description": "Motion/LFO rate — animates parameters over time for evolving, breathing textures"},
+    "Motion Depth":      {"cc": 77, "description": "Motion/LFO depth — amount of automated parameter movement"}
+  }
+}

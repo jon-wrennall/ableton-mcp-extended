@@ -1,0 +1,26 @@
+{
+  "plugin_name": "MiniBrute V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["MiniBrute V", "Mini Brute V", "Arturia MiniBrute"],
+  "notes": "Arturia MiniBrute V emulates the Arturia MiniBrute, the company's own flagship analog monosynth, featuring a unique single-oscillator architecture enriched by the Ultrasaw (multiple detuned sawtooth waves) and Metalizer (wavefolder/ring-mod-style waveshaping) circuits. The Steiner-Parker multimode filter provides simultaneous low-pass, band-pass, and high-pass outputs with a characteristically aggressive resonance. The signature Brute Factor control feeds the VCA output back into the filter input, adding harmonic saturation from subtle warmth to full clipping distortion. MiniBrute V is an excellent choice for punchy basses, aggressive leads, and experimental timbres where harmonic richness and analog drive are the goal.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — LFO depth or other assignable target"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento time — glide speed between notes"},
+
+    "Filter Cutoff":     {"cc": 74, "description": "Steiner-Parker filter cutoff frequency — controls brightness across LP/BP/HP outputs"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter resonance — characteristically aggressive; self-oscillates at high values"},
+    "Brute Factor":      {"cc": 22, "description": "Brute Factor — VCA-to-filter feedback saturation; from subtle grit to full harmonic clipping"},
+    "Ultrasaw Amount":   {"cc": 23, "description": "Ultrasaw amount — blends in detuned sawtooth copies for a chorus-like thickening without CPU overhead"},
+    "Metalizer":         {"cc": 24, "description": "Metalizer amount — waveshaping/ring modulation character; adds inharmonic overtones and metallic bite"},
+    "Attack":            {"cc": 73, "description": "Envelope attack time — shared amp/filter envelope attack"},
+    "Release":           {"cc": 72, "description": "Envelope release time — tail length after note off"},
+    "LFO Rate":          {"cc": 76, "description": "LFO rate — modulation speed for vibrato, tremolo, or filter movement"},
+    "LFO Depth":         {"cc": 77, "description": "LFO depth — modulation amount applied to pitch, filter, or PWM"},
+    "Sub Osc Level":     {"cc": 25, "description": "Sub-oscillator level — adds one or two octave sub to thicken the bass register"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — adds space and dimension"}
+  }
+}

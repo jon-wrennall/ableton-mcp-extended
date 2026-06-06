@@ -1,0 +1,22 @@
+{
+  "plugin_name": "Clavinet V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Clavinet V", "Arturia Clavinet V", "Hohner Clavinet V"],
+  "notes": "Arturia Clavinet V is a physical model of the Hohner Clavinet D6, the electromechanical keyboard instrument made famous by Stevie Wonder's 'Superstition', Herbie Hancock's 'Chameleon', and countless funk, soul, and rock recordings of the 1970s. The Clavinet works by pressing a string against a fret when a key is pressed, with two electromagnetic pickups (A and B on the treble side, C and D on the bass side) capturing the vibration — the pickup combination directly changes the tonal character from bright and cutting to warm and full. The built-in tone filters (Brilliant, Treble, Medium, Soft) and wah/envelope filter options make it ideal for funk rhythm parts, and the physical model accurately captures key noise, string muting, and the percussive pluck transient.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — assignable modulation source"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Pickup Selection":  {"cc": 22, "description": "Pickup selection (AB/CD) — selects and blends the four pickup configurations; AB = bright and cutting, CD = warm and full, all four = thickest tone"},
+    "Mute Amount":       {"cc": 23, "description": "String mute amount — dampens the strings for a tighter, more percussive articulation; essential for tight funk rhythms"},
+    "Wah Sweep":         {"cc": 24, "description": "Wah pedal sweep — controls the position of a simulated wah filter for vowel-like tonal shaping"},
+    "Envelope Filter":   {"cc": 25, "description": "Envelope filter amount — auto-wah depth; the filter opens on each note attack for funky, dynamic tonal movement"},
+    "Overdrive":         {"cc": 26, "description": "Overdrive amount — from clean to crunchy distortion; classic on rock and funk Clavinet parts"},
+    "Tone":              {"cc": 74, "description": "Tone/brightness — overall tonal filter shaping across the output"},
+    "Key Noise":         {"cc": 20, "description": "Key noise level — the mechanical thump and click of the Clavinet's key mechanism; adds physical realism"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — room or plate reverb adds space"}
+  }
+}

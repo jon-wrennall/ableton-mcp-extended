@@ -1,0 +1,29 @@
+{
+  "plugin_name": "Modular V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Modular V", "Moog Modular V", "Arturia Modular V"],
+  "notes": "Arturia Modular V emulates the Moog System 55 modular synthesizer, the towering patchable system that defined early electronic music through artists like Wendy Carlos, Keith Emerson, and Rick Wakeman. At its core are three voltage-controlled oscillators, the iconic Moog transistor ladder 24dB/oct low-pass filter, dual envelope generators, two LFOs, a ring modulator, a sample-and-hold circuit, and a spring reverb. The virtual patch bay allows near-infinite routing possibilities beyond the pre-patched signal flow. The Moog ladder filter's warm, creamy, self-oscillating character is the sonic centrepiece and the first parameter to automate in any performance context.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — scales output level for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — typically routed to filter cutoff or VCO pitch"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento time — Moog-style glide between pitches"},
+
+    "VCF Cutoff":        {"cc": 74, "description": "Moog ladder filter cutoff frequency — the warm, creamy 24dB/oct low-pass; the defining sonic control"},
+    "VCF Resonance":     {"cc": 71, "description": "Filter resonance/emphasis — adds the characteristic Moog resonant peak; self-oscillates as a sine wave at maximum"},
+    "VCF Env Amount":    {"cc": 22, "description": "Filter envelope amount — how much EG1 opens or closes the filter cutoff"},
+    "VCO Mix":           {"cc": 23, "description": "VCO mix balance — relative levels of the three oscillators in the mixer"},
+    "Attack":            {"cc": 73, "description": "EG1 attack time — envelope applied to both filter and VCA"},
+    "Decay":             {"cc": 79, "description": "EG1 decay time"},
+    "Sustain Level":     {"cc": 80, "description": "EG1 sustain level"},
+    "Release":           {"cc": 72, "description": "EG1 release time"},
+    "LFO Rate":          {"cc": 76, "description": "LFO rate — speed of the primary low-frequency oscillator"},
+    "LFO Depth":         {"cc": 77, "description": "LFO depth — modulation amount applied to pitch, filter, or PWM"},
+    "VCO1 Tune":         {"cc": 24, "description": "VCO1 fine tune — pitch offset for detuning against VCO2 and VCO3"},
+    "VCO2 Tune":         {"cc": 25, "description": "VCO2 fine tune — detuning creates beating and fatness"},
+    "Noise Level":       {"cc": 26, "description": "Noise generator level — white noise for percussion, wind effects, and S&H input"},
+    "Spring Reverb":     {"cc": 91, "description": "Built-in spring reverb level — classic Moog warm hall reverb character"}
+  }
+}

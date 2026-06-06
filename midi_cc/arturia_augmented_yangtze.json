@@ -1,0 +1,23 @@
+{
+  "plugin_name": "Augmented YANGTZE",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Augmented YANGTZE", "Augmented Yangtze", "Arturia Augmented Yangtze"],
+  "notes": "Arturia Augmented YANGTZE is a hybrid instrument combining recordings of traditional Chinese instruments — erhu (two-stringed bowed fiddle), guzheng (plucked zither), pipa (lute), dizi (transverse bamboo flute), xiao, and others — with a synthesis layer. The result bridges Eastern acoustic heritage with modern electronic sound design, making it ideal for cinematic scoring, world music production, and any context where Asian melodic character is required in a contemporary production setting. The Timbre Morph control sweeps between the acoustic instrumental character and the synthesis layer, while vibrato applied via modulation or the dedicated rate/depth controls is essential for authentic erhu and dizi phrasing. Expression is critical for bowed-string instruments like the erhu, where dynamic variation is central to the playing style.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — primary dynamic control; essential for realistic bowed erhu phrasing and dizi breath dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Timbre Morph — sweeps between the Acoustic Chinese instrument layer and the Synth layer"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+
+    "Acoustic Layer":    {"cc": 22, "description": "Acoustic layer level — level of the real Chinese instrument recordings (erhu, guzheng, pipa, dizi, etc.)"},
+    "Synth Layer":       {"cc": 23, "description": "Synth layer level — level of the synthesis component"},
+    "Filter Cutoff":     {"cc": 74, "description": "Filter cutoff — shapes harmonic brightness; subtle movement adds phrasing nuance to the acoustic layer"},
+    "Attack":            {"cc": 73, "description": "Amplitude envelope attack — short for plucked guzheng/pipa articulation; longer for bowed erhu swells"},
+    "Release":           {"cc": 72, "description": "Amplitude envelope release — tail length after note off"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — subtle hall or room reverb places the instruments in a natural acoustic space without obscuring their timbral detail"},
+    "Vibrato Rate":      {"cc": 76, "description": "Vibrato rate — speed of pitch modulation; the erhu uses prominent, expressive vibrato central to its character"},
+    "Vibrato Depth":     {"cc": 77, "description": "Vibrato depth — intensity of pitch modulation; higher values suit expressive erhu solos"},
+    "Motion Rate":       {"cc": 24, "description": "Motion/animation rate — automated parameter movement for evolving hybrid textures"}
+  }
+}

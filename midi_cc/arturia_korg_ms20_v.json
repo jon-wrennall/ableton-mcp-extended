@@ -1,0 +1,31 @@
+{
+  "plugin_name": "Korg MS-20 V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Korg MS-20 V", "MS-20 V", "MS20 V"],
+  "notes": "Arturia Korg MS-20 V emulates the legendary Korg MS-20 semi-modular synthesizer, famous for its aggressive, characterful dual-filter design. The MS-20 uses two cascaded filters: a high-pass filter (VCF1) followed by a low-pass filter (VCF2), each with its own resonance control — this configuration allows the instrument to produce sounds ranging from nasal, band-passed tones to brutal, self-oscillating leads and bass. Two oscillators, two envelope generators, and an extensive patch bay make it one of the most versatile semi-modular instruments ever built. The MS-20 V adds a virtual patch bay and additional modulation options beyond the hardware original, making it suited for experimental basses, leads, percussion, and sound effects.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "VCA output level — expression control for dynamics"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — wheel modulation routed per patch"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento/glide time between notes"},
+
+    "VCF2 LPF Cutoff":   {"cc": 74, "description": "VCF2 low-pass filter cutoff — primary brightness control; self-oscillates at max resonance"},
+    "VCF1 HPF Cutoff":   {"cc": 75, "description": "VCF1 high-pass filter cutoff — removes low frequencies; combining with LPF creates band-pass character"},
+    "VCF2 Resonance":    {"cc": 71, "description": "VCF2 resonance/peak — the MS-20's aggressive resonant peak; drive to extremes for screaming leads"},
+    "VCF1 Resonance":    {"cc": 22, "description": "VCF1 high-pass resonance — adds a secondary peak at the HPF frequency"},
+    "EG1 Attack":        {"cc": 73, "description": "Envelope Generator 1 attack — primarily modulates VCF cutoff"},
+    "EG1 Decay":         {"cc": 79, "description": "Envelope Generator 1 decay time"},
+    "EG1 Sustain":       {"cc": 80, "description": "Envelope Generator 1 sustain level"},
+    "EG1 Release":       {"cc": 72, "description": "Envelope Generator 1 release — VCF envelope release time"},
+    "EG2 Attack":        {"cc": 85, "description": "Envelope Generator 2 attack — primarily modulates VCA"},
+    "EG2 Release":       {"cc": 86, "description": "Envelope Generator 2 release — VCA envelope release time"},
+    "LFO Rate":          {"cc": 76, "description": "LFO rate — modulation speed for vibrato, tremolo, or filter wobble"},
+    "LFO Depth":         {"cc": 77, "description": "LFO depth — modulation amount applied to target"},
+    "Osc1 Waveform":     {"cc": 23, "description": "Oscillator 1 waveform selection (sawtooth, triangle, pulse)"},
+    "Osc2 Waveform":     {"cc": 24, "description": "Oscillator 2 waveform selection — set differently from OSC1 for richer timbres"},
+    "Osc2 Detune":       {"cc": 25, "description": "Oscillator 2 detune — fine pitch offset for chorusing and thickening"},
+    "Reverb":            {"cc": 91, "description": "Reverb send level — adds space to the MS-20's direct, dry character"}
+  }
+}

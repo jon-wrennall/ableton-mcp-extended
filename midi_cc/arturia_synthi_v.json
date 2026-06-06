@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Synthi V",
+  "manufacturer": "Arturia",
+  "match_patterns": ["Synthi V", "EMS Synthi V", "Synthi AKS V"],
+  "notes": "Arturia Synthi V emulates the EMS Synthi AKS, the iconic portable synthesizer used by Pink Floyd, Brian Eno, Klaus Schulze, and countless experimental composers in the 1970s. Unlike conventional synthesizers, the Synthi uses a pin matrix for modulation routing — small pins inserted into a grid connect any output to any input, creating chaotic, unpredictable, and infinitely variable signal flows. Three oscillators, a multi-mode filter, a trapezoid envelope, a spring reverb, and a joystick controller complete the architecture. The Synthi excels at drones, evolving textures, abstract sound design, and experimental music where the system's inherent instability is a feature rather than a flaw.",
+  "parameters": {
+    "Volume":            {"cc": 7,  "description": "Master output volume"},
+    "Pan":               {"cc": 10, "description": "Stereo pan position"},
+    "Expression":        {"cc": 11, "description": "Expression — output level scaling"},
+    "Modulation":        {"cc": 1,  "description": "Modulation wheel — assignable via pin matrix routing"},
+    "Sustain":           {"cc": 64, "description": "Sustain pedal"},
+    "Portamento Time":   {"cc": 5,  "description": "Portamento time — glide between pitches"},
+
+    "Filter Frequency":  {"cc": 74, "description": "Filter cutoff frequency — the Synthi filter is a multi-mode design with a distinctive character"},
+    "Filter Resonance":  {"cc": 71, "description": "Filter Q/resonance — creates the filter's characteristic peak"},
+    "Osc1 Pitch":        {"cc": 22, "description": "Oscillator 1 pitch — from sub-audio to above hearing range; cross-modulation creates FM-like timbres"},
+    "Osc Sync":          {"cc": 23, "description": "Oscillator sync/cross-modulation amount — the Synthi's inter-oscillator modulation creates unstable, evolving tones"},
+    "LFO Rate":          {"cc": 76, "description": "LFO rate — oscillator 3 rate when used as a low-frequency modulation source"},
+    "Attack":            {"cc": 73, "description": "Trapezoid envelope attack time"},
+    "Decay":             {"cc": 72, "description": "Trapezoid envelope decay/on time"},
+    "Reverb":            {"cc": 91, "description": "Built-in spring reverb level — integral to the Synthi's atmospheric sound"},
+    "Joystick X":        {"cc": 24, "description": "Joystick X axis — assignable controller for real-time performance gestures"},
+    "Joystick Y":        {"cc": 25, "description": "Joystick Y axis — second dimension of the performance joystick"}
+  }
+}
