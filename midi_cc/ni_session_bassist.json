@@ -1,0 +1,34 @@
+{
+  "plugin_name": "Session Bassist",
+  "manufacturer": "Native Instruments",
+  "match_patterns": [
+    "Session Bassist Icon Bass",
+    "Session Bassist Prime Bass",
+    "Session Bassist Upright Bass",
+    "Session Bassist"
+  ],
+  "notes": "NI Session Bassist series — pattern-based Kontakt bass instruments. Three variants share the same CC layout but differ in character: Icon Bass (modern electric, punchy/mid-focused), Prime Bass (versatile electric, studio-ready), Upright Bass (acoustic double bass, warm/woody). All variants are pattern-driven: MIDI notes in the lower range trigger grooves and fills; notes in the upper range trigger live melodic playing mode. CC 11 (Expression) is the primary level/dynamics control. CC 64 switches between chord hold and immediate mute on pattern release. The Quick Controls adjust tone, pickup character, and performance behaviour — exact knob labels vary by variant but CC numbers are consistent. Right-click any QC knob in Kontakt → Learn MIDI CC to verify for your loaded patch.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — primary dynamics/level control. Automate for verse/chorus level differences and natural bass swell into a section."},
+    "Modulation":          {"cc": 1,  "description": "Performance variation or groove intensity — instrument-dependent. On some patches selects between playing styles (e.g. pick vs fingerstyle blend)."},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds pattern loop running / chord sustain; release to mute/choke"},
+    "Soft Pedal":          {"cc": 67, "description": "Mute / dead-string effect toggle (instrument-dependent)"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Pickup Position — bridge pickup (bright, cutting, attack-forward) vs neck pickup (warm, round, smooth). On Upright Bass: bow pressure / arco–pizzicato blend."},
+    "Quick Control 2":     {"cc": 15, "description": "Tone / EQ Character — overall tonal brightness. Low = dark and vintage. High = modern hi-fi snap. On Upright: body resonance."},
+    "Quick Control 3":     {"cc": 16, "description": "Amp / DI Blend — direct signal vs amp cabinet character. High = more amp warmth and grit; low = clean DI punch."},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb / Room Amount — built-in reverb mix. Keep low for tight modern bass; raise for a more vintage roomy feel."},
+    "Quick Control 5":     {"cc": 18, "description": "Attack Speed — transient shaper; how hard the pick or pluck hits. High = snappy, percussive. Low = smooth, soft onset."},
+    "Quick Control 6":     {"cc": 19, "description": "Release / Sustain Time — note decay tail length after key-up. Short = tight and staccato; long = legato sustain."},
+    "Quick Control 7":     {"cc": 20, "description": "Fret / String Noise — mechanical noise level: fret slides, string buzz, finger release. Add for rawer, more live feel."},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random velocity, timing, and tuning variation between notes for a more played-in feel"},
+
+    "Attack":              {"cc": 73, "description": "Global envelope attack time"},
+    "Release":             {"cc": 72, "description": "Global envelope release time"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness / upper harmonic content"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"},
+    "Portamento":          {"cc": 5,  "description": "Portamento/glide time for legato slides between notes"}
+  }
+}

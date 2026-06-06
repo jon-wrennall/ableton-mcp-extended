@@ -187,7 +187,8 @@ For plugins that don't expose parameters through VST3/AU (Arturia V Collection, 
 | Abbey Road Modern Drummer | NI | Kick/snare/overhead/room mic levels, compression, transient shaping |
 | Session Strings Pro 2 | NI | Expression/dynamics, vibrato, ensemble size, mic blend, attack, release, humanise |
 | Session Horns Pro | NI | Expression/dynamics, vibrato, ensemble size, mic blend, attack, growl/flutter, humanise |
-| Session Guitarist (Picked Nylon / Electric Mint / Strummed Acoustic) | NI | Pick position, tone, reverb, delay, chorus, string noise, humanise |
+| Session Bassist (Icon Bass / Prime Bass / Upright Bass) | NI | Pickup position, tone, amp/DI blend, reverb, attack, fret noise, humanise |
+| Session Guitarist (Electric Mint / Electric Storm / Picked Nylon / Strummed Acoustic / Strummed Acoustic 2 / Picked Acoustic / Fingerpicked Acoustic) | NI | Pickup/pick position, tone/amp drive, reverb, delay, chorus, string noise, humanise — per-variant QC notes in file |
 | Session Percussionist | NI | Close/room/overhead mic levels, reverb, attack transient, release, bleed, humanise |
 | Symphony Series String Ensemble | NI | CC 1+11 dual dynamics, ensemble size, 3-mic blend, attack, vibrato, portamento, humanise |
 | Symphony Series Brass Ensemble | NI | CC 1+11 dual dynamics, ensemble blend, mute, attack, vibrato, growl/flutter, humanise |
