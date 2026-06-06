@@ -23,10 +23,22 @@ git config user.email "jon@remote-eyes.co.uk"
 git config user.name "Jon Wrennall"
 git checkout -b "$BRANCH"
 
+echo "→ Moving midi_cc/ inside MCP_Server/ package..."
+mv midi_cc MCP_Server/midi_cc
+
 echo "→ Fixing midi_cc.py..."
 python3 << 'PYEOF'
 with open("MCP_Server/tools/midi_cc.py", encoding="utf-8") as f:
     src = f.read()
+
+# Fix 0: update path — midi_cc/ is now inside MCP_Server/ (2 dirnames not 3)
+src = src.replace(
+    '# Path to the midi_cc/ directory (sits alongside the MCP_Server/ package)\n'
+    '_PACKAGE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))\n'
+    'CC_MAPS_DIR = os.path.join(_PACKAGE_ROOT, "midi_cc")',
+    '# Path to the midi_cc/ directory — inside the MCP_Server package\n'
+    'CC_MAPS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "midi_cc")'
+)
 
 # Fix 1: UTF-8 encoding on file opens
 src = src.replace(
@@ -144,26 +156,27 @@ import json, os
 fixes = {}
 
 # Fix: ni_massive_x.json — remove "Massive" (matches original Massive plugin)
-p = "MCP_Server/midi_cc/ni_massive_x.json"
+CC = "MCP_Server/midi_cc"
+p = f"{CC}/ni_massive_x.json"
 with open(p, encoding="utf-8") as f: d = json.load(f)
 d["match_patterns"] = [x for x in d["match_patterns"] if x != "Massive"]
 d["notes"] = d.get("notes","") + " Note: 'Massive' removed from match_patterns to avoid collision with the original NI Massive (2007)."
 fixes[p] = d
 
 # Fix: ni_scarbee_bass.json — remove bare "Scarbee" (too broad)
-p = "MCP_Server/midi_cc/ni_scarbee_bass.json"
+p = f"{CC}/ni_scarbee_bass.json"
 with open(p, encoding="utf-8") as f: d = json.load(f)
 d["match_patterns"] = [x for x in d["match_patterns"] if x != "Scarbee"]
 fixes[p] = d
 
 # Fix: arturia_opxa_v.json — remove "Oberheim" (too broad, matches Matrix-12)
-p = "MCP_Server/midi_cc/arturia_opxa_v.json"
+p = f"{CC}/arturia_opxa_v.json"
 with open(p, encoding="utf-8") as f: d = json.load(f)
 d["match_patterns"] = [x for x in d["match_patterns"] if x != "Oberheim"]
 fixes[p] = d
 
 # Fix: arturia_analog_lab.json — Release CC 72 conflicts with Macro 4 CC 72
-p = "MCP_Server/midi_cc/arturia_analog_lab.json"
+p = f"{CC}/arturia_analog_lab.json"
 with open(p, encoding="utf-8") as f: d = json.load(f)
 if "Release" in d["parameters"] and d["parameters"]["Release"]["cc"] == 72:
     d["parameters"]["Release"]["cc"] = 80
@@ -171,14 +184,14 @@ if "Release" in d["parameters"] and d["parameters"]["Release"]["cc"] == 72:
 fixes[p] = d
 
 # Fix: arturia_cs80_v.json — Brilliance CC 74 conflicts with Ch1 Filter Cutoff CC 74
-p = "MCP_Server/midi_cc/arturia_cs80_v.json"
+p = f"{CC}/arturia_cs80_v.json"
 with open(p, encoding="utf-8") as f: d = json.load(f)
 if "Brilliance" in d["parameters"] and d["parameters"]["Brilliance"]["cc"] == 74:
     d["parameters"]["Brilliance"]["cc"] = 75
 fixes[p] = d
 
 # Fix: arturia_piano_v.json — EQ High CC 74 conflicts with Bright CC 74
-p = "MCP_Server/midi_cc/arturia_piano_v.json"
+p = f"{CC}/arturia_piano_v.json"
 with open(p, encoding="utf-8") as f: d = json.load(f)
 if "EQ High" in d["parameters"] and d["parameters"]["EQ High"]["cc"] == 74:
     d["parameters"]["EQ High"]["cc"] = 75
@@ -188,7 +201,7 @@ if "Bright" in d["parameters"] and d["parameters"]["Bright"]["cc"] == 74:
 fixes[p] = d
 
 # Fix: ni_symphony_brass.json — Close Mic CC 15 conflicts with Quick Control 2 CC 15
-p = "MCP_Server/midi_cc/ni_symphony_brass.json"
+p = f"{CC}/ni_symphony_brass.json"
 with open(p, encoding="utf-8") as f: d = json.load(f)
 if "Close Mic" in d["parameters"] and d["parameters"]["Close Mic"]["cc"] == 15:
     # QC2 (CC 15) IS the close mic — merge the description and remove the duplicate
