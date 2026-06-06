@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Super 8",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Super 8", "NI Super 8", "Reaktor - Super 8", "Reaktor 6 - Super 8"],
+  "notes": "Super 8 is a retro polysynth running inside Reaktor 6, inspired by the lush 70s and 80s analog polyphonic synthesizers such as the Sequential Circuits Prophet-5 and Roland Jupiter-8. It supports up to 8-voice polyphony with unison stacking and detune for thick, wide pads and leads. The filter is warm and musical with a vintage character, and the onboard chorus and ensemble effect is essential to its sound — the chorus is often the difference between a thin patch and a fully realised analog-style pad. CC 74 (Brightness) maps to Filter Cutoff and is the most important real-time tonal control. CC 1 (Modulation) modulates the filter cutoff or vibrato depth depending on the preset, providing the classic mod wheel vibrato that is standard on poly synths of this era. Super 8 runs as a Reaktor ensemble, so Quick Control assignments may vary per preset, but the layout below reflects the default assignments.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the Reaktor ensemble"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression / output level — useful for swells on pad patches"},
+    "Modulation":          {"cc": 1,  "description": "Vibrato depth or filter cutoff modulation — classic mod wheel vibrato for lead lines"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds notes; effective for pad textures and long chord progressions"},
+    "Release Time":        {"cc": 72, "description": "Envelope release time — longer releases for lush pad tails"},
+    "Attack Time":         {"cc": 73, "description": "Envelope attack time — slow attacks create pad-like swells from percussive presets"},
+    "Brightness":          {"cc": 74, "description": "Filter Cutoff — primary tonal control; rolls off the multi-mode analog-style filter"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — add space to the naturally dry analog-style sound"},
+    "Quick Control 1":     {"cc": 14, "description": "Filter Cutoff — main cutoff frequency of the analog-style filter; key expressive control"},
+    "Quick Control 2":     {"cc": 15, "description": "Filter Resonance — adds resonant peak; at high values creates filter self-oscillation"},
+    "Quick Control 3":     {"cc": 16, "description": "Attack — envelope attack time for both VCA and VCF simultaneously"},
+    "Quick Control 4":     {"cc": 17, "description": "Release — envelope release time; extend for long, lush pad tails"},
+    "Quick Control 5":     {"cc": 18, "description": "Chorus Rate — speed of the onboard chorus/ensemble effect; slower for shimmer, faster for vibrato-like effect"},
+    "Quick Control 6":     {"cc": 19, "description": "Chorus Depth — intensity of the chorus modulation; essential for the characteristic wide poly-synth sound"},
+    "Quick Control 7":     {"cc": 20, "description": "Reverb — onboard reverb send level within the ensemble"},
+    "Quick Control 8":     {"cc": 21, "description": "Unison Detune — amount of detuning between stacked unison voices for width and thickness"}
+  }
+}

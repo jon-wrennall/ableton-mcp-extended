@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Kinetic Toys",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Kinetic Toys", "NI Kinetic Toys", "Kontakt - Kinetic Toys"],
+  "notes": "Kinetic Toys is a melodic instrument for Kontakt built from recordings of toys, music boxes, mechanical instruments, kalimbas, toy pianos, and unusual found-sound sources. It occupies a charming, whimsical, and somewhat melancholic sonic space perfect for children's media, quirky indie film scores, advertising, and any context that benefits from a childlike, nostalgic character. The combination of the Toy Layer and Mallets/Bells Layer creates a blend of delicate and tinkling timbres that can range from sweet and bright to haunting and wistful. CC 11 (Expression) shapes the overall level for delicate, nuanced passages. CC 1 (Modulation) controls the internal sequencer or motion engine rate — the mod wheel can be used to speed up or slow down the subtle animated quality of the textures. The Humanise QC is especially important here as the source recordings have natural imperfections that humanisation further enhances for a more authentic lo-fi quality.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — delicate level shaping; critical for quiet, intimate passages"},
+    "Modulation":          {"cc": 1,  "description": "Sequencer / Motion Rate — mod wheel controls the speed of the internal animated motion engine"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — sustains notes and allows the toy-like resonances to accumulate"},
+    "Release Time":        {"cc": 72, "description": "Release time — how long notes ring after key release; shorter for percussive toys, longer for music boxes"},
+    "Attack Time":         {"cc": 73, "description": "Attack time — onset envelope; most toy sources have an immediate attack character"},
+    "Brightness":          {"cc": 74, "description": "Filter Cutoff — shapes tonal brightness; rolling off gives a more lo-fi, aged quality"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds space; subtle reverb enhances the distant, nostalgic character"},
+    "Quick Control 1":     {"cc": 14, "description": "Toy Layer Mix — level of the toy and found-object samples layer"},
+    "Quick Control 2":     {"cc": 15, "description": "Mallets / Bells Layer — level of the metallic mallet and bell sources layer"},
+    "Quick Control 3":     {"cc": 16, "description": "Filter Cutoff — low-pass filter over the combined layers for tonal shaping"},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb — reverb depth; subtle amounts add the sense of a distant toy room"},
+    "Quick Control 5":     {"cc": 18, "description": "Attack — onset speed of the combined layers"},
+    "Quick Control 6":     {"cc": 19, "description": "Release — decay length after note release; music box-like longer releases vs. percussive toy shorter ones"},
+    "Quick Control 7":     {"cc": 20, "description": "Motion / Sequencer Rate — speed of the internal animated sequencer or LFO motion within the patch"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — randomises velocity, timing, and tuning for authentic toy-like imperfection"}
+  }
+}

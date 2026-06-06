@@ -1,0 +1,25 @@
+{
+  "plugin_name": "George Duke Soul Treasures",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["George Duke Soul Treasures", "Soul Treasures", "NI Soul Treasures", "Kontakt - George Duke Soul Treasures"],
+  "notes": "George Duke Soul Treasures is a Kontakt library built from samples of the personal instrument collection of jazz fusion legend George Duke, capturing a range of vintage keys and instruments used in his recordings across the 1970s and 1980s. The collection includes Fender Rhodes electric piano variants, Wurlitzer electric piano, Clavinet, Hammond-style organs, and vintage analog synthesizers — instruments central to the jazz fusion, funk, R&B, and soul genres Duke mastered. The character is decidedly vintage, with the warmth, slight imperfection, and analog tonal quality of well-used 1970s instruments. CC 11 (Expression) is the primary dynamic control and is especially effective on the Rhodes and Wurlitzer presets where dynamics are a core expressive element. CC 1 (Modulation) controls tremolo depth on applicable instruments — the slow, warm tremolo of the Rhodes or Wurlitzer is a defining vintage texture. The Pickup/Tone Character QC fundamentally alters the tonal flavour of each instrument, from bright and cutting to warm and rounded.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — primary level control; critical for dynamic Rhodes/Wurlitzer playing expression"},
+    "Modulation":          {"cc": 1,  "description": "Tremolo Depth — mod wheel adds vintage tremolo effect on applicable instruments like Rhodes and Wurlitzer"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — extends note decay; shorter on electric pianos compared to acoustic grands"},
+    "Release Time":        {"cc": 72, "description": "Release time — controls how long instrument tones ring after key release"},
+    "Attack Time":         {"cc": 73, "description": "Attack envelope — shapes the onset from immediate to slightly softened"},
+    "Brightness":          {"cc": 74, "description": "Tonal brightness — shapes the high-frequency character across all source instruments"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds space to the vintage instruments for studio placement"},
+    "Quick Control 1":     {"cc": 14, "description": "Pickup / Tone Character — adjusts the tonal character; simulates different pickup positions or tone settings on the source instrument"},
+    "Quick Control 2":     {"cc": 15, "description": "Amp / DI Blend — blends between the direct instrument signal and an amplified, slightly saturated tone"},
+    "Quick Control 3":     {"cc": 16, "description": "Tremolo Rate — speed of the vintage tremolo effect; from slow, warm wobble to fast shimmer"},
+    "Quick Control 4":     {"cc": 17, "description": "Tremolo Depth — intensity of the tremolo modulation; increase for more pronounced vintage tremolo effect"},
+    "Quick Control 5":     {"cc": 18, "description": "Reverb — onboard reverb depth within the Kontakt patch"},
+    "Quick Control 6":     {"cc": 19, "description": "Overdrive — amount of analog overdrive or preamp saturation for vintage grit and warmth"},
+    "Quick Control 7":     {"cc": 20, "description": "Release Noise — mechanical noise at key release; adds tactile realism to electric piano and organ pads"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — subtle random velocity and timing variation for a more organic, lived-in vintage feel"}
+  }
+}

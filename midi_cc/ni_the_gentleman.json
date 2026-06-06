@@ -1,0 +1,27 @@
+{
+  "plugin_name": "The Gentleman",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["The Gentleman", "NI The Gentleman", "Kontakt - The Gentleman"],
+  "notes": "The Gentleman captures a 1951 Bechstein upright piano with a warm, intimate, and slightly honky character distinct from any concert grand. Upright pianos have a different physical action and string arrangement that produces a drier, more focused tone with less sustain bloom, making this ideal for singer-songwriter, jazz, indie pop, and vintage film soundtrack contexts. The slight natural inharmonicity and character of the aged instrument give it personality that a pristine grand cannot replicate. CC 11 (Expression) shapes dynamics for soft, intimate passages, while CC 1 (Modulation) engages humanisation for a loose, natural feel. The Felt Pedal QC is particularly useful — engaging a felt strip between the hammers and strings produces a muted, prepared-piano-like quality perfect for lo-fi or intimate arrangements. Mic position blending is key to placing the instrument in the mix, from close and present to more distant and ambient.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — primary level shaping for intimate, nuanced playing"},
+    "Modulation":          {"cc": 1,  "description": "Humanise — randomises velocity and timing subtly for authentic feel"},
+    "Sustain":             {"cc": 64, "description": "Damper pedal — sustains notes; shorter natural decay than a concert grand"},
+    "Sostenuto":           {"cc": 66, "description": "Holds only currently depressed notes for selective sustain"},
+    "Soft Pedal":          {"cc": 67, "description": "Una corda / soft pedal — further softens tone for the most intimate dynamic range"},
+    "Release Time":        {"cc": 72, "description": "Note release tail length — controls how quickly notes decay after key release"},
+    "Attack Time":         {"cc": 73, "description": "Attack envelope speed — subtle adjustments to onset character"},
+    "Brightness":          {"cc": 74, "description": "Tonal brightness — filter the high end for a warmer, more vintage character"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds space to the naturally dry upright recording"},
+    "Quick Control 1":     {"cc": 14, "description": "Mic Position — blends between close (present, detailed) and room (ambient, distant) mic perspectives"},
+    "Quick Control 2":     {"cc": 15, "description": "Tone — overall tonal character from warm/dark to bright/present"},
+    "Quick Control 3":     {"cc": 16, "description": "Reverb — additional reverb depth to place the instrument in a larger space"},
+    "Quick Control 4":     {"cc": 17, "description": "Sustain Resonance — level of sympathetic string resonance when pedal is held"},
+    "Quick Control 5":     {"cc": 18, "description": "Release Noise — level of mechanical noise at key release for tactile realism"},
+    "Quick Control 6":     {"cc": 19, "description": "Mechanical Noise — general key and action mechanism noise for vintage authenticity"},
+    "Quick Control 7":     {"cc": 20, "description": "Felt Pedal / Soft — inserts felt strip between hammers and strings for a muted, prepared-piano quality"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random velocity, tuning, and timing variation for natural performance feel"}
+  }
+}

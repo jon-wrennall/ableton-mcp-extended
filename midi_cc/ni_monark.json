@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Monark",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Monark", "NI Monark", "Reaktor - Monark", "Reaktor 6 - Monark"],
+  "notes": "Monark is a meticulous Moog Model D emulation running inside Reaktor 6, built to capture the specific circuit behaviour and non-linearities of the original hardware. It features three oscillators with variable waveforms, a classic 24dB/octave transistor ladder filter with its distinctive resonant character, a single LFO, and an analog-style overdrive circuit. Monark excels at fat bass lines, lead tones, and evolving filter sweeps. The ladder filter's self-oscillation and non-linear saturation at high resonance are the instrument's most characteristic feature. CC 74 (Brightness) maps naturally to Filter Cutoff and is the primary expressive control alongside CC 11. CC 1 (Modulation) typically controls Filter Cutoff depth or LFO depth depending on the patch. Portamento/Glide (QC7) is essential for authentic lead playing — the original Model D's glide circuit is specifically emulated. Monark runs as a Reaktor ensemble, so Quick Control assignments are set within Reaktor's MIDI panel and may vary by preset.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the Reaktor ensemble"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression / output level — use for phrase shaping on lead or bass lines"},
+    "Modulation":          {"cc": 1,  "description": "Filter Cutoff modulation depth or LFO depth depending on patch — mod wheel for filter sweeps"},
+    "Sustain":             {"cc": 64, "description": "Sustain / gate hold — holds notes in certain patch modes"},
+    "Release Time":        {"cc": 72, "description": "Envelope release time — controls how long the VCA/VCF envelope tails off"},
+    "Attack Time":         {"cc": 73, "description": "Envelope attack time — from instant percussive to slow pad-like attacks"},
+    "Brightness":          {"cc": 74, "description": "Filter Cutoff frequency — the primary tonal control; maps to the ladder filter cutoff"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — if a reverb module is present in the ensemble"},
+    "Quick Control 1":     {"cc": 14, "description": "Filter Cutoff — main cutoff frequency of the 24dB ladder filter; most expressive real-time control"},
+    "Quick Control 2":     {"cc": 15, "description": "Filter Resonance / Emphasis — resonance amount; at maximum the filter self-oscillates"},
+    "Quick Control 3":     {"cc": 16, "description": "Oscillator Mix / Balance — relative level balance between the three oscillators"},
+    "Quick Control 4":     {"cc": 17, "description": "Filter Envelope Amount — how strongly the filter envelope modulates the cutoff frequency"},
+    "Quick Control 5":     {"cc": 18, "description": "LFO Rate — speed of the low-frequency oscillator modulation"},
+    "Quick Control 6":     {"cc": 19, "description": "LFO Depth — intensity of LFO modulation applied to the target (typically pitch or filter)"},
+    "Quick Control 7":     {"cc": 20, "description": "Portamento / Glide — glide time between notes; emulates the original Model D's glide circuit"},
+    "Quick Control 8":     {"cc": 21, "description": "Overdrive / Saturation — input saturation level for the characteristic Moog transistor clipping and warmth"}
+  }
+}

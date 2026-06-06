@@ -1,0 +1,27 @@
+{
+  "plugin_name": "The Maverick",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["The Maverick", "NI The Maverick", "Kontakt - The Maverick"],
+  "notes": "The Maverick is a vintage American upright piano with the classic detuned, characterful honky-tonk quality prized in Nashville country, blues, ragtime, and roots music. Unlike a concert grand, this instrument has an intentional looseness — slightly detuned strings, natural mechanical noise, and a percussive, immediate attack that sits forward in a mix. The slight detuning between string pairs creates the characteristic 'chorus' effect associated with old roadhouse pianos. CC 11 (Expression) shapes the dynamic range from gentle accompaniment to driving rhythmic playing, while CC 1 (Modulation) adds humanisation to push the authentic feel. The Felt/Mute QC emulates a honky-tonk mute or felt strip, taking the already characterful instrument even further into lo-fi territory. String Buzz is particularly useful on this instrument — dial it in for maximum character or reduce it for cleaner use in modern production contexts.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — shapes level from quiet comping to aggressive playing"},
+    "Modulation":          {"cc": 1,  "description": "Humanise — adds random velocity and timing variation for a loose, authentic feel"},
+    "Sustain":             {"cc": 64, "description": "Damper pedal — sustains notes with the instrument's characteristic shorter decay"},
+    "Sostenuto":           {"cc": 66, "description": "Holds only currently depressed notes for selective sustain"},
+    "Soft Pedal":          {"cc": 67, "description": "Soft pedal — reduces volume and mutes the naturally bright character slightly"},
+    "Release Time":        {"cc": 72, "description": "Release tail length — adjust to control how quickly the natural ring fades"},
+    "Attack Time":         {"cc": 73, "description": "Attack speed — subtle shaping of the percussive hammer strike onset"},
+    "Brightness":          {"cc": 74, "description": "Tonal brightness — high-frequency filter for taming harshness or adding sparkle"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds space; use sparingly for authentic roadhouse dry sound"},
+    "Quick Control 1":     {"cc": 14, "description": "Mic Position — blends between close and room perspectives for presence vs. distance"},
+    "Quick Control 2":     {"cc": 15, "description": "Tone — overall tonal shaping from dark/muffled to bright/biting"},
+    "Quick Control 3":     {"cc": 16, "description": "Reverb — reverb amount for placing the piano in a room or hall context"},
+    "Quick Control 4":     {"cc": 17, "description": "String Buzz / Rattle — amount of characteristic string rattle and buzz for maximum honky-tonk character"},
+    "Quick Control 5":     {"cc": 18, "description": "Release Noise — level of damper and string mechanical noise at note release"},
+    "Quick Control 6":     {"cc": 19, "description": "Mechanical Noise — key action and pedal mechanism noise for tactile authenticity"},
+    "Quick Control 7":     {"cc": 20, "description": "Felt / Mute — applies felt muting for a tack piano / practice room quality with reduced sustain"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — randomises velocity, tuning, and timing for natural performance variation"}
+  }
+}

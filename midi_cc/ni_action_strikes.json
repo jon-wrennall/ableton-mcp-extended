@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Action Strikes",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Action Strikes", "NI Action Strikes", "Kontakt - Action Strikes"],
+  "notes": "Action Strikes is a hybrid cinematic percussion and orchestral hit library for Kontakt, designed for transitions, impacts, ensemble hits, risers, and textural percussion beds in trailer and film music contexts. It blends real orchestral forces — full brass and string ensemble hits — with designed percussion layers, industrial textures, and processed impacts for a hybrid cinematic sound. The library is organised around impacts and transitions, making it particularly useful for placing punctuation marks in a score or building to a climactic moment. CC 1 (Modulation) controls overall intensity and density, making it the primary real-time performance control during recording — pushing the mod wheel up into a hit is a natural way to add impact energy. CC 11 (Expression) shapes the overall dynamic level for quieter, more subtle uses of the library. The Orchestra Layer and Percussion Layer QCs can be independently balanced to dial in the ratio of acoustic ensemble to designed percussion, which fundamentally changes the character from conventional orchestral to full hybrid.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — overall level shaping for dynamic control within the hybrid texture"},
+    "Modulation":          {"cc": 1,  "description": "Intensity / Ensemble Density — increases hit power and layer density in real time; primary performance controller"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — may hold riser or swell textures in applicable patches"},
+    "Release Time":        {"cc": 72, "description": "Tail / Decay — controls the sustain length of impacts and riser tails after note release"},
+    "Attack Time":         {"cc": 73, "description": "Attack — sharpness of the initial transient impact"},
+    "Brightness":          {"cc": 74, "description": "Tonal brightness — high-frequency filter for shaping harshness and presence of impacts"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds additional space to the natural concert hall recording"},
+    "Quick Control 1":     {"cc": 14, "description": "Impact Level — overall level and intensity of the primary impact/hit layer"},
+    "Quick Control 2":     {"cc": 15, "description": "Orchestra Layer — amount of the orchestral ensemble (brass, strings) hit layer in the mix"},
+    "Quick Control 3":     {"cc": 16, "description": "Percussion Layer — amount of the designed percussion and drum layer in the hybrid mix"},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb / Space — reverb depth; determines the perceived hall size and ambience of each hit"},
+    "Quick Control 5":     {"cc": 18, "description": "Attack — transient sharpness of the hit onset; increase for maximum punch and definition"},
+    "Quick Control 6":     {"cc": 19, "description": "Tail / Decay — length of the riser or impact tail; extend for epic, sustained hits"},
+    "Quick Control 7":     {"cc": 20, "description": "Intensity / Density — number of layers and overall density; pushes from sparse to massive ensemble hits"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — subtle random velocity and timing variation to reduce mechanical repetition"}
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Kinetic Metal",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Kinetic Metal", "NI Kinetic Metal", "Kontakt - Kinetic Metal"],
+  "notes": "Kinetic Metal is a melodic and textural instrument for Kontakt built from recordings of struck, bowed, and scraped metal objects — singing bowls, bells, industrial metal plates, pipes, gongs, and percussion instruments. It bridges the gap between pitched melodic metal sounds and abstract metallic textures, making it equally useful for ambient music, cinematic scoring, and experimental sound design. The Bright Metal Layer captures the upper harmonic shimmer and attack transients of smaller metal objects while the Deep Metal Layer provides low, resonant foundation from larger metallic sources. CC 1 (Modulation) controls the motion rate of internal LFO-driven animation, adding gentle undulation to held metallic tones. CC 11 (Expression) shapes the overall level for nuanced dynamic control. The Resonance/Sustain QC is particularly important on metal instruments — controlling how long the natural decay rings is central to the character, from percussive staccato to endlessly sustained bell-like tones.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — level shaping for controlling the intensity of metallic strikes and resonances"},
+    "Modulation":          {"cc": 1,  "description": "Motion Rate — mod wheel controls the speed of internal LFO modulation applied to the metallic resonances"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds notes and allows metallic resonances to accumulate and blend"},
+    "Release Time":        {"cc": 72, "description": "Release Decay — how long metallic resonances continue after note release; critical tonal parameter"},
+    "Attack Time":         {"cc": 73, "description": "Attack Transient — sharpness of the initial strike; from hard metallic click to soft bowl-like onset"},
+    "Brightness":          {"cc": 74, "description": "Filter Cutoff — shapes high-frequency content; controls how much metallic shimmer is present"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds space; metallic sounds often benefit from large hall or plate reverb"},
+    "Quick Control 1":     {"cc": 14, "description": "Bright Metal Layer — level of the upper harmonics and shimmer layer from smaller metal objects"},
+    "Quick Control 2":     {"cc": 15, "description": "Deep Metal Layer — level of the low, resonant layer from large gongs, bowls, and plates"},
+    "Quick Control 3":     {"cc": 16, "description": "Resonance / Sustain — length and intensity of the natural metallic resonance decay; core tonal parameter"},
+    "Quick Control 4":     {"cc": 17, "description": "Filter Cutoff — frequency filter shaping the tonal balance of both metal layers"},
+    "Quick Control 5":     {"cc": 18, "description": "Reverb — onboard reverb depth for spatial placement"},
+    "Quick Control 6":     {"cc": 19, "description": "Attack Transient — initial strike intensity and click; higher for more percussive, lower for smoother onset"},
+    "Quick Control 7":     {"cc": 20, "description": "Release Decay — overall sustain tail length; from short percussive hit to long ringing bell tone"},
+    "Quick Control 8":     {"cc": 21, "description": "Motion Rate — speed of internal animated LFO modulation for evolving metallic shimmer"}
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Retro Machines Mk2",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Retro Machines Mk2", "Retro Machines", "NI Retro Machines", "Kontakt - Retro Machines"],
+  "notes": "Retro Machines Mk2 is a Kontakt instrument containing a curated collection of vintage hardware synthesizer and keyboard samples, including string machines (Solina, Eminent), Mellotron tapes (Mk II and Mk IV), early polyphonic pads (Polymoog, ARP Omni), and classic analog poly pads. Each instrument in the collection is separately preloaded and accessible through the Kontakt interface. The instruments share a common filter and modulation section for consistent playability across the collection. CC 74 (Brightness) controls the shared low-pass filter cutoff, which is particularly effective on the Mellotron and string machine presets where rolling off the top end creates more authentic vintage warmth. CC 1 (Modulation) controls chorus/ensemble depth or LFO depth depending on the source — Solina and string machines benefit enormously from chorus. The Chorus/Ensemble Rate QC is especially important for string machine presets, as the ensemble circuit is what gives these instruments their characteristic shimmer and thickness.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — overall level shaping; useful for swells on pad and string machine presets"},
+    "Modulation":          {"cc": 1,  "description": "Chorus / Ensemble Depth or LFO Depth — mod wheel adds thickness via chorus on string machines and Solina"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds notes; useful for building sustained pad chords"},
+    "Release Time":        {"cc": 72, "description": "Envelope release time — extends or shortens the note decay tail"},
+    "Attack Time":         {"cc": 73, "description": "Envelope attack time — from instant to slow swell; great for pad morphing in real time"},
+    "Brightness":          {"cc": 74, "description": "Filter Cutoff — low-pass filter over the shared instrument output; roll off for vintage warmth"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds space to the naturally dry vintage recordings"},
+    "Quick Control 1":     {"cc": 14, "description": "Filter Cutoff — shared low-pass filter cutoff across all source instruments in the collection"},
+    "Quick Control 2":     {"cc": 15, "description": "Filter Resonance — resonance of the shared filter; adds presence and character"},
+    "Quick Control 3":     {"cc": 16, "description": "Attack — amplitude envelope attack; from immediate to slow pad-style swell"},
+    "Quick Control 4":     {"cc": 17, "description": "Release — amplitude envelope release time; longer for pad tails, shorter for rhythmic parts"},
+    "Quick Control 5":     {"cc": 18, "description": "LFO Rate — speed of the LFO modulation applied to filter or pitch vibrato"},
+    "Quick Control 6":     {"cc": 19, "description": "LFO Depth — intensity of LFO modulation; add vibrato or filter movement in real time"},
+    "Quick Control 7":     {"cc": 20, "description": "Chorus / Ensemble Rate — speed of the onboard chorus/ensemble effect; essential for authentic string machine sound"},
+    "Quick Control 8":     {"cc": 21, "description": "Reverb — onboard reverb depth within the Kontakt patch; adds hall or room character"}
+  }
+}

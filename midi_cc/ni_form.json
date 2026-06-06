@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Form",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Form", "NI Form", "Reaktor - Form", "Reaktor 6 - Form"],
+  "notes": "Form is a sample-based synthesizer running inside Reaktor 6 that reimagines how samples are used as synthesis sources. Instead of traditional playback, Form uses a freely positionable playhead that scans through a sample at any speed or direction, treating the waveform as a continuous source for synthesis rather than a linear playback item. This makes radically different sounds possible from any source material — stretching, granularising, and morphing through audio. The Playhead Position and Scan Speed are the two central expressive controls: CC 1 (Modulation) can be assigned to Scan Speed for real-time morphing via mod wheel, while the playhead position automation creates evolving tonal transformations over time. The filter shapes the scanned audio and is the primary tonal colour control. Form is capable of everything from conventional textural pads to radically processed, unrecognisable soundscapes. Quick Control assignments below reflect typical defaults and may vary per preset.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the Reaktor ensemble"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression / output level — shapes the level of the synthesised output"},
+    "Modulation":          {"cc": 1,  "description": "Scan Speed modulation — mod wheel controls how fast the playhead moves through the sample source"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds notes and allows continued playhead scanning"},
+    "Release Time":        {"cc": 72, "description": "Envelope release time — controls tail length after note release"},
+    "Attack Time":         {"cc": 73, "description": "Envelope attack time — shapes the onset of the synthesised output from the playhead"},
+    "Brightness":          {"cc": 74, "description": "Filter Cutoff — shapes the frequency content of the scanned audio output"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds spatial depth to the synthesised texture"},
+    "Quick Control 1":     {"cc": 14, "description": "Playhead Position — sets the position within the sample that is being scanned and synthesised; key morphing control"},
+    "Quick Control 2":     {"cc": 15, "description": "Scan Speed — speed at which the playhead moves through the sample; from static to rapid scan"},
+    "Quick Control 3":     {"cc": 16, "description": "Filter Cutoff — low-pass filter frequency applied to the scanned audio output"},
+    "Quick Control 4":     {"cc": 17, "description": "Filter Resonance — resonance of the synthesis filter; adds harmonic character"},
+    "Quick Control 5":     {"cc": 18, "description": "Attack — amplitude envelope attack; shapes onset from instant to slow swell"},
+    "Quick Control 6":     {"cc": 19, "description": "Release — amplitude envelope release; controls how long the sound sustains after note-off"},
+    "Quick Control 7":     {"cc": 20, "description": "Reverb / Space — onboard reverb/spatial effect depth within the ensemble"},
+    "Quick Control 8":     {"cc": 21, "description": "Formant / Colour — tonal character and formant shaping of the synthesised output; changes the voice quality of the scanned audio"}
+  }
+}

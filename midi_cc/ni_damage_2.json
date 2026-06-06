@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Damage 2",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Damage 2", "NI Damage 2", "Kontakt - Damage 2", "Damage2"],
+  "notes": "Damage 2 is an epic cinematic percussion library for Kontakt from Heavyocity, featuring massive taiko drums, orchestral timp hits, industrial metal impacts, designed noise percussion, and ensemble risers. It is the go-to library for trailer music, action film scoring, and any production requiring large-scale percussive power. The multi-mic architecture — close, overhead, room, and hall — allows precise control over the perceived size and character of the sound, from tight and punchy to massive and cavernous. CC 1 (Modulation) is particularly important in Damage 2 as it often controls swell intensity or ensemble density on combo and layered patches, allowing real-time control of builds and climaxes. CC 11 (Expression) controls the overall dynamic level and is used for shaping the arc of percussion phrases and transitions. The Attack Transient QC shapes the click and impact at the note onset — critical for punchy transients in the mix — while the Release Decay QC controls how long hits ring and sustain into the reverb.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — shapes the overall dynamic level and intensity of percussion hits"},
+    "Modulation":          {"cc": 1,  "description": "Swell Intensity / Ensemble Density — on combo patches, controls build intensity and layering in real time"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — may extend or hold certain riser and swell textures depending on patch"},
+    "Release Time":        {"cc": 72, "description": "Release decay — controls the overall ring and sustain of percussion hits after impact"},
+    "Attack Time":         {"cc": 73, "description": "Attack transient — shapes the sharpness of the initial impact and click"},
+    "Brightness":          {"cc": 74, "description": "Tonal brightness — high-frequency filter over the percussion output; tame harshness or boost presence"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds additional space on top of the multi-mic room and hall recordings"},
+    "Quick Control 1":     {"cc": 14, "description": "Close Mic Level — amount of the direct, punchy close microphone signal"},
+    "Quick Control 2":     {"cc": 15, "description": "Overhead Mic Level — amount of the overhead mic for natural body and spread"},
+    "Quick Control 3":     {"cc": 16, "description": "Room Mic Level — amount of the room microphones for space and ambience"},
+    "Quick Control 4":     {"cc": 17, "description": "Hall Mic Level — amount of the hall microphones for the largest, most reverberant sound"},
+    "Quick Control 5":     {"cc": 18, "description": "Attack Transient — sharpness and level of the initial hit impact; increase for maximum punch"},
+    "Quick Control 6":     {"cc": 19, "description": "Release Decay — length of the sustain tail after each hit; longer for epic ringing impacts"},
+    "Quick Control 7":     {"cc": 20, "description": "Reverb — additional convolution reverb depth beyond the natural hall recording"},
+    "Quick Control 8":     {"cc": 21, "description": "Swell / Intensity — overall intensity and density of layering on ensemble and combo patches"}
+  }
+}

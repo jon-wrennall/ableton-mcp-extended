@@ -1,0 +1,27 @@
+{
+  "plugin_name": "Noire",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Noire", "NI Noire", "Kontakt - Noire"],
+  "notes": "Noire is an extraordinary prepared Yamaha CF concert grand recorded by Nils Frahm in his Berlin studio. The instrument features felt placed between the strings and hammers on many keys, creating the signature muffled, intimate, and somewhat melancholic tone that defines Frahm's piano aesthetic. The close-mic recording captures every mechanical nuance — the thud of hammers, the creak of the sustain pedal, and the gentle whoosh of the felt — which are celebrated rather than removed. An additional atmospheric synthesis layer blends beneath the acoustic samples for an otherworldly, cinematic depth. CC 11 (Expression) is the primary dynamic control and interacts naturally with the felt depth for extremely nuanced soft playing. CC 1 (Modulation) engages the Motion/Atmospheric Layer depth, allowing real-time evolution of the texture underneath the piano notes. The Felt Depth QC is the defining parameter — from fully open (bright, traditional grand) to fully engaged (deeply muffled, intimate Frahm-style), it transforms the entire character of the instrument.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — primary level control; interacts with felt depth for extremely delicate soft playing"},
+    "Modulation":          {"cc": 1,  "description": "Atmospheric Layer depth — controls how much the underlying synthesis texture is present"},
+    "Sustain":             {"cc": 64, "description": "Damper pedal — sustains notes; natural sustain is shorter on felt-prepared strings"},
+    "Sostenuto":           {"cc": 66, "description": "Holds only currently depressed notes for selective sustain"},
+    "Soft Pedal":          {"cc": 67, "description": "Una corda — further reduces volume; on felt-prepared notes creates extreme softness"},
+    "Release Time":        {"cc": 72, "description": "Release tail length — controls the decay of notes after key release"},
+    "Attack Time":         {"cc": 73, "description": "Attack envelope speed — felt notes have a softer natural attack; use to shape further"},
+    "Brightness":          {"cc": 74, "description": "Tonal brightness filter — shapes high frequencies on top of the felt character"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds space to the naturally close-mic recording"},
+    "Quick Control 1":     {"cc": 14, "description": "Felt Depth — amount of felt muffling applied; the defining tonal control from open to fully prepared"},
+    "Quick Control 2":     {"cc": 15, "description": "Close Mic Level — amount of the intimate, detailed close microphone signal"},
+    "Quick Control 3":     {"cc": 16, "description": "Room / Ambience Level — amount of natural room ambience from the Berlin studio"},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb — additional reverb depth for spatial placement"},
+    "Quick Control 5":     {"cc": 18, "description": "Release Noise — level of string and damper noise on key release"},
+    "Quick Control 6":     {"cc": 19, "description": "Body Resonance — sympathetic resonance of the piano body and strings"},
+    "Quick Control 7":     {"cc": 20, "description": "Atmospheric Layer — level of the underlying synthesis/textural layer beneath the piano"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — subtle randomisation of velocity and timing for natural performance feel"}
+  }
+}

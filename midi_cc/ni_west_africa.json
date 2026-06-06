@@ -1,0 +1,25 @@
+{
+  "plugin_name": "West Africa",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["West Africa", "NI West Africa", "Kontakt - West Africa"],
+  "notes": "West Africa is a Kontakt library of traditional West African percussion instruments, including the djembe (bass, tone, and slap strokes), dunun (dundunba, sangban, kenkeni), shekere (various playing techniques), talking drum (with pitch bend), and additional supporting rhythm instruments. The library is designed to represent the full ensemble of a traditional West African percussion ensemble, which is inherently call-and-response and polyphonic in nature. Instruments are mapped across the keyboard — refer to the Kontakt mapping view for articulation layout. CC 11 (Expression) provides global dynamic control while Humanise is critical for authentic feel, as West African percussion has a distinctive physical warmth and natural variation that quantised MIDI cannot replicate. The Tone/Skin Tension QC is particularly interesting — on the djembe and talking drum, skin tension fundamentally changes pitch and tonal character, and this QC provides expressive tonal shaping even on instruments with fixed MIDI pitching.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — overall level shaping across the West African percussion ensemble"},
+    "Modulation":          {"cc": 1,  "description": "Humanise depth — mod wheel increases random variation in velocity and timing for natural groove"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — limited use; may affect certain ringing or sustained tones in the ensemble"},
+    "Release Time":        {"cc": 72, "description": "Release decay — controls the ring length after each drum stroke"},
+    "Attack Time":         {"cc": 73, "description": "Attack transient — sharpness of the initial drum hit; affects the characteristic snap of slap tones"},
+    "Brightness":          {"cc": 74, "description": "Tonal brightness — high-frequency filter shaping the crack and body of the drums"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds space; use subtly for a natural outdoor or courtyard ambience"},
+    "Quick Control 1":     {"cc": 14, "description": "Close Mic Level — amount of the intimate close microphone signal across all instruments"},
+    "Quick Control 2":     {"cc": 15, "description": "Room Level — amount of the room microphones capturing the natural acoustic space"},
+    "Quick Control 3":     {"cc": 16, "description": "Reverb — additional reverb depth for spatial enhancement"},
+    "Quick Control 4":     {"cc": 17, "description": "Attack — transient sharpness of initial strikes across the percussion ensemble"},
+    "Quick Control 5":     {"cc": 18, "description": "Tone / Skin Tension — simulates skin tension variation on djembe and talking drum; alters pitch and tone character"},
+    "Quick Control 6":     {"cc": 19, "description": "Release — decay length after each hit; from short, dry strokes to longer ringing tones"},
+    "Quick Control 7":     {"cc": 20, "description": "Bleed — microphone bleed between instruments for a cohesive ensemble recording quality"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random velocity, timing, and pitch variation for authentic live ensemble feel"}
+  }
+}

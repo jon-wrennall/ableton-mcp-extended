@@ -1,0 +1,27 @@
+{
+  "plugin_name": "The Giant",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["The Giant", "NI The Giant", "Kontakt - The Giant"],
+  "notes": "The Giant is a meticulously sampled Bösendorfer Imperial 97-key concert grand, recorded by pianist and producer Nils Frahm at his Berlin studio. The extra bass strings of the Imperial (keys below the standard 88) give it an extraordinarily rich, resonant low end that is unique among sampled pianos. It excels in intimate contemporary classical, ambient, and cinematic contexts where sustain and natural room decay are essential. CC 11 (Expression) controls overall dynamic level and is ideal for long, shaped phrases, while CC 1 (Modulation) can be assigned to the Humanise parameter for subtle real-time variation. The multiple mic positions — close, room, and additional ambience — allow blending from dry and intimate to deeply immersive within the patch. Release noise and pedal noise samples are included and controllable via Quick Controls, adding authentic physical character. Use the Lid Position QC to open or close the lid in real time for tonal shaping.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — controls overall playing level, ideal for shaping long phrases"},
+    "Modulation":          {"cc": 1,  "description": "Assigns to Humanise by default — subtle random velocity and timing variation for realism"},
+    "Sustain":             {"cc": 64, "description": "Damper pedal — lifts all dampers for full sustain resonance"},
+    "Sostenuto":           {"cc": 66, "description": "Holds only currently depressed notes while allowing new notes to be damped"},
+    "Soft Pedal":          {"cc": 67, "description": "Una corda — softens tone and shifts hammer contact point for a quieter, more intimate sound"},
+    "Release Time":        {"cc": 72, "description": "Adjusts the release tail length of notes after key release"},
+    "Attack Time":         {"cc": 73, "description": "Adjusts the attack envelope speed — use cautiously on piano to preserve natural transient"},
+    "Brightness":          {"cc": 74, "description": "High-frequency filter cutoff — shapes brightness of the piano tone"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds space and room ambience on top of the natural room recording"},
+    "Quick Control 1":     {"cc": 14, "description": "Lid Position — opens or closes the piano lid, shifting tone from bright (open) to warm (closed)"},
+    "Quick Control 2":     {"cc": 15, "description": "Close Mic Level — blend of the intimate close microphone position"},
+    "Quick Control 3":     {"cc": 16, "description": "Room Mic Level — blend of the room microphones capturing natural space"},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb — additional convolution reverb depth for extra space beyond the room mics"},
+    "Quick Control 5":     {"cc": 18, "description": "Sustain Resonance — amount of sympathetic string resonance when damper pedal is held"},
+    "Quick Control 6":     {"cc": 19, "description": "Release Noise — level of string and damper release noise for physical realism"},
+    "Quick Control 7":     {"cc": 20, "description": "Pedal Noise — mechanical sound of the sustain pedal mechanism for added authenticity"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — randomises velocity, timing, and tuning subtly to simulate a live performance"}
+  }
+}

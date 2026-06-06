@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Mysteria",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Mysteria", "NI Mysteria", "Kontakt - Mysteria"],
+  "notes": "Mysteria is a hybrid choral and vocal synthesis instrument for Kontakt that blends sampled choir recordings with synthesised vocal elements to create otherworldly, genre-defying vocal textures. The instrument bridges the gap between conventional choir libraries and purely synthetic vocal pads, offering a range of sounds from recognisably choral to deeply alien. The Choir Layer provides natural ensemble vocal character while the Synth Layer adds shimmer, breath, and tonal synthesis to push the sound beyond realism. CC 11 (Expression) is essential for shaping the natural dynamic arc of any choral performance — choir is often used in long, shaped swells where expression control is critical. CC 1 (Modulation) controls vibrato depth or shimmer intensity depending on the patch, adding the character associated with live choir vibrato. The Vowel/Formant QC creates distinctly different resonant characters from different syllables and positions, while the Vibrato/Shimmer QC adds the final expressive quality that differentiates Mysteria from static pad instruments.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — primary level shaping; essential for long, shaped choral phrases and swells"},
+    "Modulation":          {"cc": 1,  "description": "Vibrato depth or Shimmer intensity — adds expressive choir-like vibrato or synthetic shimmer via mod wheel"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds choir and synth layers for extended sustained textures"},
+    "Release Time":        {"cc": 72, "description": "Release time — controls how long the choir and synth layers decay after note release"},
+    "Attack Time":         {"cc": 73, "description": "Attack time — onset speed from immediate entry to gradual, swelling choir build"},
+    "Brightness":          {"cc": 74, "description": "Filter Cutoff — shapes high-frequency presence of both choir and synth layers combined"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds hall or cathedral ambience to the choral textures"},
+    "Quick Control 1":     {"cc": 14, "description": "Choir Layer Level — amount of the natural sampled choir ensemble in the mix"},
+    "Quick Control 2":     {"cc": 15, "description": "Synth Layer Level — amount of the synthesised, otherworldly vocal synthesis layer"},
+    "Quick Control 3":     {"cc": 16, "description": "Vowel / Formant — shifts the vowel character from ah to oh to ee; changes resonant quality of the whole instrument"},
+    "Quick Control 4":     {"cc": 17, "description": "Filter Cutoff — low-pass filter shaping the overall brightness of the hybrid vocal texture"},
+    "Quick Control 5":     {"cc": 18, "description": "Reverb — onboard reverb depth for spatial immersion"},
+    "Quick Control 6":     {"cc": 19, "description": "Attack — onset envelope speed of the vocal layers"},
+    "Quick Control 7":     {"cc": 20, "description": "Release — decay length of both layers after note release"},
+    "Quick Control 8":     {"cc": 21, "description": "Vibrato / Shimmer — vibrato depth on the choir layer and shimmer intensity on the synth layer simultaneously"}
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "plugin_name": "Replika XT",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Replika XT", "NI Replika XT", "Replika"],
+  "notes": "Replika XT is a multi-mode delay plugin (VST3 audio effect) with five distinct delay modes: Tape (warm, pitch-modulated), Analog (warm, frequency-coloured), Diffusion (smeared, reverb-like), Modulated (chorus-like pitch variation), and Neural (machine-learning-based). It is not a Kontakt instrument and does not run inside a sampler — it is a dedicated audio effects plugin. The primary controls are accessed via the VST parameter API using get_device_parameters and set_device_parameter. The CC mappings listed here follow convention for MIDI-learn-capable parameters where Replika XT supports external MIDI control. Dry/Wet and Feedback are the most commonly automated parameters in a production context. The Delay Time can be synced to host tempo, in which case automation of the time parameter changes the rhythmic subdivision. Modulation Rate and Depth create the characteristic pitch shimmer of the Modulated mode and are useful for automated textural variation. The Reverse toggle (CC 25) flips the delay buffer for the distinctive backwards delay effect.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Output level of the delay plugin"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan of the wet signal"},
+    "Expression":          {"cc": 11, "description": "Overall wet signal level — use for dynamic control of the delay presence"},
+    "Modulation":          {"cc": 1,  "description": "Modulation Depth — mod wheel adds pitch shimmer to the delay repeats in Modulated mode"},
+    "Dry/Wet":             {"cc": 91, "description": "Delay wet/dry mix — primary blend control between dry signal and delayed signal"},
+    "Delay Time":          {"cc": 22, "description": "Delay time — in free mode controls the delay length; in sync mode changes the rhythmic subdivision"},
+    "Feedback":            {"cc": 23, "description": "Feedback amount — number of delay repeats; high values create long echo tails or self-oscillation"},
+    "Filter Cutoff":       {"cc": 74, "description": "Filter cutoff on the delay feedback path — darkens repeats as they recur (Tape/Analog modes)"},
+    "Modulation Rate":     {"cc": 20, "description": "Modulation LFO rate — speed of the pitch modulation applied to delay repeats in Modulated mode"},
+    "Modulation Depth":    {"cc": 21, "description": "Modulation LFO depth — intensity of pitch shimmer; increase for more pronounced chorus-like character"},
+    "Saturation":          {"cc": 24, "description": "Saturation / Drive — analog-style input saturation for warm, coloured delay repeats (most effective in Tape/Analog modes)"},
+    "Reverse":             {"cc": 25, "description": "Reverse toggle — flips the delay buffer for backwards delay effect; CC value > 64 to enable"}
+  }
+}

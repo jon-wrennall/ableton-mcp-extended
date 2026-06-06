@@ -1,0 +1,20 @@
+{
+  "plugin_name": "Raum",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Raum", "NI Raum"],
+  "notes": "Raum is a reverb plugin (VST3 audio effect) with three distinct modes: Room (natural small-to-medium room simulation), Hall (large concert hall and epic space), and Grounded (a distinctive earthy, organic reverb character designed by NI). It is not a Kontakt instrument — it is a dedicated audio effects processor accessed via the VST parameter API using get_device_parameters and set_device_parameter. The CC mappings listed here follow convention for parameters where Raum supports external MIDI control or automation. Dry/Wet and Decay are the two primary parameters in any reverb workflow: Dry/Wet (CC 91) controls how much reverb is in the mix, while Decay (CC 23) sets the tail length. Size (CC 22) changes the perceived room or hall dimensions. Pre-Delay (CC 24) is a critical mixing tool — adding pre-delay separates the dry signal from the reverb onset for clarity in dense mixes. The Shimmer parameter (CC 25) adds a pitched, octave-up shimmer effect to the reverb tail for ethereal, pad-like reverb character. The Freeze function (CC 26) holds the current reverb tail indefinitely for drone and textural use.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Output level of the reverb plugin"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan of the wet signal"},
+    "Expression":          {"cc": 11, "description": "Overall wet level — dynamic control of the reverb presence in the mix"},
+    "Modulation":          {"cc": 1,  "description": "Modulation depth — adds subtle pitch movement to the reverb tail for a more organic, less static character"},
+    "Dry/Wet":             {"cc": 91, "description": "Reverb wet/dry mix — primary blend control between dry signal and reverberated signal"},
+    "Size":                {"cc": 22, "description": "Room/Hall Size — perceived dimensions of the space from small room to enormous hall"},
+    "Decay":               {"cc": 23, "description": "Decay time — length of the reverb tail from short room to infinite space"},
+    "Pre-Delay":           {"cc": 24, "description": "Pre-delay — time before reverb onset begins; increases clarity in dense mixes by separating source from reverb"},
+    "High-Cut":            {"cc": 74, "description": "High-cut filter on the reverb tail — reduces high-frequency content for a warmer, darker reverb character"},
+    "Low-Cut":             {"cc": 75, "description": "Low-cut filter on the reverb tail — reduces low-frequency buildup for clarity in the low end"},
+    "Shimmer":             {"cc": 25, "description": "Shimmer — adds a pitched, octave-up shimmer effect to the reverb tail for ethereal, ambient character"},
+    "Character/Freeze":    {"cc": 26, "description": "Character control or Freeze toggle — in Freeze mode (CC > 64) holds the reverb tail indefinitely for drone textures"}
+  }
+}

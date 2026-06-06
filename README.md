@@ -187,6 +187,32 @@ For plugins that don't expose parameters through VST3/AU (Arturia V Collection, 
 | Analog Dreams | NI | Filter cutoff/resonance, attack/release, LFO rate+depth, FX mix, reverb/space |
 | Alicia's Keys | NI | Close/room mic mix, sustain resonance, release noise, dynamics |
 | Electric Keys | NI | Bell/tine character, pickup position, tremolo rate+depth, overdrive |
+| The Giant | NI | Lid, close/room mic, sustain resonance, release/pedal noise, humanise — Bösendorfer Imperial 97-key |
+| Grandeur | NI | Lid, close/room mic, sustain resonance, release/hammer noise — Steinway D concert grand |
+| The Gentleman | NI | Mic position, tone, sustain resonance, release/mechanical noise — 1951 Bechstein upright |
+| The Maverick | NI | Mic position, string buzz/rattle, release noise, mute/felt — vintage honky-tonk upright |
+| Noire | NI | Felt depth, close/room mic, body resonance, atmospheric layer — Nils Frahm prepared piano |
+| Una Corda | NI | Una corda depth, close/room mic, release/mechanical noise — Nils Frahm intimate Bösendorfer |
+| Vintage Organs | NI | B3: drawbars (QC1–4), Leslie speed/brake, percussion, key click; Farfisa/Vox: registers, tone |
+| Monark | NI | Filter cutoff/resonance, osc mix, filter env, LFO rate+depth, portamento, overdrive — Moog Model D |
+| Super 8 | NI | Filter cutoff/resonance, attack/release, chorus rate+depth, reverb, unison detune |
+| Rounds | NI | Filter cutoff/resonance, attack/release, LFO rate+depth, FX blend, voice spread |
+| Form | NI | Playhead position, scan speed, filter cutoff/resonance, attack/release, reverb, formant |
+| Retro Machines Mk2 | NI | Filter cutoff/resonance, attack/release, LFO rate+depth, chorus/ensemble, reverb |
+| Damage 2 | NI | Close/overhead/room/hall mic levels, attack transient, decay, reverb, swell — Heavyocity |
+| Action Strikes | NI | Impact level, orchestra/percussion layer blend, attack, tail, intensity — Heavyocity |
+| Thrill | NI | Tension intensity, performer/texture layer levels, attack, release, filter, reverb |
+| Straylight | NI | Grain size+position, layer 2 mix, filter, reverb, attack, release, LFO — Heavyocity |
+| Pharlight | NI | Grain density+pitch spread, vowel morph, filter, reverb, motion rate — Heavyocity |
+| Mysteria | NI | Choir/synth layer blend, vowel/formant, filter, reverb, attack, release, vibrato |
+| Kinetic Toys | NI | Toy/bells layer mix, filter, reverb, attack, release, sequencer rate |
+| Kinetic Metal | NI | Bright/deep metal layer mix, resonance, filter, reverb, attack transient, motion rate |
+| Cuba | NI | Close/room mic, reverb, attack, tone, bleed/crosstalk, humanise |
+| West Africa | NI | Close/room mic, reverb, attack, skin tension/tone, bleed, humanise |
+| George Duke Soul Treasures | NI | Pickup/tone, amp/DI blend, tremolo rate+depth, reverb, overdrive, release noise |
+| Replika XT | NI | Delay time, feedback, filter, mod rate+depth, saturation, dry/wet — VST3 effect |
+| Raum | NI | Size, decay, dry/wet, pre-delay, high/low cut, shimmer — VST3 effect |
+| Battery 4 | NI | Master volume/pan/tune, bus compression, reverb send — per-pad via VST parameter API |
 | Scarbee Mark I | NI | Tine character/bark, pickup position, tremolo rate+depth, overdrive, release/key noise, humanise |
 | Scarbee A-200 | NI | Reed character/bite, crosstalk, tremolo rate+depth, overdrive, release noise, humanise |
 | Scarbee Clavinet Pianet | NI | Pickup selection (AB/CD), mute, wah sweep, envelope filter, overdrive, tone, release noise |

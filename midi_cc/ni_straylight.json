@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Straylight",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Straylight", "NI Straylight", "Kontakt - Straylight"],
+  "notes": "Straylight is a granular pad instrument for Kontakt developed by Heavyocity, designed to create evolving, atmospheric textures from deeply processed orchestral samples using granular synthesis. It features two independently controllable layers, each with its own granular engine that can scan, scatter, and reshape the underlying sample material. The result ranges from recognisable orchestral pad textures to abstract, morphing soundscapes. CC 1 (Modulation) controls overall motion intensity — the speed and randomness of the granular process — making the mod wheel an essential real-time tool for adding or removing movement within a sustained texture. CC 11 (Expression) shapes the overall dynamic level. The Grain Size QC fundamentally changes the textural character: larger grains produce smoother, more pad-like textures while smaller grains create noisier, more abstract tones. The Grain Position/Scan QC determines which part of the underlying orchestral sample is being granularised, allowing tonal morphing even within a held note.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — overall level shaping for the evolving granular texture"},
+    "Modulation":          {"cc": 1,  "description": "Motion Intensity — speed and randomness of granular process; mod wheel adds movement and evolution to held notes"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds granular textures and allows continued evolution"},
+    "Release Time":        {"cc": 72, "description": "Release time — how long the texture continues to evolve and fade after note release"},
+    "Attack Time":         {"cc": 73, "description": "Attack time — onset speed of the granular texture from immediate to gradual swell"},
+    "Brightness":          {"cc": 74, "description": "Filter Cutoff — shapes the frequency content of the granular output for tonal control"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds spatial depth to the granular textures"},
+    "Quick Control 1":     {"cc": 14, "description": "Grain Size — size of individual grains; larger for smooth pads, smaller for abstract granular textures"},
+    "Quick Control 2":     {"cc": 15, "description": "Grain Position / Scan — which point in the source sample grains are read from; morphs the tonal character"},
+    "Quick Control 3":     {"cc": 16, "description": "Layer 2 Mix — amount of the second granular layer blended into the overall texture"},
+    "Quick Control 4":     {"cc": 17, "description": "Filter Cutoff — main tonal filter over both granular layers combined"},
+    "Quick Control 5":     {"cc": 18, "description": "Reverb — onboard reverb depth for spatial enhancement of the granular texture"},
+    "Quick Control 6":     {"cc": 19, "description": "Attack — onset envelope; controls how quickly the texture rises from silence"},
+    "Quick Control 7":     {"cc": 20, "description": "Release — how long the texture continues after a note is released"},
+    "Quick Control 8":     {"cc": 21, "description": "Motion / LFO Rate — rate of internal LFO-driven motion applied to grain parameters for continuous evolution"}
+  }
+}

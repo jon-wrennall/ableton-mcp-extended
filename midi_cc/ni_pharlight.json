@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Pharlight",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Pharlight", "NI Pharlight", "Kontakt - Pharlight"],
+  "notes": "Pharlight is a granular choir and vocal pad instrument for Kontakt by Heavyocity that processes recorded vocal and choral samples through a granular synthesis engine to create evolving, ethereal vocal textures. The source material includes solo voices, small ensembles, and full choral recordings across multiple vowels and syllables. The granular engine scatters, stretches, and morphs this material into pads that retain a distinctly human quality while being rhythmically static and tonally malleable. CC 11 (Expression) is the primary dynamic controller and is especially important here — nuanced control over the level creates the breathy, intimate quality that distinguishes Pharlight from conventional choral libraries. CC 1 (Modulation) controls motion depth, adding organic movement and subtle pitch variation to held textures via the mod wheel. The Vowel Morph QC is unique to this instrument and allows smooth transitions between different vocal formations (ah, oh, ee, etc.) in real time, fundamentally altering the resonant character of the granular output.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — primary level control; use for nuanced dynamic shaping of vocal textures"},
+    "Modulation":          {"cc": 1,  "description": "Motion Depth — intensity of granular motion and organic variation applied to held textures via mod wheel"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds vocal textures and continues granular evolution"},
+    "Release Time":        {"cc": 72, "description": "Release time — how long the vocal texture fades after note release"},
+    "Attack Time":         {"cc": 73, "description": "Attack time — onset speed from immediate vocal hit to slow, breathy swell"},
+    "Brightness":          {"cc": 74, "description": "Filter Cutoff — shapes the frequency content of the granular vocal output for brightness control"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds space and depth to the vocal textures"},
+    "Quick Control 1":     {"cc": 14, "description": "Grain Density — number of simultaneous grains; higher density for smoother, denser vocal pads"},
+    "Quick Control 2":     {"cc": 15, "description": "Grain Pitch Spread — pitch randomisation across grains; adds a shimmering, choir-like quality"},
+    "Quick Control 3":     {"cc": 16, "description": "Vowel Morph — morphs between vocal formations (ah, oh, ee); changes the resonant character in real time"},
+    "Quick Control 4":     {"cc": 17, "description": "Filter Cutoff — low-pass filter shaping the overall tonal brightness of the granular output"},
+    "Quick Control 5":     {"cc": 18, "description": "Reverb — onboard reverb depth within the Kontakt patch"},
+    "Quick Control 6":     {"cc": 19, "description": "Attack — onset envelope speed of the vocal texture"},
+    "Quick Control 7":     {"cc": 20, "description": "Release — decay length of the vocal texture after note release"},
+    "Quick Control 8":     {"cc": 21, "description": "Motion Rate — speed of internal LFO-driven grain modulation for continuous organic movement"}
+  }
+}

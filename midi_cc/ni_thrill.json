@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Thrill",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Thrill", "NI Thrill", "Kontakt - Thrill"],
+  "notes": "Thrill is a cinematic tension instrument for Kontakt designed for stings, risers, atmospheric suspense, and emotional tension in film and TV scoring. It is built around two primary layers — the Performer layer (bowed and performed string and woodwind textures) and the Texture layer (processed ambient and drone-like sounds) — which combine to create a sense of unease, anticipation, or dread. CC 1 (Modulation) is the primary tension control, pushing intensity from ambient and restrained to full cinematic sting level, making it the most important real-time controller during recording sessions. CC 11 (Expression) provides a finer dynamic shaping tool within the chosen intensity level. The Attack and Release QCs shape whether a texture sweeps in gradually or hits immediately, while the Filter/Brightness QC opens up the high-frequency content for added brightness or closes it down for a darker, more ominous character. Thrill works best with slow, sustained notes and CC 1 automation riding the tension throughout a scene.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — fine-grained dynamic shaping within the set tension level"},
+    "Modulation":          {"cc": 1,  "description": "Tension / Intensity — primary tension control; increasing this pushes from ambient to full cinematic sting intensity"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — may hold evolving textures or sustain the performer layer"},
+    "Release Time":        {"cc": 72, "description": "Release / Tail — controls how long the texture continues after note release"},
+    "Attack Time":         {"cc": 73, "description": "Attack — whether the texture builds gradually or hits immediately"},
+    "Brightness":          {"cc": 74, "description": "Filter / Brightness — high-frequency filter; open for bright, sharp tension; close for dark, ominous character"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds space and depth to the tension textures"},
+    "Quick Control 1":     {"cc": 14, "description": "Tension / Intensity — overall tension level; primary expressive control on this instrument"},
+    "Quick Control 2":     {"cc": 15, "description": "Performer Layer Level — amount of the live-performed string and woodwind tension layer"},
+    "Quick Control 3":     {"cc": 16, "description": "Texture Layer Level — amount of the ambient, processed texture layer beneath the performer"},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb — reverb amount for spatial placement from dry to deeply immersive"},
+    "Quick Control 5":     {"cc": 18, "description": "Attack — onset speed of the tension texture from gradual swell to immediate sting"},
+    "Quick Control 6":     {"cc": 19, "description": "Release / Tail — decay length after the note ends; longer for lingering unease"},
+    "Quick Control 7":     {"cc": 20, "description": "Filter / Brightness — low-pass filter cutoff controlling overall tonal darkness or brightness"},
+    "Quick Control 8":     {"cc": 21, "description": "Modulation Depth — internal modulation intensity applied to the texture for added motion and instability"}
+  }
+}

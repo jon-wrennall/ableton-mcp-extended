@@ -1,0 +1,23 @@
+{
+  "plugin_name": "Vintage Organs",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Vintage Organs", "NI Vintage Organs", "Kontakt - Vintage Organs"],
+  "notes": "Vintage Organs is a Kontakt instrument containing three classic electromechanical and electronic organs: the Hammond B3 (tonewheel organ), the Farfisa Compact (Italian transistor organ), and the Vox Continental (British transistor organ). Each organ has a distinct character and Quick Control layout. The Hammond B3 is the most complex — drawbar levels set the tonal character, the percussion effect adds a transient click, and the Leslie rotary cabinet speed is the defining real-time expression control. For full drawbar control on the B3, right-click each drawbar in Kontakt and assign individual MIDI CCs via MIDI Learn, as eight drawbars exceed the Quick Control count. The Farfisa and Vox use register tab and stop assignments mapped to QCs for bright, cutting registrations typical of 60s garage and pop. CC 11 (Expression) on organ emulates the swell pedal or expression pedal that organists use for dynamic shaping. CC 1 is best mapped to Leslie Speed for the B3, enabling smooth fast/slow transitions via mod wheel. Avoid using CC 7 as the primary dynamic control on Hammond — use CC 11 (swell) instead, as a real Hammond has no master volume knob on the instrument itself.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level — note: on Hammond B3, use CC 11 (swell pedal) for dynamic expression instead"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Swell pedal / expression — the primary dynamic control on organ, emulates the expression pedal"},
+    "Modulation":          {"cc": 1,  "description": "Best assigned to Leslie Speed — smooth transitions between slow (chorale) and fast (tremolo) Leslie rotation"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds notes; organs naturally sustain while keys are depressed so this has limited use"},
+    "Brightness":          {"cc": 74, "description": "Tonal brightness filter — shapes the high-frequency content across all three organ types"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds space; the Leslie cabinet naturally adds some spatial character"},
+    "Quick Control 1":     {"cc": 14, "description": "B3: Upper Drawbar Balance (16' / fundamental tone) | Farfisa/Vox: Register / Stop selection 1"},
+    "Quick Control 2":     {"cc": 15, "description": "B3: Upper Drawbar (8' / primary pitch drawbar, most used) | Farfisa/Vox: Register / Stop selection 2"},
+    "Quick Control 3":     {"cc": 16, "description": "B3: Upper Drawbar (4' / octave above fundamental) | Farfisa/Vox: Vibrato / Chorus on/off"},
+    "Quick Control 4":     {"cc": 17, "description": "B3: Lower Drawbar Balance (main lower manual tone) | Farfisa/Vox: Tone shaping / Brightness"},
+    "Quick Control 5":     {"cc": 18, "description": "B3: Percussion On/Off — adds the characteristic click transient to note attacks"},
+    "Quick Control 6":     {"cc": 19, "description": "B3: Percussion Level / Decay — volume and speed of the percussion transient click"},
+    "Quick Control 7":     {"cc": 20, "description": "B3: Leslie Speed — switches between slow chorale and fast tremolo rotation; assign CC 1 for smooth control"},
+    "Quick Control 8":     {"cc": 21, "description": "B3: Key Click Level — amount of the characteristic Hammond key contact click on note attack"}
+  }
+}

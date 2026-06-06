@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Cuba",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Cuba", "NI Cuba", "Kontakt - Cuba"],
+  "notes": "Cuba is a Kontakt library dedicated to Cuban percussion and traditional instruments, featuring congas (open, slap, muted, bass tones), bongos (open, muted), timbales (macho/hembra, cascara, campana), claves, maracas, guiro, cowbell, and additional Afro-Cuban ritual percussion. The instruments are distributed across the keyboard mapping — check the Kontakt mapping view or use the on-screen keyboard to identify which keys trigger which articulations and instruments. The close/room mic blend is the primary tonal control, from an intimate studio sound to a more open, ambient character. CC 11 (Expression) shapes the overall dynamic level across the mapped instruments. Humanise is particularly important in Cuban percussion to recreate the slight variations in feel and attack that distinguish live Afro-Cuban playing from quantised MIDI patterns — increase this for a looser, more natural groove. The Bleed/Crosstalk QC simulates the natural microphone bleed between instruments in the recording, which adds to the organic, live ensemble feel.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — overall level shaping across the percussion kit"},
+    "Modulation":          {"cc": 1,  "description": "Humanise depth — mod wheel increases the random variation in velocity and timing for a looser feel"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — limited use on percussion; may affect certain sustained or ringing elements"},
+    "Release Time":        {"cc": 72, "description": "Release decay — controls how long percussion tones ring after being struck"},
+    "Attack Time":         {"cc": 73, "description": "Attack transient — sharpness of the initial strike; adjust for more or less percussive presence"},
+    "Brightness":          {"cc": 74, "description": "Tonal brightness — high-frequency filter shaping the crack and shimmer of percussion hits"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds room or hall to the percussion instruments"},
+    "Quick Control 1":     {"cc": 14, "description": "Close Mic Level — amount of the direct, present close microphone signal for all instruments"},
+    "Quick Control 2":     {"cc": 15, "description": "Room Mic Level — amount of the room microphones capturing the natural studio ambience"},
+    "Quick Control 3":     {"cc": 16, "description": "Reverb — additional reverb depth beyond the natural room recording"},
+    "Quick Control 4":     {"cc": 17, "description": "Attack Transient — initial strike sharpness and click presence across the kit"},
+    "Quick Control 5":     {"cc": 18, "description": "Release — length of decay and ring after each percussion hit"},
+    "Quick Control 6":     {"cc": 19, "description": "Tone / Brightness — overall tonal character from warm and dark to bright and cutting"},
+    "Quick Control 7":     {"cc": 20, "description": "Bleed / Crosstalk — amount of microphone bleed between instruments for a natural ensemble recording feel"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — randomises velocity, timing, and intensity for authentic live Afro-Cuban groove feel"}
+  }
+}

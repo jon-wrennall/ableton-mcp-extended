@@ -1,0 +1,27 @@
+{
+  "plugin_name": "Una Corda",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Una Corda", "NI Una Corda", "Kontakt - Una Corda"],
+  "notes": "Una Corda captures an intimate Bösendorfer baby grand piano recorded by Nils Frahm with an extremely close microphone placement designed to reveal the full physical character of the instrument. Named after the una corda pedal — which shifts the hammer mechanism so it strikes only one string per note rather than the usual two or three — this library captures the unique, muted, and soft tone that results. The recording is so close that mechanical nuances like hammer contact, key bed clicks, and sustain pedal movement are all audible, and these are features of the instrument rather than flaws. This piano is best suited for intimate solo pieces, ambient music, and contemporary classical contexts where delicacy and transparency are paramount. CC 11 (Expression) shapes the extremely wide dynamic range from near-inaudible whispers to a fuller piano sound. CC 1 (Modulation) controls the Una Corda Pedal depth in real time, allowing smooth morphing between the open and single-string tone. The interaction between the Una Corda depth and the close-mic level is the primary tonal palette of this instrument.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — shapes the very wide dynamic range from whisper-quiet to full piano tone"},
+    "Modulation":          {"cc": 1,  "description": "Una Corda Pedal Depth — morphs between standard tone and the single-string una corda character in real time"},
+    "Sustain":             {"cc": 64, "description": "Damper pedal — sustains notes; sympathetic resonance is notably beautiful on this instrument"},
+    "Sostenuto":           {"cc": 66, "description": "Holds only currently depressed notes while new notes remain damped"},
+    "Soft Pedal":          {"cc": 67, "description": "Combined with the una corda character, this creates an extremely delicate pianissimo tone"},
+    "Release Time":        {"cc": 72, "description": "Release tail — controls how long the natural decay rings after key release"},
+    "Attack Time":         {"cc": 73, "description": "Attack speed — subtle control of the hammer strike onset character"},
+    "Brightness":          {"cc": 74, "description": "Tonal brightness filter — high-frequency shaping on top of the naturally warm tone"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds space to the very dry, intimate close recording"},
+    "Quick Control 1":     {"cc": 14, "description": "Una Corda Pedal Depth — shifts hammer to strike fewer strings; transforms tone from full to soft and muted"},
+    "Quick Control 2":     {"cc": 15, "description": "Close Mic Level — amount of the extremely intimate close microphone signal"},
+    "Quick Control 3":     {"cc": 16, "description": "Room Level — amount of natural room ambience from the Berlin studio recording space"},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb — additional reverb depth for spatial enhancement"},
+    "Quick Control 5":     {"cc": 18, "description": "Sustain Resonance — sympathetic string resonance level when the damper pedal is held"},
+    "Quick Control 6":     {"cc": 19, "description": "Release Noise — level of mechanical noise when keys are released"},
+    "Quick Control 7":     {"cc": 20, "description": "Mechanical Noise — general key action and sustain pedal mechanism noise"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — subtle randomisation of velocity and timing for authentic performance feel"}
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "plugin_name": "Battery 4",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Battery 4", "NI Battery 4", "Battery"],
+  "notes": "Battery 4 is a sample-based drum machine and sampler plugin featuring a 16-pad grid that can hold any audio sample, with comprehensive per-cell processing including filters, envelopes, saturation, and effects. It ships with a large library of drum kits and individual hits spanning electronic, acoustic, urban, and experimental categories. Battery 4 does not run inside Kontakt — it is a standalone NI plugin accessed via the VST parameter API. The CC mappings here cover the master/global controls; per-cell parameters (individual pad volume, pan, pitch) are typically controlled via the VST parameter API using get_device_parameters and set_device_parameter, as each cell has unique parameter indices. Battery 4 is GM drum-map compatible by default, with drum sounds mapped starting from C1 (MIDI note 36) following the standard GM layout (kick on C1/D1, snare on D1/E1, etc.), though this mapping is fully customisable per kit. CC 7 (master volume) and CC 10 (master pan) are the primary global MIDI controls. Individual cells typically respond to their mapped MIDI notes for triggering; velocity sensitivity is set per cell.",
+  "parameters": {
+    "Master Volume":       {"cc": 7,  "description": "Master output volume of the entire Battery 4 plugin"},
+    "Master Pan":          {"cc": 10, "description": "Master stereo pan of the overall drum mix"},
+    "Expression":          {"cc": 11, "description": "Overall expression / level — can be used to shape master output dynamics"},
+    "Modulation":          {"cc": 1,  "description": "User-assignable via MIDI Learn within Battery 4 — not pre-assigned by default"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — limited use in Battery 4; behaviour depends on individual cell settings"},
+    "Master Tune":         {"cc": 18, "description": "Master Tune — global pitch shift applied across all cells in the kit"},
+    "Bus Compression":     {"cc": 28, "description": "Bus compression amount on the master bus — affects the overall punch and density of the drum mix"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb send level — sends the drum mix to the global reverb bus if configured"},
+    "Brightness":          {"cc": 74, "description": "Tonal brightness filter — global high-frequency shaping over the drum mix"},
+    "Cell 1 (C1/Kick)":    {"cc": 102, "description": "Cell volume for C1 — typically Kick drum in GM mapping; individual cell CCs assigned via MIDI Learn per kit"},
+    "Cell 2 (D1/Snare)":   {"cc": 103, "description": "Cell volume for D1 — typically Snare drum in GM mapping; use MIDI Learn in Battery 4 to assign per cell"},
+    "Cell 3 (F#1/Hihat)":  {"cc": 104, "description": "Cell volume for F#1 — typically Closed Hi-Hat in GM mapping; assigned via MIDI Learn per kit"}
+  }
+}

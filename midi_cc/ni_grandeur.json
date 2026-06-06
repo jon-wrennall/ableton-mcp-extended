@@ -1,0 +1,27 @@
+{
+  "plugin_name": "Grandeur",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Grandeur", "NI Grandeur", "Kontakt - Grandeur", "The Grandeur"],
+  "notes": "Grandeur is a Steinway Model D concert grand piano with a formal, powerful character well-suited to classical, orchestral, and high-production contexts. The Steinway D is the world-standard concert grand, and this library captures its characteristic bright, even tone across the full dynamic range with extensive multi-sampling. CC 11 (Expression) is the primary tool for shaping long, phrased lines and is especially effective in legato passages, while CC 1 (Modulation) adds humanisation for less mechanical performances. The multiple mic perspectives — close, room — allow dialling in everything from an intimate practice room to a large recital hall sound. Hammer noise and release noise samples contribute realism and can be blended tastefully without becoming intrusive. Sustain resonance is especially rich on this instrument due to the Steinway's long string length, and adjusting that QC significantly changes the sense of space within the patch.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the instrument"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression — primary level control for shaping phrases and dynamics"},
+    "Modulation":          {"cc": 1,  "description": "Humanise — adds subtle velocity and timing variation to simulate live playing feel"},
+    "Sustain":             {"cc": 64, "description": "Damper pedal — sustains all notes and activates string resonance"},
+    "Sostenuto":           {"cc": 66, "description": "Holds only the notes held at the moment of press; new notes remain damped"},
+    "Soft Pedal":          {"cc": 67, "description": "Una corda — reduces volume and slightly softens tone quality"},
+    "Release Time":        {"cc": 72, "description": "Release tail length — how long notes ring after keys are released"},
+    "Attack Time":         {"cc": 73, "description": "Attack envelope speed — use subtly to shape note onset character"},
+    "Brightness":          {"cc": 74, "description": "Tonal brightness filter — reduces high-frequency content for a warmer sound"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds hall or room reverb to supplement the mic recordings"},
+    "Quick Control 1":     {"cc": 14, "description": "Lid Position — open lid for full projection, close for a more intimate, contained tone"},
+    "Quick Control 2":     {"cc": 15, "description": "Close Mic Level — amount of the direct, detailed close microphone signal"},
+    "Quick Control 3":     {"cc": 16, "description": "Room Mic Level — amount of natural room ambience captured by the room microphones"},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb — additional reverb depth for concert hall atmosphere"},
+    "Quick Control 5":     {"cc": 18, "description": "Sustain Resonance — sympathetic string resonance intensity when pedal is depressed"},
+    "Quick Control 6":     {"cc": 19, "description": "Release Noise — level of the natural damper and string noise at key release"},
+    "Quick Control 7":     {"cc": 20, "description": "Hammer Noise — level of hammer mechanism noise on each key strike for realism"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — randomises velocity, timing, and tuning slightly for a more human feel"}
+  }
+}

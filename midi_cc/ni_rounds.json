@@ -1,0 +1,25 @@
+{
+  "plugin_name": "Rounds",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Rounds", "NI Rounds", "Reaktor - Rounds", "Reaktor 6 - Rounds"],
+  "notes": "Rounds is a polyphonic synthesizer running inside Reaktor 6 with a unique architecture: eight independent voices, each capable of its own distinct synthesis method including analog-style subtractive, FM, and waveshaping. This voice-per-synthesis approach creates complex, evolving textures that sound different from traditional single-engine polysynths. The primary expressive controls are Filter Cutoff and the Voice Spread/Detune which controls how widely the eight voices are detuned from each other — this is the sonic centrepiece. CC 74 (Brightness) maps to the filter cutoff. CC 1 (Modulation) controls LFO depth or effects blend depending on the preset, enabling mod wheel-based textural evolution. Rounds is particularly well-suited to evolving pads, atmospheric textures, and complex harmonic soundscapes. Quick Control layout below reflects typical default assignments and may vary per preset in Reaktor.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output level of the Reaktor ensemble"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan position"},
+    "Expression":          {"cc": 11, "description": "Dynamic expression / output level — shapes the level of the complex polyphonic texture"},
+    "Modulation":          {"cc": 1,  "description": "LFO Depth or Effects Blend — mod wheel modulates texture and motion in real time"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds notes; useful for building layered textural chords"},
+    "Release Time":        {"cc": 72, "description": "Envelope release time — controls the length of tails on each of the eight voices"},
+    "Attack Time":         {"cc": 73, "description": "Envelope attack time — from instant to slow swells across the voice bank"},
+    "Brightness":          {"cc": 74, "description": "Filter Cutoff — primary tonal control across the primary synthesis engine"},
+    "Reverb Send":         {"cc": 91, "description": "Reverb wet level — adds spatial depth to the complex multi-voice texture"},
+    "Quick Control 1":     {"cc": 14, "description": "Primary Synth Filter Cutoff — the main filter cutoff for the primary synthesis engine across all voices"},
+    "Quick Control 2":     {"cc": 15, "description": "Resonance — filter resonance amount; adds character and harmonic emphasis"},
+    "Quick Control 3":     {"cc": 16, "description": "Attack — amplitude and filter envelope attack time across all voices"},
+    "Quick Control 4":     {"cc": 17, "description": "Release — amplitude and filter envelope release; longer for ambient, shorter for rhythmic patches"},
+    "Quick Control 5":     {"cc": 18, "description": "LFO Rate — speed of the low-frequency oscillator modulation applied to filter or pitch"},
+    "Quick Control 6":     {"cc": 19, "description": "LFO Depth / Mix — intensity of LFO modulation; blends in modulation character"},
+    "Quick Control 7":     {"cc": 20, "description": "Effects Blend — overall wet/dry mix of the internal effects chain (chorus, reverb, delay)"},
+    "Quick Control 8":     {"cc": 21, "description": "Voice Spread / Detune — amount of detuning and spectral spreading between the eight independent voices; core tonal parameter"}
+  }
+}
