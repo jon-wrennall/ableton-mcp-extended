@@ -1,0 +1,32 @@
+{
+  "plugin_name": "Analog Dreams",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Analog Dreams", "NI Analog Dreams"],
+  "notes": "NI Analog Dreams — hybrid analog/digital synthesizer instrument in Kontakt. Built from samples of vintage analog hardware (Jupiter-8, Oberheim, Prophet-5, ARP 2600 etc.) combined with Kontakt's internal synthesis engine. Each preset uses 8 macro Quick Controls — the labels change per preset but the CC numbers (14–21) are always the same. The QC descriptions below are the most common default assignments; some presets remap them for patch-specific controls. Rule of thumb: QC1 is almost always filter-related, QC8 is almost always reverb/space or effects. For exact labels on any preset: open the instrument in Kontakt and read the QC knob labels at the top of the panel. Supports velocity and aftertouch on many patches.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — output level/dynamics"},
+    "Modulation":          {"cc": 1,  "description": "Modulation wheel — LFO depth, filter sweep, or vibrato depth depending on the preset"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+    "Soft Pedal":          {"cc": 67, "description": "Soft pedal — some patches map to suboscillator or effects level"},
+    "Breath":              {"cc": 2,  "description": "Breath — alternative modulation/dynamics source on some patches"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Filter Cutoff — low-pass filter frequency (most common QC1 assignment across Analog Dreams presets). Sweep for classic synth filter effects."},
+    "Quick Control 2":     {"cc": 15, "description": "Filter Resonance — filter Q / resonance peak. Combine with QC1 for self-oscillation effects on high-resonance presets."},
+    "Quick Control 3":     {"cc": 16, "description": "Attack — amplitude or filter envelope attack time. Pads: slow for long fade-in. Leads/Bass: fast for punchy immediate entry."},
+    "Quick Control 4":     {"cc": 17, "description": "Release — amplitude envelope release time. Short for tight, rhythmic patches; long for evolving pads and swells."},
+    "Quick Control 5":     {"cc": 18, "description": "LFO Rate — low-frequency oscillator speed for modulation (tremolo, vibrato, filter wobble depending on preset routing)"},
+    "Quick Control 6":     {"cc": 19, "description": "LFO Depth / Mod Amount — how much the LFO affects its target. At high values can produce dramatic filter sweeps or pitch vibrato."},
+    "Quick Control 7":     {"cc": 20, "description": "FX Mix / Character — effects wet/dry blend or patch-specific character control (distortion, chorus depth, bit-crush etc. — check preset QC label)"},
+    "Quick Control 8":     {"cc": 21, "description": "Reverb / Space — reverb or delay mix. On most Analog Dreams presets this controls the ambient tail size — essential for the signature wide pad sounds."},
+
+    "Attack":              {"cc": 73, "description": "Global envelope attack (maps alongside QC3 on most patches)"},
+    "Release":             {"cc": 72, "description": "Global envelope release (maps alongside QC4 on most patches)"},
+    "Master Filter Cutoff":{"cc": 74, "description": "Global filter brightness / cutoff"},
+    "Master Filter Res":   {"cc": 71, "description": "Global filter resonance"},
+    "Glide":               {"cc": 5,  "description": "Portamento/glide time — many Analog Dreams leads and bass patches respond to this"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"},
+    "Chorus":              {"cc": 93, "description": "Chorus/ensemble send"}
+  }
+}

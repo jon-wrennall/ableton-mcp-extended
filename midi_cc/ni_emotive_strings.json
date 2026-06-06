@@ -1,0 +1,31 @@
+{
+  "plugin_name": "Emotive Strings",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Emotive Strings", "NI Emotive Strings"],
+  "notes": "NI Emotive Strings — cinematic string library in Kontakt, designed for emotional, dramatic scoring. Recorded with a full string orchestra in a large hall. Unlike the Symphony Series (which emphasises orchestral accuracy and multi-mic studio realism), Emotive Strings is optimised for expressive cinematic writing — smoother legato transitions, longer sustain tails, and a warmer, more blended sound. Uses the same CC 1 + CC 11 dual-dynamics approach as the Symphony Series: CC 1 cross-fades between dynamic layers (affecting tone and level), CC 11 rides the overall output envelope. Articulations via key switches (check instrument KS panel). Especially effective for slow, emotional passages; use long CC 11 automation ramps and subtle CC 1 shaping for maximum expressiveness.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — primary output level envelope. Use slow continuous automation for emotional string swells. Combine with CC 1 for full dynamic shaping."},
+    "Modulation":          {"cc": 1,  "description": "Dynamics cross-fade — morphs between soft (pp) and loud (ff) sample layers. Controls both volume and tonal character. Essential for orchestral realism alongside CC 11."},
+    "Breath":              {"cc": 2,  "description": "Breath controller — secondary dynamics input"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — holds legato mode / sustain on some articulations"},
+    "Sostenuto":           {"cc": 66, "description": "Sostenuto — selectively holds notes"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Ensemble Size — scales between intimate chamber ensemble and full cinematic string section"},
+    "Quick Control 2":     {"cc": 15, "description": "Close Mic Level — direct string mic; more detail and bow texture"},
+    "Quick Control 3":     {"cc": 16, "description": "Room / Hall Mic Level — hall ambience; larger space, more blend and emotional weight"},
+    "Quick Control 4":     {"cc": 17, "description": "Reverb Amount — built-in cinematic reverb mix; key to the Emotive Strings signature sound"},
+    "Quick Control 5":     {"cc": 18, "description": "Attack Shape — bow-on-string onset speed; low = slow, soft, emotional; high = dramatic, assertive entries"},
+    "Quick Control 6":     {"cc": 19, "description": "Release Time — string decay tail after note release; longer tails suit slow cinematic passages"},
+    "Quick Control 7":     {"cc": 20, "description": "Vibrato Depth — natural player vibrato intensity (add gradually after the initial attack for emotional effect)"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random detuning and timing variation between players for a more organic, less sampled character"},
+
+    "Attack":              {"cc": 73, "description": "Global envelope attack time"},
+    "Release":             {"cc": 72, "description": "Global envelope release time"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness — high-shelf filter across the section"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"},
+    "Stereo Width":        {"cc": 22, "description": "Stereo image width of the string section"},
+    "Portamento":          {"cc": 5,  "description": "Portamento/glide time for legato transitions between notes"}
+  }
+}

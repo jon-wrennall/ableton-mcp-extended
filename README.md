@@ -182,6 +182,9 @@ For plugins that don't expose parameters through VST3/AU (Arturia V Collection, 
 | Guitar Rig 7 | NI | 8 Macros, amp gain/EQ, reverb, delay, wah |
 | Choir Omnia | NI | Expression/dynamics, vowel morph, vibrato, reverb (via Kontakt Quick Controls) |
 | Kontakt 8 | NI | 8 Quick Controls (instrument-specific), master filter, expression |
+| Kontakt Factory Library | NI | CC 7/11/1/64 universal; QC layout documented per category (strings/synths/keys/drums) |
+| Emotive Strings | NI | CC 1+11 dual dynamics, ensemble size, mic blend, reverb, attack, vibrato, humanise |
+| Analog Dreams | NI | Filter cutoff/resonance, attack/release, LFO rate+depth, FX mix, reverb/space |
 | Alicia's Keys | NI | Close/room mic mix, sustain resonance, release noise, dynamics |
 | Electric Keys | NI | Bell/tine character, pickup position, tremolo rate+depth, overdrive |
 | Scarbee Mark I | NI | Tine character/bark, pickup position, tremolo rate+depth, overdrive, release/key noise, humanise |

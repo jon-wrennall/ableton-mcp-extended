@@ -1,0 +1,35 @@
+{
+  "plugin_name": "Kontakt Factory Library",
+  "manufacturer": "Native Instruments",
+  "match_patterns": [
+    "Kontakt Factory Library",
+    "NI Factory",
+    "Factory Library"
+  ],
+  "notes": "NI Kontakt Factory Library — the bundled multi-instrument library shipped with Kontakt 8. Contains hundreds of instruments across categories: Acoustic Instruments (piano, guitar, bass, strings, brass, woodwinds, mallets), Synths (pads, leads, bass synths), Drums & Percussion (kits, loops), Choirs, and Effects. Because the library spans so many instrument types, Quick Control assignments vary significantly per patch category. The CCs below are consistent across all Factory Library instruments. For QC assignments on a specific patch: open the instrument in Kontakt, check the KC panel header for QC labels, or right-click any knob → Learn MIDI CC. The most reliable real-time controls for any Factory Library patch are CC 7 (volume), CC 11 (expression), CC 1 (modulation), and CC 64 (sustain).\n\nTypical QC layouts by category:\n  Acoustic Strings/Winds: QC1=Ensemble Size, QC2=Close Mic, QC3=Room Mic, QC4=Reverb, QC5=Attack, QC6=Release, QC7=Vibrato, QC8=Humanise\n  Acoustic Keyboard (Piano/Guitar): QC1=Mic Position, QC2=Resonance, QC3=Release Noise, QC4=Reverb, QC5=Brightness, QC6=Body, QC7=Velocity Curve, QC8=Humanise\n  Synths/Pads: QC1=Filter Cutoff, QC2=Filter Resonance, QC3=Attack, QC4=Release, QC5=LFO Rate, QC6=LFO Depth, QC7=FX Mix, QC8=Mod/Character\n  Drums/Percussion: QC1=Kick Level, QC2=Snare Level, QC3=Overhead, QC4=Room, QC5=Compression, QC6=Release, QC7=Transient, QC8=Humanise",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume — consistent across all Factory Library patches"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — primary real-time dynamics. Works on virtually every Factory Library patch. Automate for natural phrase shaping."},
+    "Modulation":          {"cc": 1,  "description": "Modulation wheel — vibrato, filter sweep, or crossfade depending on the patch category. Always worth trying first."},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — consistent on all melodic/harmonic patches"},
+    "Breath":              {"cc": 2,  "description": "Breath controller — secondary dynamics on wind and orchestral instruments"},
+    "Soft Pedal":          {"cc": 67, "description": "Soft pedal — reduces attack/velocity sensitivity on keyboard instruments"},
+    "Sostenuto":           {"cc": 66, "description": "Sostenuto — selectively sustains held notes"},
+
+    "Quick Control 1":     {"cc": 14, "description": "QC 1 — assignment varies by patch category. Typical: Ensemble Size (strings/winds), Filter Cutoff (synths), Mic Position (acoustic keys), Kick Level (drums). Check KC panel in Kontakt."},
+    "Quick Control 2":     {"cc": 15, "description": "QC 2 — typical: Close Mic (acoustic), Filter Resonance (synths), Snare Level (drums)"},
+    "Quick Control 3":     {"cc": 16, "description": "QC 3 — typical: Room Mic (acoustic), Attack (synths/strings), Overhead Level (drums)"},
+    "Quick Control 4":     {"cc": 17, "description": "QC 4 — typical: Reverb Amount (most categories), Release (synths)"},
+    "Quick Control 5":     {"cc": 18, "description": "QC 5 — typical: Attack Shape (strings/winds), LFO Rate (synths), Compression (drums)"},
+    "Quick Control 6":     {"cc": 19, "description": "QC 6 — typical: Release Time (most categories), LFO Depth (synths)"},
+    "Quick Control 7":     {"cc": 20, "description": "QC 7 — typical: Vibrato Depth (strings/winds), FX Mix (synths), Transient (drums)"},
+    "Quick Control 8":     {"cc": 21, "description": "QC 8 — Humanise on most patches; random timing and velocity variation"},
+
+    "Attack":              {"cc": 73, "description": "Envelope attack time"},
+    "Release":             {"cc": 72, "description": "Envelope release time"},
+    "Master Filter Cutoff":{"cc": 74, "description": "Tone brightness / filter cutoff"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level"},
+    "Glide":               {"cc": 5,  "description": "Portamento/glide time (synths and legato instrument patches)"}
+  }
+}
