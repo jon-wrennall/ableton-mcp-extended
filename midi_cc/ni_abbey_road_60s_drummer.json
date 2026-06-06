@@ -1,0 +1,34 @@
+{
+  "plugin_name": "Abbey Road 60s Drummer",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Abbey Road 60s Drummer", "Abbey Road 60s", "60s Drummer"],
+  "notes": "NI Abbey Road 60s Drummer — vintage 1960s drum kit recorded at Abbey Road Studios. Based on a Gretsch Round Badge-style kit — the quintessential British Invasion and rock'n'roll sound. Character: punchy, slightly ringy snare, clear attack on the kick, open cymbals with natural wash. The Abbey Road room lends the dry-but-roomy quality of classic 60s recordings (think Ringo Starr on Revolver/Sgt Pepper). Suits classic rock, pop, Motown-style R&B, soul, and British Invasion. The overhead/room balance is central — push room slightly for the classic Abbey Road live sound. This kit has noticeably more crack and presence than the 50s kit while remaining warm and vintage. QC layout identical to all Abbey Road Drummer instruments.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Master stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression / overall dynamics"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Kick Close Mic Level — punchy round 60s kick; less attack than modern, more fundamental"},
+    "Quick Control 2":     {"cc": 15, "description": "Snare Top Mic Level — classic 60s snare crack; slightly ringy and open"},
+    "Quick Control 3":     {"cc": 16, "description": "Overhead Mic Level — cymbals and kit spread; key to the open 60s sound"},
+    "Quick Control 4":     {"cc": 17, "description": "Room Mic Level — the Abbey Road Studio Two room; characteristic of classic 60s British recordings"},
+    "Quick Control 5":     {"cc": 18, "description": "Kick Sub Level — low-end body of the kick"},
+    "Quick Control 6":     {"cc": 19, "description": "Snare Bottom Mic — snare wire sizzle and buzz"},
+    "Quick Control 7":     {"cc": 20, "description": "Hi-Hat Level — open 60s hi-hat with natural wash"},
+    "Quick Control 8":     {"cc": 21, "description": "Reverb/Room Blend — close vs room mic ratio"},
+
+    "Kick Level":          {"cc": 22, "description": "Kick drum overall level"},
+    "Snare Level":         {"cc": 23, "description": "Snare drum overall level"},
+    "Overhead Level":      {"cc": 24, "description": "Overhead mics"},
+    "Room Level":          {"cc": 25, "description": "Room microphone level — essential for classic Abbey Road 60s character"},
+    "Tom Level":           {"cc": 26, "description": "Tom drums overall level"},
+    "Cymbal Level":        {"cc": 27, "description": "Cymbal/hi-hat level"},
+    "Compression":         {"cc": 28, "description": "Bus compression amount"},
+    "EQ Brightness":       {"cc": 74, "description": "High-frequency EQ / air"},
+    "EQ Body":             {"cc": 70, "description": "Low-mid body EQ"},
+    "Reverb":              {"cc": 91, "description": "Additional reverb send"},
+    "Transient Attack":    {"cc": 29, "description": "Transient shaper attack"},
+    "Velocity Curve":      {"cc": 30, "description": "Velocity response sensitivity"}
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "plugin_name": "Abbey Road 80s Drummer",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Abbey Road 80s Drummer", "Abbey Road 80s", "80s Drummer"],
+  "notes": "NI Abbey Road 80s Drummer — vintage 1980s drum kit recorded at Abbey Road Studios. Based on a Tama Superstar-style maple kit — the decade of big snares, gated reverb, and heavily close-miked production. Character: punchy, dry close-mic sound with sharp transients; snare is wide and cracking; kick is tight with a defined beater click. The close mics (QC1–2) are more prominent in the mix than earlier eras. Room mic can be used for an authentic 80s gated reverb effect when combined with gate processing downstream. Compression (CC 28) is a key parameter on this kit — heavier compression defines the decade's sound. Suits pop, new wave, synth-pop, AOR, hard rock, and any production with an 80s aesthetic.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Master stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression / overall dynamics"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Kick Close Mic Level — punchy tight 80s kick with defined beater click; more attack-forward than earlier decades"},
+    "Quick Control 2":     {"cc": 15, "description": "Snare Top Mic Level — wide, cracking 80s snare; the dominant element in 80s drum production"},
+    "Quick Control 3":     {"cc": 16, "description": "Overhead Mic Level — cymbals and kit overview"},
+    "Quick Control 4":     {"cc": 17, "description": "Room Mic Level — Abbey Road room; feed into a gate plugin downstream for classic 80s gated reverb effect"},
+    "Quick Control 5":     {"cc": 18, "description": "Kick Sub Level — tight low-end body; not as round as 70s kit, more focused"},
+    "Quick Control 6":     {"cc": 19, "description": "Snare Bottom Mic — wire sizzle and snare buzz"},
+    "Quick Control 7":     {"cc": 20, "description": "Hi-Hat Level — tight 80s hi-hat"},
+    "Quick Control 8":     {"cc": 21, "description": "Reverb/Room Blend — close vs room ratio"},
+
+    "Kick Level":          {"cc": 22, "description": "Kick drum overall level"},
+    "Snare Level":         {"cc": 23, "description": "Snare drum overall level — the centrepiece of 80s drum sound"},
+    "Overhead Level":      {"cc": 24, "description": "Overhead mics"},
+    "Room Level":          {"cc": 25, "description": "Room mic — use for gated reverb source; gate externally in Ableton for the classic Phil Collins / John Bonham effect"},
+    "Tom Level":           {"cc": 26, "description": "Tom drums overall level"},
+    "Cymbal Level":        {"cc": 27, "description": "Cymbal/hi-hat level"},
+    "Compression":         {"cc": 28, "description": "Bus compression — push harder than other decades for authentic 80s density and punch"},
+    "EQ Brightness":       {"cc": 74, "description": "High-frequency EQ / air"},
+    "EQ Body":             {"cc": 70, "description": "Low-mid body EQ"},
+    "Reverb":              {"cc": 91, "description": "Additional reverb send"},
+    "Transient Attack":    {"cc": 29, "description": "Transient shaper attack — higher values sharpen the 80s click/attack"},
+    "Velocity Curve":      {"cc": 30, "description": "Velocity response sensitivity"}
+  }
+}

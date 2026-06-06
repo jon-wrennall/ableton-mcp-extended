@@ -1,0 +1,34 @@
+{
+  "plugin_name": "Abbey Road 70s Drummer",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Abbey Road 70s Drummer", "Abbey Road 70s", "70s Drummer"],
+  "notes": "NI Abbey Road 70s Drummer — vintage 1970s drum kit recorded at Abbey Road Studios. Based on a Ludwig Vistalite-style acrylic kit — the sound of classic rock, funk, and hard rock. Character: big, fat, open drum sound with strong fundamentals; kick has significant low-end weight, snare is thick and resonant with clear crack, toms ring out with long sustains. The 70s saw more close-mic recording but still with significant room use — balance QC1–2 for presence and QC4 for the big room sound. Suits classic rock, funk, hard rock, prog, and vintage-feel productions. The tom level (CC 26) is particularly important on this kit — the 70s tom sound is huge. Compression (CC 28) can push towards the dense classic rock wall-of-sound character.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Master stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression / overall dynamics"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Kick Close Mic Level — weighty 70s kick with strong low-end fundamental"},
+    "Quick Control 2":     {"cc": 15, "description": "Snare Top Mic Level — thick, resonant 70s snare crack"},
+    "Quick Control 3":     {"cc": 16, "description": "Overhead Mic Level — wide overhead capture with open cymbals"},
+    "Quick Control 4":     {"cc": 17, "description": "Room Mic Level — big Abbey Road room ambience; key to the 70s large-room drum sound"},
+    "Quick Control 5":     {"cc": 18, "description": "Kick Sub Level — substantial low-end body; this kit has more sub than earlier eras"},
+    "Quick Control 6":     {"cc": 19, "description": "Snare Bottom Mic — snare wire character and buzz"},
+    "Quick Control 7":     {"cc": 20, "description": "Hi-Hat Level — open 70s hi-hat"},
+    "Quick Control 8":     {"cc": 21, "description": "Reverb/Room Blend — close vs room ratio"},
+
+    "Kick Level":          {"cc": 22, "description": "Kick drum overall level"},
+    "Snare Level":         {"cc": 23, "description": "Snare drum overall level"},
+    "Overhead Level":      {"cc": 24, "description": "Overhead mics"},
+    "Room Level":          {"cc": 25, "description": "Room microphone level — push for the signature 70s big room sound"},
+    "Tom Level":           {"cc": 26, "description": "Tom drums overall level — particularly important on this kit; 70s toms are a defining feature"},
+    "Cymbal Level":        {"cc": 27, "description": "Cymbal/hi-hat level"},
+    "Compression":         {"cc": 28, "description": "Bus compression — higher values approach classic rock wall-of-sound density"},
+    "EQ Brightness":       {"cc": 74, "description": "High-frequency EQ / air"},
+    "EQ Body":             {"cc": 70, "description": "Low-mid body EQ"},
+    "Reverb":              {"cc": 91, "description": "Additional reverb send"},
+    "Transient Attack":    {"cc": 29, "description": "Transient shaper attack"},
+    "Velocity Curve":      {"cc": 30, "description": "Velocity response sensitivity"}
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "plugin_name": "Abbey Road 50s Drummer",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Abbey Road 50s Drummer", "Abbey Road 50s", "50s Drummer"],
+  "notes": "NI Abbey Road 50s Drummer — vintage 1950s drum kit recorded at Abbey Road Studios. Based on a period Ludwig/Gretsch-style kit with calf-skin heads. Minimal close-mic setup reflecting 50s recording practice — overhead and room mics dominate the sound. Character: warm, open, live room sound with natural decay; less separation than modern kits. Kick is soft and round (no felt-strip muting), snare is fat and papery. Suits jazz, early rock'n'roll, blues, and vintage-feel productions. Room mic is particularly important for this era's sound — push QC4 higher than you would on modern kits. The QC layout is identical across all Abbey Road Drummer instruments.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Master stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression / overall dynamics"},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Kick Close Mic Level — soft and round 50s kick character; less sub than modern kits"},
+    "Quick Control 2":     {"cc": 15, "description": "Snare Top Mic Level — fat, papery 50s snare crack"},
+    "Quick Control 3":     {"cc": 16, "description": "Overhead Mic Level — period-accurate overhead capture; carries most of the kit's character"},
+    "Quick Control 4":     {"cc": 17, "description": "Room Mic Level — Abbey Road room ambience; push this higher than modern kits for authentic 50s open room sound"},
+    "Quick Control 5":     {"cc": 18, "description": "Kick Sub Level — low-end body of the kick (subtler on this kit than modern)"},
+    "Quick Control 6":     {"cc": 19, "description": "Snare Bottom Mic — snare wire character"},
+    "Quick Control 7":     {"cc": 20, "description": "Hi-Hat Level — open, washy 50s hi-hat"},
+    "Quick Control 8":     {"cc": 21, "description": "Reverb/Room Blend — overall close vs room ratio"},
+
+    "Kick Level":          {"cc": 22, "description": "Kick drum overall level"},
+    "Snare Level":         {"cc": 23, "description": "Snare drum overall level"},
+    "Overhead Level":      {"cc": 24, "description": "Overhead mics — primary kit capture for this era"},
+    "Room Level":          {"cc": 25, "description": "Room microphone level — the defining characteristic of 50s drum sound"},
+    "Tom Level":           {"cc": 26, "description": "Tom drums overall level"},
+    "Cymbal Level":        {"cc": 27, "description": "Cymbal/hi-hat level"},
+    "Compression":         {"cc": 28, "description": "Bus compression — keep light for vintage authenticity"},
+    "EQ Brightness":       {"cc": 74, "description": "High-frequency EQ / air"},
+    "EQ Body":             {"cc": 70, "description": "Low-mid body EQ"},
+    "Reverb":              {"cc": 91, "description": "Additional reverb send"},
+    "Transient Attack":    {"cc": 29, "description": "Transient shaper attack"},
+    "Velocity Curve":      {"cc": 30, "description": "Velocity response sensitivity"}
+  }
+}

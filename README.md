@@ -191,6 +191,10 @@ For plugins that don't expose parameters through VST3/AU (Arturia V Collection, 
 | Scarbee A-200 | NI | Reed character/bite, crosstalk, tremolo rate+depth, overdrive, release noise, humanise |
 | Scarbee Clavinet Pianet | NI | Pickup selection (AB/CD), mute, wah sweep, envelope filter, overdrive, tone, release noise |
 | Scarbee Bass (MM-Bass / Pre-Bass / Jay-Bass / Rickenbacker — DI + Amped) | NI | Pickup blend, tone, amp/DI blend, attack/slap, fret noise, portamento, humanise |
+| Abbey Road 50s Drummer | NI | Kick/snare/overhead/room mic levels, compression, transient shaping — warm/open vintage character |
+| Abbey Road 60s Drummer | NI | Kick/snare/overhead/room mic levels, compression — Gretsch Round Badge, British Invasion sound |
+| Abbey Road 70s Drummer | NI | Kick/snare/overhead/room mic levels, compression, tom level — big open rock sound |
+| Abbey Road 80s Drummer | NI | Kick/snare/overhead/room mic levels, compression — tight/punchy, gated reverb source |
 | Abbey Road Modern Drummer | NI | Kick/snare/overhead/room mic levels, compression, transient shaping |
 | Studio Drummer (The Fab / The Beast / The Classic) | NI | Kick/snare/hi-hat/tom/overhead/room levels, parallel compression, humanise |
 | Session Strings Pro 2 | NI | Expression/dynamics, vibrato, ensemble size, mic blend, attack, release, humanise |
