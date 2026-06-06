@@ -185,6 +185,7 @@ For plugins that don't expose parameters through VST3/AU (Arturia V Collection, 
 | Alicia's Keys | NI | Close/room mic mix, sustain resonance, release noise, dynamics |
 | Electric Keys | NI | Bell/tine character, pickup position, tremolo rate+depth, overdrive |
 | Abbey Road Modern Drummer | NI | Kick/snare/overhead/room mic levels, compression, transient shaping |
+| Studio Drummer (The Fab / The Beast / The Classic) | NI | Kick/snare/hi-hat/tom/overhead/room levels, parallel compression, humanise |
 | Session Strings Pro 2 | NI | Expression/dynamics, vibrato, ensemble size, mic blend, attack, release, humanise |
 | Session Horns Pro | NI | Expression/dynamics, vibrato, ensemble size, mic blend, attack, growl/flutter, humanise |
 | Session Bassist (Icon Bass / Prime Bass / Upright Bass) | NI | Pickup position, tone, amp/DI blend, reverb, attack, fret noise, humanise |

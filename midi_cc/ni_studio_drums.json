@@ -1,0 +1,26 @@
+{
+  "plugin_name": "Studio Drummer",
+  "manufacturer": "Native Instruments",
+  "match_patterns": ["Studio Drummer", "NI Studio Drummer"],
+  "notes": "NI Studio Drummer — multi-mic acoustic drum kit in Kontakt. Three kits included: The Fab (vintage Gretsch character), The Beast (modern rock/metal Ludwig), The Classic (all-round studio kit). All kits share the same CC layout. Quick Controls map to the per-kit mixer channels — kick, snare, toms, hi-hat, overhead, and room — giving direct level control without opening the Kontakt UI. CC 11 (Expression) rides the master output. CC 64 can toggle hi-hat open/closed on some patches. For individual drum compression and transient shaping, map those parameters via right-click → Learn MIDI CC inside Kontakt. General MIDI note mapping applies: kick = C1 (36), snare = D1 (38), hi-hat closed = F#1 (42), open = A#1 (46), crash = C#2 (49), ride = D#2 (51) — check the instrument's mapping view for full layout.",
+  "parameters": {
+    "Volume":              {"cc": 7,  "description": "Master output volume"},
+    "Pan":                 {"cc": 10, "description": "Stereo pan"},
+    "Expression":          {"cc": 11, "description": "Expression — master output level. Use to automate the drum kit level in a mix."},
+    "Sustain":             {"cc": 64, "description": "Sustain pedal — hi-hat open/closed toggle on some patches"},
+
+    "Quick Control 1":     {"cc": 14, "description": "Kick Level — combined kick in + kick out mic blend level in the kit mixer"},
+    "Quick Control 2":     {"cc": 15, "description": "Snare Level — combined snare top + snare bottom level in the kit mixer"},
+    "Quick Control 3":     {"cc": 16, "description": "Hi-Hat Level — hi-hat close mic level"},
+    "Quick Control 4":     {"cc": 17, "description": "Tom Level — floor and rack tom mic blend level"},
+    "Quick Control 5":     {"cc": 18, "description": "Overhead Level — stereo overhead pair; natural kit spread and cymbal detail"},
+    "Quick Control 6":     {"cc": 19, "description": "Room Level — room microphones; adds size, depth, and ambient glue to the kit"},
+    "Quick Control 7":     {"cc": 20, "description": "Parallel Compression Amount — built-in parallel bus compression; adds punch and density without killing dynamics"},
+    "Quick Control 8":     {"cc": 21, "description": "Humanise — random velocity and timing variation between hits for a more played-in, less quantised feel"},
+
+    "Attack":              {"cc": 73, "description": "Global transient attack shaping"},
+    "Release":             {"cc": 72, "description": "Global decay/release time"},
+    "Reverb":              {"cc": 91, "description": "Reverb send level — adds extra ambience beyond the built-in room mics"},
+    "Brightness":          {"cc": 74, "description": "Tone brightness — high-shelf across the kit bus"}
+  }
+}
