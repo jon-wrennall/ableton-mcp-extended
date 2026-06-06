@@ -81,57 +81,44 @@ echo "  $(ls midi_cc/*.json | wc -l | tr -d ' ') maps copied."
 echo "→ Copying MCP_Server/tools/midi_cc.py..."
 cp "$SCRIPT_DIR/MCP_Server/tools/midi_cc.py" MCP_Server/tools/midi_cc.py
 
-# ── Step 5: Patch server.py ───────────────────────────────────────────────────
+# ── Step 5: Patch MCP_Server/tools/__init__.py ───────────────────────────────
 #
-# AbletonBridge's server.py registers tools via register_tools(mcp) calls.
-# We add one import and one registration call after the last existing one.
+# AbletonBridge registers tools via register_all_tools() in tools/__init__.py.
+# We add midi_cc to the module imports and one register_tools(mcp) call.
 
-echo "→ Patching MCP_Server/server.py..."
+echo "→ Patching MCP_Server/tools/__init__.py..."
 
-SERVER="MCP_Server/server.py"
+INIT="MCP_Server/tools/__init__.py"
 
-# Check if already patched
-if grep -q "midi_cc" "$SERVER"; then
-  echo "  server.py already patched — skipping."
+if grep -q "midi_cc" "$INIT"; then
+  echo "  __init__.py already patched — skipping."
 else
-  # Add import after the last 'from MCP_Server.tools' import line
-  python3 - "$SERVER" <<'PYEOF'
-import sys, re
-
-path = sys.argv[1]
-with open(path) as f:
+  python3 - <<PYEOF
+with open("$INIT") as f:
     src = f.read()
 
-# 1. Add import line after last tools import
-import_line = "from MCP_Server.tools import midi_cc"
-last_tools_import = max(
-    (m.end() for m in re.finditer(r'^from MCP_Server\.tools import \w+', src, re.MULTILINE)),
-    default=None
+# 1. Add midi_cc to the import tuple
+src = src.replace(
+    "    session, tracks, clips, devices, browser, mixer,\n"
+    "    automation, arrangement, scenes, creative, m4l_tools,\n"
+    "    snapshots, audio, grid, workflows,",
+    "    session, tracks, clips, devices, browser, mixer,\n"
+    "    automation, arrangement, scenes, creative, m4l_tools,\n"
+    "    snapshots, audio, grid, workflows,\n"
+    "    midi_cc,"
 )
-if last_tools_import is None:
-    print("ERROR: could not find tools imports in server.py", file=sys.stderr)
-    sys.exit(1)
 
-# Insert after the line that ends at last_tools_import
-insert_at = src.index('\n', last_tools_import) + 1
-src = src[:insert_at] + import_line + "\n" + src[insert_at:]
-
-# 2. Add register call after last register_tools(mcp) call
-last_reg = max(
-    (m.end() for m in re.finditer(r'register_tools\(mcp\)', src)),
-    default=None
+# 2. Add registration call at the end of register_all_tools()
+src = src.replace(
+    "    workflows.register_tools(mcp)\n",
+    "    workflows.register_tools(mcp)\n"
+    "    midi_cc.register_tools(mcp)\n"
 )
-if last_reg is None:
-    print("ERROR: could not find register_tools(mcp) in server.py", file=sys.stderr)
-    sys.exit(1)
 
-insert_at2 = src.index('\n', last_reg) + 1
-src = src[:insert_at2] + "midi_cc.register_tools(mcp)\n" + src[insert_at2:]
-
-with open(path, 'w') as f:
+with open("$INIT", "w") as f:
     f.write(src)
 
-print("  server.py patched successfully.")
+print("  __init__.py patched successfully.")
 PYEOF
 fi
 
@@ -170,7 +157,7 @@ fi
 # ── Step 7: Commit and push ───────────────────────────────────────────────────
 
 echo "→ Committing..."
-git add midi_cc/ MCP_Server/tools/midi_cc.py MCP_Server/server.py pyproject.toml
+git add midi_cc/ MCP_Server/tools/midi_cc.py MCP_Server/tools/__init__.py pyproject.toml
 git commit -m "feat: add MIDI CC plugin control — 100 maps for NI Komplete + Arturia V Collection 11
 
 Adds a new tools/midi_cc.py module and a midi_cc/ directory containing 100 JSON
