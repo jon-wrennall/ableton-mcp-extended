@@ -1,5 +1,8 @@
 # ableton-mcp-extended
 
+** I have taken the SDK and CC extensions here and built them into https://github.com/hidingwill/AbletonBridge, which has a broader capability **
+** I have not applied the learning and fixes I found whilst doing the integration into AbletonBridge here, and thus this is now considered stale **
+
 An extended version of [ahujasid/ableton-mcp](https://github.com/ahujasid/ableton-mcp) — connecting Ableton Live to AI assistants via the Model Context Protocol (MCP).
 
 Built on the excellent original work by [Siddharth Ahuja](https://github.com/ahujasid). This fork adds deep plugin parameter control, fuzzy browser search, device snapshots, and small-LLM compatibility fixes.
